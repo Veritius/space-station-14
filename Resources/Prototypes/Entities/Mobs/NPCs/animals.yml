@@ -1297,12 +1297,12 @@
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: chicken-0
-      sprite: Mobs/Animals/chicken.rsi
+      state: pigeon-0
+      sprite: Mobs/Animals/pigeon.rsi
   - type: Appearance
     visuals:
     - type: DamageStateVisualizer
-      normal: chicken-0
+      normal: pigeon-0
       crit: dead-0
       dead: dead-0
   - type: InteractionPopup
@@ -1315,7 +1315,7 @@
         maxVol: 10
         reagents:
         - ReagentId: Milk
-          Quantity: 2
+          Quantity: 10
   - type: Udder
     reagentId: Milk
     targetSolution: udder #Reference to https://www.youtube.com/watch?v=eRlXnmBsEis
