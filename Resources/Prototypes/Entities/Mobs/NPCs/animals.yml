@@ -1286,3 +1286,40 @@
     attributes:
       proper: true
       gender: female
+
+- type: entity
+  name: pigeon
+  parent: SimpleMobBase
+  id: MobPigeon
+  description: A pigeon. Don't let it near any statues.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: chicken-0
+      sprite: Mobs/Animals/chicken.rsi
+  - type: Appearance
+    visuals:
+    - type: DamageStateVisualizer
+      normal: chicken-0
+      crit: dead-0
+      dead: dead-0
+  - type: InteractionPopup
+    successChance: 0.8
+    interactSuccessString: petting-success-bird
+    interactFailureString: petting-failure-generic
+    interactSuccessSound:
+      path: /Audio/Animals/chicken_cluck_happy.ogg
+  - type: SolutionContainerManager
+    solutions:
+      udder:
+        maxVol: 10
+        reagents:
+        - ReagentId: Milk
+          Quantity: 2
+  - type: Udder
+    reagentId: Milk
+    targetSolution: udder #Reference to https://www.youtube.com/watch?v=eRlXnmBsEis
+    quantity: 2
+    updateRate: 5
