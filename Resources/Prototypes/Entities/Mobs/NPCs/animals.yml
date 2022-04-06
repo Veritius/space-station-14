@@ -1309,8 +1309,6 @@
     successChance: 0.8
     interactSuccessString: petting-success-bird
     interactFailureString: petting-failure-generic
-    interactSuccessSound:
-      path: /Audio/Animals/chicken_cluck_happy.ogg
   - type: SolutionContainerManager
     solutions:
       udder:
