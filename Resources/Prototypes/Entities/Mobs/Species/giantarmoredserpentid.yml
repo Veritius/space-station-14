@@ -1,5 +1,5 @@
 ﻿- type: entity
-  name: Urist McSlime
+  name: Urist McSnake
   parent: MobHumanBase
   id: MobGiantArmoredSerpentidBase
   description: A miserable pile of scales.
