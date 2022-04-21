@@ -134,6 +134,7 @@
             heatDamage:
               types:
                 Heat: 0.15 #per second, scales with temperature & other constants
+    - type: LizardAccent
 
 - type: entity
   save: false
