@@ -1,0 +1,24 @@
+﻿- type: entity
+  save: false
+  parent: MobSlimePersonBase
+  id: MobGiantArmoredSerpentid
+  components:
+    - type: InteractionPopup
+      successChance: 1
+      interactSuccessString: hugging-success-generic
+      interactSuccessSound: /Audio/Effects/hug.ogg
+    - type: Mind
+      showExamineInfo: true
+    - type: Input
+      context: "human"
+    - type: PlayerMobMover
+    - type: PlayerInputMover
+    - type: Alerts
+    - type: Actions
+    - type: Eye
+    - type: CameraRecoil
+    - type: Examiner
+    - type: CanHostGuardian
+    - type: AiFactionTag
+      factions:
+        - NanoTrasen
