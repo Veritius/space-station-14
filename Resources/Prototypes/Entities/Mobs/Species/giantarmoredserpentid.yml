@@ -138,8 +138,8 @@
 
 - type: entity
   save: false
-  name: Urist McHands
-  parent: MobGiantArmoredSerpentidDummy
+  name: Urist McSnake
+  parent: MobHumanDummy
   id: MobGiantArmoredSerpentidDummy
   noSpawn: true
   description: A dummy GAS meant to be used in character setup.
