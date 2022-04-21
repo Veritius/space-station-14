@@ -2,7 +2,7 @@
   name: Urist McSlime
   parent: MobHumanBase
   id: MobGiantArmoredSerpentidBase
-  description: A miserable pile of slime.
+  description: A miserable pile of scales.
   abstract: true
   components:
     - type: Icon

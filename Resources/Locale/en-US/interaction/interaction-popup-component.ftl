@@ -39,3 +39,4 @@ comp-window-knock = *knock knock*
 ## Hugging players
 
 hugging-success-generic = You hug {THE($target)}.
+hugging-success-gas = You hug {THE($target)} the snek!

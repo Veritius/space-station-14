@@ -5,7 +5,7 @@
   components:
     - type: InteractionPopup
       successChance: 1
-      interactSuccessString: hugging-success-generic
+      interactSuccessString: hugging-success-gas
       interactSuccessSound: /Audio/Effects/hug.ogg
     - type: Mind
       showExamineInfo: true
