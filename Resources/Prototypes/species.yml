@@ -32,7 +32,7 @@
 
 - type: species
   id: GiantArmoredSerpentid
-  name: GAS
+  name: Serpentid
   roundStart: true
   prototype: MobGiantArmoredSerpentid
   dollPrototype: MobGiantArmoredSerpentidDummy
