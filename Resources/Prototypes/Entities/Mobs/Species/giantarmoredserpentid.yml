@@ -135,6 +135,7 @@
         types:
           Heat: 0.4 #per second, scales with temperature & other constants
     - type: LizardAccent
+    - type: NoSlip
     # move 1.1x faster
     - type: MovementSpeedModifier
       baseWalkSpeed: 3.3
