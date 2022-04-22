@@ -790,6 +790,6 @@
   #Maybe specify in the name field to make sure nobody gets confused over what exactly is in the drink.
   name: snake venom
   parent: BaseAlcohol
-  desc: It's not real snake venom, but will probably get you just as ill.
+  desc: It's not real snake venom, but will probably make you just as ill.
   physicalDesc: bubbly
   color: "#f2aee3"
