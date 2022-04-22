@@ -118,22 +118,22 @@
         types:
           Blunt: 0.1 # Giant bugs are resilient
     - type: Flammable
-        fireSpread: true
-        canResistFire: true
-        damage:
-          types:
-            Heat: 0.15 #per second, scales with number of fire 'stacks'
-          - type: Temperature
-            heatDamageThreshold: 800
-            coldDamageThreshold: 223
-            currentTemperature: 310.15
-            specificHeat: 42
-            coldDamage:
-              types:
-                Cold: 0.05 #per second, scales with temperature & other constants
-            heatDamage:
-              types:
-                Heat: 0.15 #per second, scales with temperature & other constants
+      fireSpread: true
+      canResistFire: true
+      damage:
+      types:
+        Heat: 0.15 #per second, scales with number of fire 'stacks'
+    - type: Temperature
+      heatDamageThreshold: 800
+      coldDamageThreshold: 223
+      currentTemperature: 310.15
+      specificHeat: 42
+      coldDamage:
+        types:
+          Cold: 0.05 #per second, scales with temperature & other constants
+      heatDamage:
+        types:
+          Heat: 0.15 #per second, scales with temperature & other constants
     - type: LizardAccent
 
 - type: entity
