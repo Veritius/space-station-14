@@ -116,7 +116,7 @@
     - type: Barotrauma
       damage:
         types:
-          Bloodloss: 0.1 # blood moment
+          Blunt: 0.1
     - type: Flammable
       fireSpread: true
       canResistFire: true
