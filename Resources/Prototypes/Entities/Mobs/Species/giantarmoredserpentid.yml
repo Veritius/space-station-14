@@ -116,7 +116,7 @@
     - type: Barotrauma
       damage:
         types:
-          Blunt: 0.1
+          Blunt: 0.0
     - type: Flammable
       fireSpread: true
       canResistFire: true
@@ -130,10 +130,10 @@
       specificHeat: 42
       coldDamage:
         types:
-          Cold: 1 #per second, scales with temperature & other constants
+          Cold: 0.0 #per second, scales with temperature & other constants
       heatDamage:
         types:
-          Heat: 1 #per second, scales with temperature & other constants
+          Heat: 0.4 #per second, scales with temperature & other constants
     - type: LizardAccent
 
 - type: entity
