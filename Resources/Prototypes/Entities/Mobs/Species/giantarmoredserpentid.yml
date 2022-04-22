@@ -135,6 +135,10 @@
         types:
           Heat: 0.4 #per second, scales with temperature & other constants
     - type: LizardAccent
+    # move 1.1x faster
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 3.3
+      baseSprintSpeed: 5.5
 
 - type: entity
   save: false
