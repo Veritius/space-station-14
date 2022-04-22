@@ -100,7 +100,7 @@
       damageContainer: Biological
       damageModifierSet: GiantArmoredSerpentid
     - type: Bloodstream
-      bloodReagent: Slime # TODO: make GAS special blood
+      bloodReagent: Hemolymph
       bloodlossDamage:
         types:
           Bloodloss:

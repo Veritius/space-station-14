@@ -28,3 +28,18 @@
       effects:
       - !type:SatiateHunger
         factor: 1.5
+
+- type: reagent
+  id: Hemolymph
+  name: hemolymph
+  group: Biological
+  desc: This is not ketchup.
+  color: "#c1059d"
+  physicalDesc: viscous
+  metabolisms:
+    Medicine:
+      effects:
+        - !type:HealthChange
+          damage:
+            types:
+              Asphyxiation: -0.2
