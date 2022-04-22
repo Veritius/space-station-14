@@ -98,6 +98,7 @@
       hairAlpha: 0.5
     - type: Damageable
       damageContainer: Biological
+      damageModifierSet: GiantArmoredSerpentid
     - type: Bloodstream
       bloodReagent: Slime # TODO: make GAS special blood
       bloodlossDamage:
@@ -115,13 +116,13 @@
     - type: Barotrauma
       damage:
         types:
-          Blunt: 0.1 # Giant bugs are resilient
+          Bloodloss: 0.1 # blood moment
     - type: Flammable
       fireSpread: true
       canResistFire: true
       damage:
-      types:
-        Heat: 0.15 #per second, scales with number of fire 'stacks'
+        types:
+          Heat: 1 #per second, scales with number of fire 'stacks'
     - type: Temperature
       heatDamageThreshold: 800
       coldDamageThreshold: 223
@@ -129,10 +130,10 @@
       specificHeat: 42
       coldDamage:
         types:
-          Cold: 0.05 #per second, scales with temperature & other constants
+          Cold: 1 #per second, scales with temperature & other constants
       heatDamage:
         types:
-          Heat: 0.15 #per second, scales with temperature & other constants
+          Heat: 1 #per second, scales with temperature & other constants
     - type: LizardAccent
 
 - type: entity
