@@ -562,3 +562,15 @@
       amount: 1
   products:
     Pilk: 2
+
+- type: reaction
+  id: SnakeVenom
+  reactants:
+    Hemolymph:
+      amount: 1
+    JuiceLime:
+      amount: 1
+    Whiskey:
+      amount: 2
+  products:
+    SnakeVenom: 4
