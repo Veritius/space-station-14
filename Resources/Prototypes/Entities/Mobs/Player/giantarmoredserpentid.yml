@@ -1,6 +1,6 @@
 ﻿- type: entity
   save: false
-  parent: MobSlimePersonBase
+  parent: MobGiantArmoredSerpentidBase
   id: MobGiantArmoredSerpentid
   components:
     - type: InteractionPopup
