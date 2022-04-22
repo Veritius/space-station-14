@@ -98,7 +98,6 @@
       hairAlpha: 0.5
     - type: Damageable
       damageContainer: Biological
-      damageModifierSet: Slime
     - type: Bloodstream
       bloodReagent: Slime # TODO: make GAS special blood
       bloodlossDamage:
