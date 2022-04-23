@@ -122,7 +122,7 @@
     Slash: 0.9
     Piercing: 1.0
     Shock: 0.6
-    Cold: 0.4
+    Cold: 1.0
     Heat: 0.5
     Poison: 2.5
     Bloodloss: 1.0

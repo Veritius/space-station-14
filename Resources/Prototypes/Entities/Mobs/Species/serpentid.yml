@@ -125,19 +125,14 @@
           Heat: 1 #per second, scales with number of fire 'stacks'
     - type: Temperature
       heatDamageThreshold: 800
-      coldDamageThreshold: 223
       currentTemperature: 310.15
       specificHeat: 42
-      coldDamage:
-        types:
-          Cold: 0.0 #per second, scales with temperature & other constants
       heatDamage:
         types:
           Heat: 0.4 #per second, scales with temperature & other constants
     - type: LizardAccent
     - type: NoSlip
-    # move 1.1x faster
-    - type: MovementSpeedModifier
+    - type: MovementSpeedModifier # move 1.1x faster
       baseWalkSpeed: 3.3
       baseSprintSpeed: 5.5
 
