@@ -132,11 +132,18 @@
       heatDamage:
         types:
           Heat: 0.4 #per second, scales with temperature & other constants
+    - type: UnarmedCombat
+        range: 1.5
+        arcwidth: 0
+        arc: claw
+        damage:
+          types:
+            Slash: 10
+    - type: MovementSpeedModifier # move 1.1x faster
+        baseWalkSpeed: 3.3
+        baseSprintSpeed: 5.5
     - type: LizardAccent
     - type: NoSlip
-    - type: MovementSpeedModifier # move 1.1x faster
-      baseWalkSpeed: 3.3
-      baseSprintSpeed: 5.5
 
 - type: entity
   save: false
