@@ -38,6 +38,7 @@
   physicalDesc: viscous
   metabolisms:
     Medicine:
+      # Oxygenated!
       effects:
         - !type:HealthChange
           damage:
