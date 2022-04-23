@@ -1,5 +1,5 @@
 ﻿- type: inventoryTemplate
-  id: serpentid
+  id: Serpentid
   slots:
     - name: outerClothing
       slotTexture: suit
@@ -69,7 +69,6 @@
       slotFlags: IDCARD
       uiContainer: BottomRight
       uiWindowPos: 2,1
-      dependsOn: jumpsuit
       displayName: ID
     - name: belt
       slotTexture: belt

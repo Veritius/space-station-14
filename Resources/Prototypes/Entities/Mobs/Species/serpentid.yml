@@ -113,6 +113,8 @@
             -0.2
           Asphyxiation:
             -0.15
+    - type: Inventory
+      templateId: Serpentid
     - type: Barotrauma
       damage:
         types:
