@@ -1,7 +1,7 @@
 ﻿- type: entity
   save: false
-  parent: MobGiantArmoredSerpentidBase
-  id: MobGiantArmoredSerpentid
+  parent: MobSerpentidBase
+  id: MobSerpentid
   components:
     - type: InteractionPopup
       successChance: 1

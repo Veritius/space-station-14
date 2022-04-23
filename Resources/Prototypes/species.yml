@@ -31,9 +31,9 @@
   skinColoration: Hues
 
 - type: species
-  id: GiantArmoredSerpentid
+  id: Serpentid
   name: Serpentid
   roundStart: true
-  prototype: MobGiantArmoredSerpentid
-  dollPrototype: MobGiantArmoredSerpentidDummy
+  prototype: MobSerpentid
+  dollPrototype: MobSerpentidDummy
   skinColoration: Hues

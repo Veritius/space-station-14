@@ -1,7 +1,7 @@
 ﻿- type: entity
   name: Urist McSnake
   parent: MobHumanBase
-  id: MobGiantArmoredSerpentidBase
+  id: MobSerpentidBase
   description: A miserable pile of scales.
   abstract: true
   components:
@@ -98,7 +98,7 @@
       hairAlpha: 0.5
     - type: Damageable
       damageContainer: Biological
-      damageModifierSet: GiantArmoredSerpentid
+      damageModifierSet: Serpentid
     - type: Bloodstream
       bloodReagent: Hemolymph
       bloodlossDamage:
@@ -145,7 +145,7 @@
   save: false
   name: Urist McSnake
   parent: MobHumanDummy
-  id: MobGiantArmoredSerpentidDummy
+  id: MobSerpentidDummy
   noSpawn: true
   description: A dummy GAS meant to be used in character setup.
   components:
