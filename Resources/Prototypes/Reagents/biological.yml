@@ -44,3 +44,4 @@
           damage:
             types:
               Asphyxiation: -0.2
+              Poison: 0.3
