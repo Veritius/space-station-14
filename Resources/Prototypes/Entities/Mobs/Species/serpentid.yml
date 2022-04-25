@@ -121,17 +121,17 @@
           Blunt: 0.0
     - type: Flammable
       fireSpread: true
-      canResistFire: true
+      canResistFire: false
       damage:
         types:
-          Heat: 1 #per second, scales with number of fire 'stacks'
+          Heat: 1.2 #per second, scales with number of fire 'stacks'
     - type: Temperature
       heatDamageThreshold: 800
       currentTemperature: 310.15
       specificHeat: 42
       heatDamage:
         types:
-          Heat: 0.4 #per second, scales with temperature & other constants
+          Heat: 1 #per second, scales with temperature & other constants
     - type: UnarmedCombat
       range: 1.5
       arcwidth: 0
@@ -139,9 +139,9 @@
       damage:
         types:
           Slash: 10
-    - type: MovementSpeedModifier # move 1.1x faster
-      baseWalkSpeed: 3.3
-      baseSprintSpeed: 5.5
+    - type: MovementSpeedModifier # move 1.5x faster (fast snek)
+      baseWalkSpeed: 4.5
+      baseSprintSpeed: 7.5
     - type: LizardAccent
     - type: NoSlip
 

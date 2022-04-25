@@ -118,13 +118,13 @@
 - type: damageModifierSet
   id: Serpentid
   coefficients:
-    Blunt: 0.8
-    Slash: 0.9
-    Piercing: 1.0
-    Shock: 0.6
+    Blunt: 0.5
+    Slash: 0.6
+    Piercing: 0.6
+    Shock: 1.0
     Cold: 1.0
-    Heat: 0.5
-    Poison: 2.5
+    Heat: 1.35
+    Poison: 1.0
     Bloodloss: 1.0
     Asphyxiation: 1.0
 
