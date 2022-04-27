@@ -7,7 +7,7 @@ namespace Content.Server.SerpentidAbilities
     /// <summary>
     ///     Takes care of hunting and manipulation mode for serpentids.
     /// </summary>
-    public sealed class SerpentidAbilitiesSystem : EntitySystem
+    public sealed class HuntingModeSystem : EntitySystem
     {
         [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
