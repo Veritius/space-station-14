@@ -7,7 +7,6 @@ namespace Content.Server.SerpentidAbilities
     ///     Component given to serpentids that represents Hunting and Manipulation modes.
     /// </summary>
     [RegisterComponent]
-    [ComponentProtoName("HuntingMode")]
     public class HuntingModeComponent : Component
     {
         [ViewVariables]
