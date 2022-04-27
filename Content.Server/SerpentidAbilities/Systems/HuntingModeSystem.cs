@@ -2,12 +2,12 @@
 using Content.Server.Popups;
 using Robust.Shared.Player;
 
-namespace Content.Server.HuntingMode
+namespace Content.Server.SerpentidAbilities
 {
     /// <summary>
     ///     Takes care of hunting and manipulation mode for serpentids.
     /// </summary>
-    public sealed class HuntingModeSystem : EntitySystem
+    public sealed class SerpentidAbilitiesSystem : EntitySystem
     {
         [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
@@ -22,12 +22,12 @@ namespace Content.Server.HuntingMode
 
         private void OnGivenComponent(EntityUid uid, HuntingModeComponent component, ComponentInit args)
         {
-            _actionSystem.AddAction(uid, component.Action, null);
+            _actionSystem.AddAction(uid, component.ToggleAction, null);
         }
 
         private void OnRemovedComponent(EntityUid uid, HuntingModeComponent component, ComponentShutdown args)
         {
-            _actionSystem.RemoveAction(uid, component.Action);
+            _actionSystem.RemoveAction(uid, component.ToggleAction);
         }
 
         private void OnPerformHuntingAction(EntityUid uid, HuntingModeComponent component, ToggleHuntingModeEvent args)

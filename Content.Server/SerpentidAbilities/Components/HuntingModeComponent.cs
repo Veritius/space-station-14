@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Actions;
 using Content.Shared.Actions.ActionTypes;
 
-namespace Content.Server.HuntingMode
+namespace Content.Server.SerpentidAbilities
 {
     /// <summary>
     ///     Component given to serpentids that represents Hunting and Manipulation modes.
@@ -13,7 +13,7 @@ namespace Content.Server.HuntingMode
         public bool IsInHuntingMode = false;
 
         [DataField("action")]
-        public InstantAction Action = new()
+        public InstantAction ToggleAction = new()
         {
             Name = "action-name-hunting",
             Description = "action-description-hunting",
