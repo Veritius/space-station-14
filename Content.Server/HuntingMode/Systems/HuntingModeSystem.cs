@@ -1,5 +1,6 @@
 ﻿using Content.Shared.Actions;
 using Content.Server.Popups;
+using Robust.Shared.Player;
 
 namespace Content.Server.HuntingMode
 {
