@@ -1,5 +1,4 @@
-﻿using Content.Server.Objectives.Conditions;
-using Content.Shared.Actions;
+﻿using Content.Shared.Actions;
 using Content.Server.Popups;
 using Robust.Shared.Player;
 
