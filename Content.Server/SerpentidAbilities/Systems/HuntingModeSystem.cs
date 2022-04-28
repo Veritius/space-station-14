@@ -35,12 +35,12 @@ namespace Content.Server.SerpentidAbilities
             if (component.IsInHuntingMode)
             {
                 component.IsInHuntingMode = false;
-                _popupSystem.PopupEntity(Loc.GetString("hunting-to-manipulation-popup"), uid, Filter.Entities(uid));
+                _popupSystem.PopupEntity(Loc.GetString("hunting-to-manipulation-popup"), uid, Filter.Pvs(uid));
             }
             else
             {
                 component.IsInHuntingMode = true;
-                _popupSystem.PopupEntity(Loc.GetString("manipulation-to-hunting-popup"), uid, Filter.Entities(uid));
+                _popupSystem.PopupEntity(Loc.GetString("manipulation-to-hunting-popup"), uid, Filter.Pvs(uid));
             }
         }
     }
