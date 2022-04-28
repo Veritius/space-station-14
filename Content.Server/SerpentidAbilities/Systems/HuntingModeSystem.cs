@@ -1,4 +1,5 @@
-﻿using Content.Shared.Actions;
+﻿using Content.Server.Objectives.Conditions;
+using Content.Shared.Actions;
 using Content.Server.Popups;
 using Robust.Shared.Player;
 
@@ -35,12 +36,12 @@ namespace Content.Server.SerpentidAbilities
             if (component.IsInHuntingMode)
             {
                 component.IsInHuntingMode = false;
-                _popupSystem.PopupEntity(Loc.GetString("hunting-to-manipulation-popup"), uid, Filter.Pvs(uid));
+                _popupSystem.PopupEntity(Loc.GetString("hunting-to-manipulation-popup", ("person", uid)), uid, Filter.Pvs(uid));
             }
             else
             {
                 component.IsInHuntingMode = true;
-                _popupSystem.PopupEntity(Loc.GetString("manipulation-to-hunting-popup"), uid, Filter.Pvs(uid));
+                _popupSystem.PopupEntity(Loc.GetString("manipulation-to-hunting-popup", ("person", uid)), uid, Filter.Pvs(uid));
             }
         }
     }
