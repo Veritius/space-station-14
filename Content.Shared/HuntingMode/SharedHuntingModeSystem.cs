@@ -15,7 +15,6 @@ namespace Content.Shared.HuntingMode
         [Dependency] private readonly SharedHandsSystem _sharedHands = default!;
         [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
 
-
         public override void Initialize()
         {
             base.Initialize();
