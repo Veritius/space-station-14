@@ -1,6 +1,10 @@
 ﻿using Content.Shared.Actions;
+using Content.Shared.Damage.Prototypes;
 using Content.Server.Popups;
+using Content.Server.Weapon.Melee;
+using Content.Server.Weapon.Melee.Components;
 using Robust.Shared.Player;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.SerpentidAbilities
 {
@@ -11,6 +15,7 @@ namespace Content.Server.SerpentidAbilities
     {
         [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
         public override void Initialize()
         {
@@ -18,6 +23,9 @@ namespace Content.Server.SerpentidAbilities
             SubscribeLocalEvent<HuntingModeComponent, ComponentInit>(OnGivenComponent);
             SubscribeLocalEvent<HuntingModeComponent, ComponentShutdown>(OnRemovedComponent);
             SubscribeLocalEvent<HuntingModeComponent, ToggleHuntingModeEvent>(OnPerformHuntingAction);
+
+            SubscribeLocalEvent<UnarmedCombatComponent, MeleeHitEvent>(OnUnarmedHitEvent);
+            SubscribeLocalEvent<MeleeWeaponComponent, MeleeHitEvent>(OnArmedHitEvent);
         }
 
         private void OnGivenComponent(EntityUid uid, HuntingModeComponent component, ComponentInit args)
@@ -32,6 +40,7 @@ namespace Content.Server.SerpentidAbilities
 
         private void OnPerformHuntingAction(EntityUid uid, HuntingModeComponent component, ToggleHuntingModeEvent args)
         {
+
             if (component.IsInHuntingMode)
             {
                 component.IsInHuntingMode = false;
@@ -41,6 +50,36 @@ namespace Content.Server.SerpentidAbilities
             {
                 component.IsInHuntingMode = true;
                 _popupSystem.PopupEntity(Loc.GetString("manipulation-to-hunting-popup", ("person", uid)), uid, Filter.Pvs(uid));
+            }
+        }
+
+        private void OnUnarmedHitEvent(EntityUid weapon, UnarmedCombatComponent component, MeleeHitEvent args)
+        {
+            ApplyModifierSet(args);
+        }
+
+        private void OnArmedHitEvent(EntityUid weapon, MeleeWeaponComponent component, MeleeHitEvent args)
+        {
+            ApplyModifierSet(args);
+        }
+
+        private void ApplyModifierSet(MeleeHitEvent args)
+        {
+            // TODO: This might need caching (as hit events can happen rapidly)
+            EntityManager.TryGetComponent(args.User, out HuntingModeComponent huntcomp);
+            string modifierprototype;
+            if (!huntcomp.IsInHuntingMode)
+            {
+                modifierprototype = huntcomp.ActiveModifier;
+            }
+            else
+            {
+                modifierprototype = huntcomp.PassiveModifier;
+            }
+            _prototypeManager.TryIndex<DamageModifierSetPrototype>(modifierprototype, out var modifier);
+            if (modifier != null)
+            {
+                args.ModifiersList.Add(modifier);
             }
         }
     }

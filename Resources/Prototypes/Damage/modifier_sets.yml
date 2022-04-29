@@ -131,6 +131,17 @@
     Bloodloss: 1.0
     Asphyxiation: 1.0
 
+- type: damageModifierSet
+  id: SerpentidPassiveStance
+  coefficients:
+    Blunt: 0.6
+    Slash: 0.7
+
+- type: damageModifierSet
+  id: SerpentidActiveStance
+  coefficients:
+    Slash: 1.4
+
 # Represents which damage types should be modified
 # in relation to how they cause bloodloss damage.
 - type: damageModifierSet

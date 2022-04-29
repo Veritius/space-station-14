@@ -138,11 +138,13 @@
       arc: claw
       damage:
         types:
-          Slash: 10
+          Slash: 5
     - type: MovementSpeedModifier # move 1.5x faster (fast snek)
       baseWalkSpeed: 4.5
       baseSprintSpeed: 7.5
     - type: HuntingMode
+      passiveModifier: SerpentidPassiveStance
+      activeModifier: SerpentidActiveStance
     - type: LizardAccent
     - type: NoSlip
 
