@@ -20,7 +20,6 @@ namespace Content.Server.HuntingMode
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly SharedHandsSystem _sharedHands = default!;
-        [Dependency] private readonly TagSystem _tagSystem = default!;
 
         public override void Initialize()
         {
