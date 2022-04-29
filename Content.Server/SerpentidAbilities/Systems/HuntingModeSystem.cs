@@ -1,8 +1,10 @@
-﻿using Content.Shared.Actions;
+﻿using Content.Server.Hands.Components;
+using Content.Shared.Actions;
 using Content.Shared.Damage.Prototypes;
 using Content.Server.Popups;
 using Content.Server.Weapon.Melee;
 using Content.Server.Weapon.Melee.Components;
+using Content.Shared.Hands.EntitySystems;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
@@ -16,6 +18,7 @@ namespace Content.Server.SerpentidAbilities
         [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private readonly SharedHandsSystem _sharedHands = default!;
 
         public override void Initialize()
         {
@@ -40,7 +43,14 @@ namespace Content.Server.SerpentidAbilities
 
         private void OnPerformHuntingAction(EntityUid uid, HuntingModeComponent component, ToggleHuntingModeEvent args)
         {
-
+            if (TryComp<HandsComponent>(uid, out var handcomp))
+            {
+                foreach (var hand in handcomp.Hands)
+                {
+                    _sharedHands.TrySetActiveHand(uid, hand.Key);
+                    _sharedHands.TryDrop(uid);
+                }
+            }
             if (component.IsInHuntingMode)
             {
                 component.IsInHuntingMode = false;
