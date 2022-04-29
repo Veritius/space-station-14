@@ -18,8 +18,7 @@ namespace Content.Shared.HuntingMode
 
         private void TryPickupEvent(EntityUid uid, SharedHuntingModeComponent component, PickupAttemptEvent args)
         {
-            EntityManager.TryGetComponent(args.User, out SharedHuntingModeComponent huntcomp);
-            if (huntcomp.IsInHuntingMode && !_tagSystem.HasTag(args.Item, "SerpentidHuntingUsable"))
+            if (component.IsInHuntingMode && !_tagSystem.HasTag(args.Item, "SerpentidHuntingUsable"))
             {
                 _popupSystem.PopupEntity(Loc.GetString("hunting-cannot-pickup", ("item", args.Item)), uid, Filter.Entities(uid));
                 args.Cancel();
