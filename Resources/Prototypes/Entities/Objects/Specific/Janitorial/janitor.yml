@@ -20,7 +20,6 @@
     tags:
       - DroneUsable #No bucket because it holds chems, they can drag the cart or use a drain
       - Mop
-      - SerpentidHuntingUsable
 
 - type: entity
   name: mop bucket

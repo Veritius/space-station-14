@@ -13,8 +13,6 @@
     size: 12
     sprite: Objects/Misc/nukedisk.rsi
     state: icon
-  - type: Tag
-      - SerpentidHuntingUsable
 
 - type: entity
   name: nuclear authentication disk
@@ -31,5 +29,3 @@
     size: 12
     sprite: Objects/Misc/nukedisk.rsi
     state: icon
-  - type: Tag
-      - SerpentidHuntingUsable
