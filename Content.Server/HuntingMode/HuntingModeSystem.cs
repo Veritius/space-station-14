@@ -5,7 +5,6 @@ using Content.Server.Popups;
 using Content.Server.Weapon.Melee;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.HuntingMode;
-using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
