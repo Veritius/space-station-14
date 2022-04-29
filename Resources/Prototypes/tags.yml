@@ -43,6 +43,9 @@
   id: Carpet
 
 - type: Tag
+  id: SerpentidHuntingUsable #can be used by a serpentid in hunting mode
+
+- type: Tag
   id: CanPilot
 
 - type: Tag

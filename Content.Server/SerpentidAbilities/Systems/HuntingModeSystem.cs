@@ -5,6 +5,8 @@ using Content.Server.Popups;
 using Content.Server.Weapon.Melee;
 using Content.Server.Weapon.Melee.Components;
 using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Item;
+using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
@@ -19,6 +21,7 @@ namespace Content.Server.SerpentidAbilities
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly SharedHandsSystem _sharedHands = default!;
+        [Dependency] private readonly TagSystem _tagSystem = default!;
 
         public override void Initialize()
         {
@@ -29,6 +32,8 @@ namespace Content.Server.SerpentidAbilities
 
             SubscribeLocalEvent<UnarmedCombatComponent, MeleeHitEvent>(OnUnarmedHitEvent);
             SubscribeLocalEvent<MeleeWeaponComponent, MeleeHitEvent>(OnArmedHitEvent);
+
+            SubscribeLocalEvent<HandsComponent, PickupAttemptEvent>(TryPickupEvent);
         }
 
         private void OnGivenComponent(EntityUid uid, HuntingModeComponent component, ComponentInit args)
@@ -83,6 +88,17 @@ namespace Content.Server.SerpentidAbilities
             if (modifier != null)
             {
                 args.ModifiersList.Add(modifier);
+            }
+        }
+
+        private void TryPickupEvent(EntityUid uid, HandsComponent component, PickupAttemptEvent args)
+        {
+            EntityManager.TryGetComponent(args.User, out HuntingModeComponent huntcomp);
+            if (huntcomp.IsInHuntingMode && !_tagSystem.HasTag(args.Item, "SerpentidHuntingUsable"))
+            {
+                // TODO: Put this in shared
+                _popupSystem.PopupEntity(Loc.GetString("hunting-cannot-pickup", ("item", args.Item)), uid, Filter.Entities(uid));
+                args.Cancel();
             }
         }
     }
