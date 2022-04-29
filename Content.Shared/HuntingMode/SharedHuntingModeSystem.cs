@@ -12,49 +12,11 @@ namespace Content.Shared.HuntingMode
     {
         [Dependency] private readonly TagSystem _tagSystem = default!;
         [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
-        [Dependency] private readonly SharedHandsSystem _sharedHands = default!;
-        [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
 
         public override void Initialize()
         {
             base.Initialize();
-            SubscribeLocalEvent<SharedHuntingModeComponent, ComponentInit>(OnGivenComponent);
-            SubscribeLocalEvent<SharedHuntingModeComponent, ComponentShutdown>(OnRemovedComponent);
-            SubscribeLocalEvent<SharedHuntingModeComponent, ToggleHuntingModeEvent>(OnPerformHuntingAction);
             SubscribeLocalEvent<SharedHuntingModeComponent, PickupAttemptEvent>(TryPickupEvent);
-        }
-
-        private void OnGivenComponent(EntityUid uid, SharedHuntingModeComponent component, ComponentInit args)
-        {
-            _actionSystem.AddAction(uid, component.ToggleAction, null);
-        }
-
-        private void OnRemovedComponent(EntityUid uid, SharedHuntingModeComponent component, ComponentShutdown args)
-        {
-            _actionSystem.RemoveAction(uid, component.ToggleAction);
-        }
-
-        private void OnPerformHuntingAction(EntityUid uid, SharedHuntingModeComponent component, ToggleHuntingModeEvent args)
-        {
-            if (TryComp<SharedHandsComponent>(uid, out var handcomp))
-            {
-                foreach (var hand in handcomp.Hands)
-                {
-                    _sharedHands.TrySetActiveHand(uid, hand.Key);
-                    _sharedHands.TryDrop(uid);
-                }
-            }
-            if (component.IsInHuntingMode)
-            {
-                component.IsInHuntingMode = false;
-                _popupSystem.PopupEntity(Loc.GetString("hunting-to-manipulation-popup", ("person", uid)), uid, Filter.Pvs(uid));
-            }
-            else
-            {
-                component.IsInHuntingMode = true;
-                _popupSystem.PopupEntity(Loc.GetString("manipulation-to-hunting-popup", ("person", uid)), uid, Filter.Pvs(uid));
-            }
-            component.Dirty();
         }
 
         private void TryPickupEvent(EntityUid uid, SharedHuntingModeComponent component, PickupAttemptEvent args)

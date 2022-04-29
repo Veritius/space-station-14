@@ -26,7 +26,6 @@ namespace Content.Server.HuntingMode
             SubscribeLocalEvent<HuntingModeComponent, ComponentInit>(OnGivenComponent);
             SubscribeLocalEvent<HuntingModeComponent, ComponentShutdown>(OnRemovedComponent);
             SubscribeLocalEvent<HuntingModeComponent, ToggleHuntingModeEvent>(OnPerformHuntingAction);
-
             SubscribeLocalEvent<HuntingModeComponent, MeleeHitEvent>(OnUnarmedHitEvent); }
 
         private void OnGivenComponent(EntityUid uid, HuntingModeComponent component, ComponentInit args)
@@ -59,7 +58,6 @@ namespace Content.Server.HuntingMode
                 component.IsInHuntingMode = true;
                 _popupSystem.PopupEntity(Loc.GetString("manipulation-to-hunting-popup", ("person", uid)), uid, Filter.Pvs(uid));
             }
-            component.Dirty();
         }
 
         private void OnUnarmedHitEvent(EntityUid weapon, HuntingModeComponent component, MeleeHitEvent args)
