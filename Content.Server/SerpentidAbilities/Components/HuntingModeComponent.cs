@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Actions;
 using Content.Shared.Actions.ActionTypes;
-using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.SerpentidAbilities;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Server.SerpentidAbilities
@@ -10,11 +10,8 @@ namespace Content.Server.SerpentidAbilities
     ///     Component given to serpentids that represents Hunting and Manipulation modes.
     /// </summary>
     [RegisterComponent]
-    public class HuntingModeComponent : Component
+    public sealed class HuntingModeComponent : SharedHuntingModeComponent
     {
-        [ViewVariables]
-        public bool IsInHuntingMode = false;
-
         [ViewVariables(VVAccess.ReadWrite)] [DataField("passiveModifier", customTypeSerializer:typeof(PrototypeIdSerializer<DamageModifierSetPrototype>))]
         public string PassiveModifier = "SerpentidPassiveStance";
 

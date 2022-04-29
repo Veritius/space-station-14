@@ -6,6 +6,7 @@ using Content.Server.Weapon.Melee;
 using Content.Server.Weapon.Melee.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Item;
+using Content.Shared.SerpentidAbilities;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -15,7 +16,7 @@ namespace Content.Server.SerpentidAbilities
     /// <summary>
     ///     Takes care of hunting and manipulation mode for serpentids.
     /// </summary>
-    public sealed class HuntingModeSystem : EntitySystem
+    public sealed class HuntingModeSystem : SharedHuntingModeSystem
     {
         [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
@@ -32,8 +33,6 @@ namespace Content.Server.SerpentidAbilities
 
             SubscribeLocalEvent<UnarmedCombatComponent, MeleeHitEvent>(OnUnarmedHitEvent);
             SubscribeLocalEvent<MeleeWeaponComponent, MeleeHitEvent>(OnArmedHitEvent);
-
-            SubscribeLocalEvent<HandsComponent, PickupAttemptEvent>(TryPickupEvent);
         }
 
         private void OnGivenComponent(EntityUid uid, HuntingModeComponent component, ComponentInit args)
@@ -66,6 +65,7 @@ namespace Content.Server.SerpentidAbilities
                 component.IsInHuntingMode = true;
                 _popupSystem.PopupEntity(Loc.GetString("manipulation-to-hunting-popup", ("person", uid)), uid, Filter.Pvs(uid));
             }
+            component.Dirty();
         }
 
         private void OnUnarmedHitEvent(EntityUid weapon, UnarmedCombatComponent component, MeleeHitEvent args)
@@ -88,17 +88,6 @@ namespace Content.Server.SerpentidAbilities
             if (modifier != null)
             {
                 args.ModifiersList.Add(modifier);
-            }
-        }
-
-        private void TryPickupEvent(EntityUid uid, HandsComponent component, PickupAttemptEvent args)
-        {
-            EntityManager.TryGetComponent(args.User, out HuntingModeComponent huntcomp);
-            if (huntcomp.IsInHuntingMode && !_tagSystem.HasTag(args.Item, "SerpentidHuntingUsable"))
-            {
-                // TODO: Put this in shared
-                _popupSystem.PopupEntity(Loc.GetString("hunting-cannot-pickup", ("item", args.Item)), uid, Filter.Entities(uid));
-                args.Cancel();
             }
         }
     }
