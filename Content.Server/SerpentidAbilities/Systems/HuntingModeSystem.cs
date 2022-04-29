@@ -68,14 +68,7 @@ namespace Content.Server.SerpentidAbilities
             // TODO: This might need caching (as hit events can happen rapidly)
             EntityManager.TryGetComponent(args.User, out HuntingModeComponent huntcomp);
             string modifierprototype;
-            if (!huntcomp.IsInHuntingMode)
-            {
-                modifierprototype = huntcomp.ActiveModifier;
-            }
-            else
-            {
-                modifierprototype = huntcomp.PassiveModifier;
-            }
+            modifierprototype = !huntcomp.IsInHuntingMode ? huntcomp.ActiveModifier : huntcomp.PassiveModifier;
             _prototypeManager.TryIndex<DamageModifierSetPrototype>(modifierprototype, out var modifier);
             if (modifier != null)
             {
