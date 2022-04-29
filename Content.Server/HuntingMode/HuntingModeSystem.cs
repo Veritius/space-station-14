@@ -5,13 +5,12 @@ using Content.Server.Popups;
 using Content.Server.Weapon.Melee;
 using Content.Server.Weapon.Melee.Components;
 using Content.Shared.Hands.EntitySystems;
-using Content.Shared.Item;
-using Content.Shared.SerpentidAbilities;
+using Content.Shared.HuntingMode;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.SerpentidAbilities
+namespace Content.Server.HuntingMode
 {
     /// <summary>
     ///     Takes care of hunting and manipulation mode for serpentids.

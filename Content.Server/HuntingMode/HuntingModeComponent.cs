@@ -1,10 +1,10 @@
 ﻿using Content.Shared.Actions;
 using Content.Shared.Actions.ActionTypes;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.SerpentidAbilities;
+using Content.Shared.HuntingMode;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
-namespace Content.Server.SerpentidAbilities
+namespace Content.Server.HuntingMode
 {
     /// <summary>
     ///     Component given to serpentids that represents Hunting and Manipulation modes.

@@ -1,4 +1,4 @@
-﻿namespace Content.Shared.SerpentidAbilities
+﻿namespace Content.Shared.HuntingMode
 {
     public class SharedHuntingModeComponent : Component
     {

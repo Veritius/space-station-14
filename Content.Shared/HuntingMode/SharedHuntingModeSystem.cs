@@ -4,7 +4,7 @@ using Content.Shared.Popups;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 
-namespace Content.Shared.SerpentidAbilities
+namespace Content.Shared.HuntingMode
 {
     public class SharedHuntingModeSystem : EntitySystem
     {
