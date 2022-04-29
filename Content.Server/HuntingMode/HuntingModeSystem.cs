@@ -65,7 +65,7 @@ namespace Content.Server.HuntingMode
         private void OnUnarmedHitEvent(EntityUid weapon, HuntingModeComponent component, MeleeHitEvent args)
         {
             // TODO: This might need caching (as hit events can happen rapidly)
-            string modifierprototype = !component.IsInHuntingMode ? component.ActiveModifier : component.PassiveModifier;
+            var modifierprototype = !component.IsInHuntingMode ? component.ActiveModifier : component.PassiveModifier;
             _prototypeManager.TryIndex<DamageModifierSetPrototype>(modifierprototype, out var modifier);
             if (modifier != null)
             {
