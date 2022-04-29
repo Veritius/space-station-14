@@ -3,7 +3,6 @@ using Content.Shared.Actions;
 using Content.Shared.Damage.Prototypes;
 using Content.Server.Popups;
 using Content.Server.Weapon.Melee;
-using Content.Server.Weapon.Melee.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.HuntingMode;
 using Content.Shared.Tag;
@@ -30,9 +29,7 @@ namespace Content.Server.HuntingMode
             SubscribeLocalEvent<HuntingModeComponent, ComponentShutdown>(OnRemovedComponent);
             SubscribeLocalEvent<HuntingModeComponent, ToggleHuntingModeEvent>(OnPerformHuntingAction);
 
-            SubscribeLocalEvent<UnarmedCombatComponent, MeleeHitEvent>(OnUnarmedHitEvent);
-            SubscribeLocalEvent<MeleeWeaponComponent, MeleeHitEvent>(OnArmedHitEvent);
-        }
+            SubscribeLocalEvent<HuntingModeComponent, MeleeHitEvent>(OnUnarmedHitEvent); }
 
         private void OnGivenComponent(EntityUid uid, HuntingModeComponent component, ComponentInit args)
         {
@@ -67,22 +64,10 @@ namespace Content.Server.HuntingMode
             component.Dirty();
         }
 
-        private void OnUnarmedHitEvent(EntityUid weapon, UnarmedCombatComponent component, MeleeHitEvent args)
-        {
-            ApplyModifierSet(args);
-        }
-
-        private void OnArmedHitEvent(EntityUid weapon, MeleeWeaponComponent component, MeleeHitEvent args)
-        {
-            ApplyModifierSet(args);
-        }
-
-        private void ApplyModifierSet(MeleeHitEvent args)
+        private void OnUnarmedHitEvent(EntityUid weapon, HuntingModeComponent component, MeleeHitEvent args)
         {
             // TODO: This might need caching (as hit events can happen rapidly)
-            EntityManager.TryGetComponent(args.User, out HuntingModeComponent huntcomp);
-            string modifierprototype;
-            modifierprototype = !huntcomp.IsInHuntingMode ? huntcomp.ActiveModifier : huntcomp.PassiveModifier;
+            string modifierprototype = !component.IsInHuntingMode ? component.ActiveModifier : component.PassiveModifier;
             _prototypeManager.TryIndex<DamageModifierSetPrototype>(modifierprototype, out var modifier);
             if (modifier != null)
             {
