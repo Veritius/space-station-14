@@ -17,16 +17,5 @@ namespace Content.Server.HuntingMode
 
         [ViewVariables(VVAccess.ReadWrite)] [DataField("activeModifier", customTypeSerializer:typeof(PrototypeIdSerializer<DamageModifierSetPrototype>))]
         public string ActiveModifier = "SerpentidActiveStance";
-
-        public InstantAction ToggleAction = new()
-        {
-            Name = "action-name-hunting",
-            Description = "action-description-hunting",
-            UseDelay = TimeSpan.FromSeconds(2),
-            CheckCanInteract = true,
-            Event = new ToggleHuntingModeEvent()
-        };
     }
-
-    public sealed class ToggleHuntingModeEvent : InstantActionEvent { };
 }
