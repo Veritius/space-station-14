@@ -1,6 +1,4 @@
-﻿using Content.Shared.Actions;
-using Content.Shared.Actions.ActionTypes;
-using Content.Shared.Damage.Prototypes;
+﻿using Content.Shared.Damage.Prototypes;
 using Content.Shared.HuntingMode;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 

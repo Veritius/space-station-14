@@ -1,7 +1,4 @@
-﻿using Content.Shared.Actions;
-using Content.Shared.Hands.Components;
-using Content.Shared.Hands.EntitySystems;
-using Content.Shared.Item;
+﻿using Content.Shared.Item;
 using Content.Shared.Popups;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
