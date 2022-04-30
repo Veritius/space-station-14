@@ -4,9 +4,6 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Server.HuntingMode
 {
-    /// <summary>
-    ///     Component given to serpentids that represents Hunting and Manipulation modes.
-    /// </summary>
     [RegisterComponent]
     public sealed class HuntingModeComponent : SharedHuntingModeComponent
     {

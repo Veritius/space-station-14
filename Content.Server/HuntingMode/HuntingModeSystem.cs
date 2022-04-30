@@ -10,9 +10,6 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server.HuntingMode
 {
-    /// <summary>
-    ///     Takes care of hunting and manipulation mode for serpentids.
-    /// </summary>
     public sealed class HuntingModeSystem : SharedHuntingModeSystem
     {
         [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
