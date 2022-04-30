@@ -3,7 +3,7 @@ using Content.Shared.Actions.ActionTypes;
 
 namespace Content.Shared.HuntingMode
 {
-    public class SharedHuntingModeComponent : Component
+    public abstract class SharedHuntingModeComponent : Component
     {
         [ViewVariables]
         public bool IsInHuntingMode = false;

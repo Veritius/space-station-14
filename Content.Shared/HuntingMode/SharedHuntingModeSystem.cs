@@ -5,7 +5,7 @@ using Robust.Shared.Player;
 
 namespace Content.Shared.HuntingMode
 {
-    public class SharedHuntingModeSystem : EntitySystem
+    public abstract class SharedHuntingModeSystem : EntitySystem
     {
         [Dependency] private readonly TagSystem _tagSystem = default!;
         [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
