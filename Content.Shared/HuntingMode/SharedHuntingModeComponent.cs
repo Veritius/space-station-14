@@ -3,7 +3,6 @@ using Content.Shared.Actions.ActionTypes;
 
 namespace Content.Shared.HuntingMode
 {
-    [RegisterComponent]
     public abstract class SharedHuntingModeComponent : Component
     {
         [ViewVariables]
