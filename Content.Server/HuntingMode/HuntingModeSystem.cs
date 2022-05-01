@@ -1,11 +1,9 @@
-﻿using Content.Server.Hands.Components;
-using Content.Shared.Actions;
+﻿using Content.Shared.Actions;
 using Content.Shared.Damage.Prototypes;
 using Content.Server.Popups;
 using Content.Server.Weapon.Melee;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.HuntingMode;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.HuntingMode
