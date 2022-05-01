@@ -23,7 +23,8 @@ namespace Content.Server.HuntingMode
             SubscribeLocalEvent<HuntingModeComponent, ComponentInit>(OnGivenComponent);
             SubscribeLocalEvent<HuntingModeComponent, ComponentShutdown>(OnRemovedComponent);
             SubscribeLocalEvent<HuntingModeComponent, ToggleHuntingModeEvent>(OnPerformHuntingAction);
-            SubscribeLocalEvent<HuntingModeComponent, MeleeHitEvent>(OnUnarmedHitEvent); }
+            SubscribeLocalEvent<HuntingModeComponent, MeleeHitEvent>(OnUnarmedHitEvent);
+        }
 
         private void OnGivenComponent(EntityUid uid, HuntingModeComponent component, ComponentInit args)
         {
