@@ -20,45 +20,10 @@ namespace Content.Server.HuntingMode
         public override void Initialize()
         {
             base.Initialize();
-            SubscribeLocalEvent<HuntingModeComponent, ComponentInit>(OnGivenComponent);
-            SubscribeLocalEvent<HuntingModeComponent, ComponentShutdown>(OnRemovedComponent);
-            SubscribeLocalEvent<HuntingModeComponent, ToggleHuntingModeEvent>(OnPerformHuntingAction);
-            SubscribeLocalEvent<HuntingModeComponent, MeleeHitEvent>(OnUnarmedHitEvent);
+            SubscribeLocalEvent<SharedHuntingModeComponent, MeleeHitEvent>(OnUnarmedHitEvent);
         }
 
-        private void OnGivenComponent(EntityUid uid, HuntingModeComponent component, ComponentInit args)
-        {
-            _actionSystem.AddAction(uid, component.ToggleAction, null);
-        }
-
-        private void OnRemovedComponent(EntityUid uid, HuntingModeComponent component, ComponentShutdown args)
-        {
-            _actionSystem.RemoveAction(uid, component.ToggleAction);
-        }
-
-        private void OnPerformHuntingAction(EntityUid uid, HuntingModeComponent component, ToggleHuntingModeEvent args)
-        {
-            if (TryComp<HandsComponent>(uid, out var handcomp))
-            {
-                foreach (var hand in handcomp.Hands)
-                {
-                    _sharedHands.TrySetActiveHand(uid, hand.Key);
-                    _sharedHands.TryDrop(uid);
-                }
-            }
-            if (component.IsInHuntingMode)
-            {
-                component.IsInHuntingMode = false;
-                _popupSystem.PopupEntity(Loc.GetString("hunting-to-manipulation-popup", ("person", uid)), uid, Filter.Pvs(uid));
-            }
-            else
-            {
-                component.IsInHuntingMode = true;
-                _popupSystem.PopupEntity(Loc.GetString("manipulation-to-hunting-popup", ("person", uid)), uid, Filter.Pvs(uid));
-            }
-        }
-
-        private void OnUnarmedHitEvent(EntityUid weapon, HuntingModeComponent component, MeleeHitEvent args)
+        private void OnUnarmedHitEvent(EntityUid weapon, SharedHuntingModeComponent component, MeleeHitEvent args)
         {
             // TODO: This might need caching (as hit events can happen rapidly)
             var modifierprototype = !component.IsInHuntingMode ? component.ActiveModifier : component.PassiveModifier;
