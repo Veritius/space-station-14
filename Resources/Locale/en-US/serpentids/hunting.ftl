@@ -3,4 +3,4 @@ action-description-hunting = Toggles between Hunting (for brute force) and Manip
 hunting-to-manipulation-popup = {CAPITALIZE($person)} lowers their hunting arms.
 manipulation-to-hunting-popup = {CAPITALIZE($person)} raises their hunting arms.
 
-hunting-cannot-pickup = Your hunting arms prevent you from picking up the {THE($item)}
+hunting-cannot-pickup = Your hunting arms prevent you from picking up {THE($item)}
