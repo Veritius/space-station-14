@@ -1,8 +1,5 @@
-﻿using Content.Shared.Actions;
-using Content.Shared.Damage.Prototypes;
-using Content.Server.Popups;
+﻿using Content.Shared.Damage.Prototypes;
 using Content.Server.Weapon.Melee;
-using Content.Shared.Hands.EntitySystems;
 using Content.Shared.HuntingMode;
 using Robust.Shared.Prototypes;
 
@@ -10,10 +7,7 @@ namespace Content.Server.HuntingMode
 {
     public sealed class HuntingModeSystem : SharedHuntingModeSystem
     {
-        [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
-        [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly SharedHandsSystem _sharedHands = default!;
 
         public override void Initialize()
         {

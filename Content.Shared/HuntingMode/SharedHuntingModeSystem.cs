@@ -5,7 +5,6 @@ using Content.Shared.Item;
 using Content.Shared.Popups;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared.HuntingMode
 {
@@ -14,7 +13,6 @@ namespace Content.Shared.HuntingMode
         [Dependency] private readonly TagSystem _tagSystem = default!;
         [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
         [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly SharedHandsSystem _sharedHands = default!;
 
         public override void Initialize()
