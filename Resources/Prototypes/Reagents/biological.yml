@@ -34,7 +34,7 @@
   name: hemolymph
   group: Biological
   desc: This is not ketchup.
-  color: "#c1059d"
+  color: "#525252"
   physicalDesc: viscous
   metabolisms:
     Medicine:
