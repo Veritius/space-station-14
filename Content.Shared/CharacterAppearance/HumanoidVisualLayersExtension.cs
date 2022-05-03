@@ -15,6 +15,7 @@ namespace Content.Shared.CharacterAppearance
                     yield break;
                 case BodyPartType.Torso:
                     yield return HumanoidVisualLayers.Chest;
+                    yield return HumanoidVisualLayers.Groin;
                     break;
                 case BodyPartType.Tail:
                     yield return HumanoidVisualLayers.TailFront;

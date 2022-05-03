@@ -9,6 +9,7 @@ namespace Content.Shared.CharacterAppearance
         Hair,
         FacialHair,
         Chest,
+        Groin,
         Head,
         Snout,
         Frills,
