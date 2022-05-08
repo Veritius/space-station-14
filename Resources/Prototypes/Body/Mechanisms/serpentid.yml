@@ -1,0 +1,156 @@
+- type: entity
+  id: BaseSerpentidOrgan
+  parent: BaseItem
+  abstract: true
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Mobs/Species/Human/organs.rsi
+    - type: Mechanism
+    - type: Food
+    - type: Extractable
+      grindableSolutionName: organ
+    - type: SolutionContainerManager
+      solutions:
+        organ:
+          reagents:
+            - ReagentId: Nutriment
+              Quantity: 10
+
+- type: entity
+  id: OrganSerpentidBrain
+  parent: BaseSerpentidOrgan
+  name: distributed nervous system
+  description: "The source of incredible, unending intelligence. Honk."
+  components:
+    - type: Sprite
+      state: brain
+    - type: Mechanism
+      size: 1
+      compatibility: Biological
+    - type: Input
+      context: "ghost"
+    - type: DummyInputMover
+    - type: GhostOnMove
+    - type: Brain
+
+- type: entity
+  id: OrganSerpentidEyes
+  parent: BaseSerpentidOrgan
+  name: compound eyes
+  description: "I see you!"
+  components:
+    - type: Sprite
+      layers:
+        - state: eyeball-l
+        - state: eyeball-r
+    - type: Mechanism
+      size: 1
+      compatibility: Biological
+
+- type: entity
+  id: OrganSerpentidLungs
+  parent: BaseSerpentidOrgan
+  name: tracheae
+  description: "Filters oxygen from an atmosphere, which is then sent into the bloodstream to be used as an electron carrier."
+  components:
+    - type: Sprite
+      layers:
+        - state: lung-l
+        - state: lung-r
+    - type: Mechanism
+      size: 1
+      compatibility: Biological
+    - type: Lung
+    - type: Metabolizer
+      removeEmpty: true
+      solutionOnBody: false
+      solution: "Lung"
+      metabolizerTypes: [Serpentid]
+      groups:
+        - id: Gas
+          rateModifier: 100.0
+
+- type: entity
+  id: OrganSerpentidHeart
+  parent: BaseSerpentidOrgan
+  name: serpentid heart
+  description: "I feel bad for the heartless bastard who lost this."
+  components:
+    - type: Sprite
+      state: heart-on
+    - type: Mechanism
+      size: 1
+      compatibility: Biological
+    # The heart 'metabolizes' medicines and poisons that aren't filtered out by other organs.
+    # This is done because these chemicals need to have some effect even if they aren't being filtered out of your body.
+    # You're technically 'immune to poison' without a heart, but.. uhh, you'll have bigger problems on your hands.
+    - type: Metabolizer
+      maxReagents: 2
+      metabolizerTypes: [Serpentid]
+      groups:
+        - id: Medicine
+        - id: Poison
+        - id: Narcotic
+
+- type: entity
+  id: OrganSerpentidStomach
+  parent: BaseSerpentidOrgan
+  name: stomach
+  description: "Gross. This is hard to stomach."
+  components:
+    - type: Sprite
+      state: stomach
+    - type: Mechanism
+      size: 1
+      compatibility: Biological
+    - type: SolutionContainerManager
+      solutions:
+        stomach:
+          maxVol: 250
+    - type: Stomach
+      maxVolume: 250
+      digestionDelay: 20
+    # The stomach metabolizes stuff like foods and drinks.
+    # TODO: Have it work off of the ent's solution container, and move this
+    # to intestines instead.
+    - type: Metabolizer
+      # mm yummy
+      maxReagents: 3
+      metabolizerTypes: [Serpentid]
+      groups:
+        - id: Food
+        - id: Drink
+
+- type: entity
+  id: OrganSerpentidToxinFilter
+  parent: BaseSerpentidOrgan
+  name: serpentid toxin filter
+  components:
+    - type: Sprite
+      state: liver
+    - type: Mechanism
+      size: 1
+      compatibility: Biological
+    - type: Metabolizer # The liver metabolizes certain chemicals only, like alcohol.
+      maxReagents: 5
+      metabolizerTypes: [Serpentid]
+      groups:
+        - id: Alcohol
+          rateModifier: 0.1 # removes alcohol very slowly along with the stomach removing it as a drink
+
+- type: entity
+  id: OrganSerpentidPlasmaStorage
+  parent: BaseSerpentidOrgan
+  name: serpentid plasma sac
+  description: "A sac for storing plasma, useful in a serpentid's metabolism."
+  components:
+    - type: Sprite
+      state: liver
+    - type: Mechanism
+      size: 2
+      compatibility: Biological
+    - type: SolutionContainerManager
+      solutions:
+        plasmasac:
+          maxVol: 100

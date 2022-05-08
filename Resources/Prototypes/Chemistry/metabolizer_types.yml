@@ -13,3 +13,5 @@
 - type: metabolizerType
   id: Vox
 
+- type: metabolizerType
+  id: Serpentid

@@ -11,7 +11,7 @@
 
 - type: entity
   id: TorsoSerpentid
-  name: "serpentid torso"
+  name: "serpentid thorax"
   parent: PartSerpentid
   components:
   - type: Sprite
@@ -25,12 +25,12 @@
     partType: Torso
     size: 14
     compatibility: Biological
+    vital: true
     mechanisms:
-    - OrganHumanHeart
-    - OrganHumanLungs
-    - OrganHumanStomach
-    - OrganHumanLiver
-    - OrganHumanKidneys
+    - OrganSerpentidHeart
+    - OrganSerpentidBrain
+    - OrganSerpentidLungs # TODO: This should be in the abdomen
+    - OrganSerpentidPlasmaStorage
 #    criticalThreshold: 100
 #    deadThreshold: 150
 
@@ -50,10 +50,8 @@
     partType: Head
     size: 7
     compatibility: Biological
-    vital: true
     mechanisms:
-    - OrganHumanBrain
-    - OrganHumanEyes
+    - OrganSerpentidEyes
 #    criticalThreshold: 50
 #    deadThreshold: 120
   - type: Input

@@ -17,6 +17,12 @@
         conditions:
         - !type:OrganType
           type: Animal
+      - !type:AdjustReagent
+        reagent: Acetone
+        amount: 1
+        conditions:
+          - !type:OrganType
+            type: Serpentid
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
