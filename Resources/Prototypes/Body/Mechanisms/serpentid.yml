@@ -66,7 +66,30 @@
       removeEmpty: true
       solutionOnBody: false
       solution: "Lung"
-      metabolizerTypes: [Serpentid]
+      metabolizerTypes: [SerpentidAcetoneReaction]
+      groups:
+        - id: Gas
+          rateModifier: 100.0
+
+- type: entity
+  id: OrganSerpentidAcetoneReactor
+  parent: BaseSerpentidOrgan
+  name: acetone reactor
+  description: "Turns atmospheric oxygen into acetone. An important part of a balanced homeostasis!"
+  components:
+    - type: Sprite
+      layers:
+        - state: lung-l
+        - state: lung-r
+    - type: Mechanism
+      size: 1
+      compatibility: Biological
+    - type: Lung
+    - type: Metabolizer
+      removeEmpty: true
+      solutionOnBody: false
+      solution: "Lung"
+      metabolizerTypes: [SerpentidAcetoneReaction]
       groups:
         - id: Gas
           rateModifier: 100.0
@@ -143,14 +166,12 @@
   id: OrganSerpentidPlasmaStorage
   parent: BaseSerpentidOrgan
   name: serpentid plasma sac
-  description: "A sac for storing plasma, useful in a serpentid's metabolism."
+  description: "A sac for storing plasma, harvested from a serpentid."
   components:
     - type: Sprite
       state: liver
     - type: Mechanism
       size: 2
       compatibility: Biological
-    - type: SolutionContainerManager
-      solutions:
-        plasmasac:
-          maxVol: 100
+    # Doesn't actually store anything
+    # Maybe it can be ground down into plasma?

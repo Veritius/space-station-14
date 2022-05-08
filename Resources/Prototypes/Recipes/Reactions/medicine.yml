@@ -109,6 +109,17 @@
     Dexalin: 3
 
 - type: reaction
+  id: Dexalin
+  reactants:
+    Acetone:
+      amount: 2
+    Plasma:
+      amount: 0.1 # icky :(
+      catalyst: true
+  products:
+    Dexalin: 1
+
+- type: reaction
   id: DexalinPlus
   reactants:
     Dexalin:

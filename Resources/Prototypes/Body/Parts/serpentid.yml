@@ -30,6 +30,7 @@
     - OrganSerpentidHeart
     - OrganSerpentidBrain
     - OrganSerpentidLungs # TODO: This should be in the abdomen
+    - OrganSerpentidAcetoneReactor # TODO: This should also be in the abdomen
     - OrganSerpentidPlasmaStorage
 #    criticalThreshold: 100
 #    deadThreshold: 150

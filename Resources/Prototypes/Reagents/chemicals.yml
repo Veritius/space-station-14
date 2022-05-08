@@ -6,6 +6,15 @@
   color: "#AF14B7"
   boilingPoint: 55.5
   meltingPoint: -50.0
+  metabolisms:
+    Medicine:
+      effects:
+        - !type:AdjustReagent
+          reagent: Dexalin
+          amount: 1
+          conditions:
+            - !type:OrganType
+              type: Serpentid
 
 - type: reagent
   id: Phenol
