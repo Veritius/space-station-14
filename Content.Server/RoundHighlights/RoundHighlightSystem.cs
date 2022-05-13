@@ -11,7 +11,6 @@ namespace Content.Server.RoundHighlight
     /// </summary>
     public sealed class RoundSummarySystem : EntitySystem
     {
-        [Dependency] private readonly IEntityManager _entityManager = default!;
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
 
         public int ClownsBrutalisedCounter; // Goes up when a clown is hit
