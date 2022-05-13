@@ -36,8 +36,15 @@ namespace Content.Server.RoundHighlight
         private void OnRoundEnd(RoundEndTextAppendEvent args)
         {
             if (!_configurationManager.GetCVar(CCVars.RoundHighlights)) return;
-            args.AddLine(Loc.GetString("round-highlight-clowns-brutalised", ("count", ClownsBrutalisedCounter)));
-            args.AddLine(Loc.GetString("round-highlight-security-disarms", ("count", SecurityDisarmedCounter)));
+            // TODO: There's definitely a better way to do this
+            if(ClownsBrutalisedCounter >= 1)
+            {
+                args.AddLine(Loc.GetString("round-highlight-clowns-brutalised", ("count", ClownsBrutalisedCounter)));
+            }
+            if(SecurityDisarmedCounter >= 1)
+            {
+                args.AddLine(Loc.GetString("round-highlight-security-disarms", ("count", SecurityDisarmedCounter)));
+            }
         }
 
         private void OnMeleeHit(EntityUid uid, RoundHighlightTrackerComponent component, MeleeHitEvent args)
