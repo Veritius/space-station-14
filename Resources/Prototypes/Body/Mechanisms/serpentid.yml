@@ -69,7 +69,7 @@
       metabolizerTypes: [SerpentidAcetoneReaction]
       groups:
         - id: Gas
-          rateModifier: 100.0
+          rateModifier: 60.0
 
 - type: entity
   id: OrganSerpentidAcetoneReactor
