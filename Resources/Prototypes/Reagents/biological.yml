@@ -31,11 +31,11 @@
 
 - type: reagent
   id: Hemolymph
-  name: hemolymph
+  name: reagent-name-hemolymph
   group: Biological
-  desc: This is not ketchup.
+  desc: reagent-desc-hemolymph
   color: "#525252"
-  physicalDesc: viscous
+  physicalDesc: reagent-physical-desc-viscous
   metabolisms:
     Medicine:
       # Oxygenated!

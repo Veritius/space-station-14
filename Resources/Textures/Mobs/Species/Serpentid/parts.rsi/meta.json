@@ -62,6 +62,10 @@
     {
       "name": "head_m",
       "directions": 4
+    },
+    {
+      "name": "full",
+      "directions": 4
     }
   ]
 }

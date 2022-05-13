@@ -19,16 +19,14 @@
           type: Animal
       - !type:Oxygenate
         conditions:
-          - !type:OrganType
-            type: Serpentid
-      - !type:ModifyLungGas
-        conditions:
         - !type:OrganType
-          type: SerpentidAcetoneReaction
-        ratios:
-          Acetone: 1.0
-          Oxygen: -1.0
-
+          type: Serpentid
+      - !type:AdjustReagent
+        conditions:
+          - !type:OrganType
+            type: SerpentidAcetoneReaction
+        reagent: Acetone
+        amount: 1.0
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
