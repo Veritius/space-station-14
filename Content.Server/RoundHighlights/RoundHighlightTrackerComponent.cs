@@ -7,7 +7,7 @@ namespace Content.Server.RoundHighlight
     public sealed class RoundHighlightTrackerComponent : Component
     {
         /// <summary>
-        /// What stats should be altered when the owner is beaten.
+        /// Defines what stats should be tracked
         /// </summary>
         [DataField("tags")]
         public List<string> OwnerTags = new();
