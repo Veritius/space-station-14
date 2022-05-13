@@ -43,7 +43,7 @@
 
 - type: species
   id: Serpentid
-  name: Serpentid
+  name: species-name-serpentid
   roundStart: true
   prototype: MobSerpentid
   dollPrototype: MobSerpentidDummy
