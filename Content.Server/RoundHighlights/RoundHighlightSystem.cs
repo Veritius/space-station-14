@@ -13,6 +13,7 @@ namespace Content.Server.RoundHighlight
     public sealed class RoundSummarySystem : EntitySystem
     {
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
+        [Dependency] private readonly EntityManager _entityManager = default!;
 
         public int ClownsBrutalisedCounter; // Goes up when a clown is hit
         // TODO: This may not make sense in future when/if disarms get reworked
@@ -23,7 +24,7 @@ namespace Content.Server.RoundHighlight
             base.Initialize();
             SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
             SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEnd);
-            SubscribeLocalEvent<RoundHighlightTrackerComponent, MeleeHitEvent>(OnMeleeHit);
+            SubscribeLocalEvent<RoundHighlightTrackerComponent, MeleeInteractEvent>(OnMeleeInteract);
             SubscribeLocalEvent<RoundHighlightTrackerComponent, DisarmedEvent>(OnDisarm);
         }
 
@@ -47,9 +48,10 @@ namespace Content.Server.RoundHighlight
             }
         }
 
-        private void OnMeleeHit(EntityUid uid, RoundHighlightTrackerComponent component, MeleeHitEvent args)
+        private void OnMeleeInteract(EntityUid uid, RoundHighlightTrackerComponent component, MeleeInteractEvent args)
         {
-            if (component.OwnerTags.Contains("clown"))
+            _entityManager.TryGetComponent<RoundHighlightTrackerComponent>(args.Entity, out var interactVictim);
+            if (interactVictim.OwnerTags.Contains("clown"))
             {
                 ClownsBrutalisedCounter += 1;
             }
