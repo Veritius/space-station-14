@@ -31,10 +31,8 @@ namespace Content.Server.RoundHighlight
 
         private void OnRoundEnd(RoundEndTextAppendEvent args)
         {
-            if (_configurationManager.GetCVar(CCVars.RoundHighlights))
-            {
-                args.AddLine(Loc.GetString("round-summary-clowns-brutalised", ("count", ClownsBrutalisedCounter)));
-            }
+            if (!_configurationManager.GetCVar(CCVars.RoundHighlights)) return;
+            args.AddLine(Loc.GetString("round-highlight-clowns-brutalised", ("count", ClownsBrutalisedCounter)));
         }
 
         private void OnMeleeHit(EntityUid uid, RoundHighlightTrackerComponent component, MeleeHitEvent args)
