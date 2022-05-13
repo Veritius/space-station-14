@@ -119,14 +119,18 @@ namespace Content.Client.RoundEnd
                     else
                     {
                         //TODO: On Hover display a popup detailing more play info.
-                        //For example: their antag goals and if they completed them sucessfully.
+                        //For example: their antag goals and if they completed them successfully.
                         var icNameColor = playerInfo.Antag ? "red" : "white";
+                        var deadColor = playerInfo.Alive ? "green" : "red";
+                        var dead = playerInfo.Alive ? "survived until the end" : "died before the end";
                         playerInfoText.SetMarkup(
                             Loc.GetString("round-end-summary-window-player-info-if-not-observer-text",
                                 ("playerOOCName", playerInfo.PlayerOOCName),
                                 ("icNameColor", icNameColor),
                                 ("playerICName", playerInfo.PlayerICName),
-                                ("playerRole", Loc.GetString(playerInfo.Role))));
+                                ("playerRole", Loc.GetString(playerInfo.Role)),
+                                ("deadColor", deadColor),
+                                ("dead", dead)));
                     }
                 }
                 playerInfoContainer.AddChild(playerInfoText);

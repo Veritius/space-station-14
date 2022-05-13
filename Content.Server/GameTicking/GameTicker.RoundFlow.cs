@@ -318,7 +318,8 @@ namespace Content.Server.GameTicking
                             : mind.AllRoles.FirstOrDefault()?.Name ?? Loc.GetString("game-ticker-unknown-role"),
                         Antag = antag,
                         Observer = observer,
-                        Connected = connected
+                        Connected = connected,
+                        Alive = mind.CharacterDeadIC
                     };
                     listOfPlayerInfo.Add(playerEndRoundInfo);
                 }

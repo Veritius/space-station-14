@@ -176,6 +176,12 @@ namespace Content.Shared.CCVar
             CVarDef.Create("game.station_rotation", true);
 
         /// <summary>
+        /// Enable round highlights (displayed at round summary)
+        /// </summary>
+        public static readonly CVarDef<bool> RoundHighlights =
+            CVarDef.Create("game.round_highlights", true, CVar.ARCHIVE | CVar.SERVERONLY);
+
+        /// <summary>
         ///     When enabled, guests will be assigned permanent UIDs and will have their preferences stored.
         /// </summary>
         public static readonly CVarDef<bool> GamePersistGuests =
