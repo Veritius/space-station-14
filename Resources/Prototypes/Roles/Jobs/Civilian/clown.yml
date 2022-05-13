@@ -19,7 +19,7 @@
           Piercing: 4
         groups:
           Burn: 3
-    - type: BeatingTracker
+    - type: RoundHighlightTracker
       tags:
         - clown
 

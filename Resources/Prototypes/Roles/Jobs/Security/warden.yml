@@ -13,6 +13,12 @@
   - Maintenance
   - Service
   - Brig
+  special:
+    - !type:AddComponentSpecial
+      components:
+        - type: RoundHighlightTracker
+          tags:
+            - security
 
 - type: startingGear
   id: WardenGear

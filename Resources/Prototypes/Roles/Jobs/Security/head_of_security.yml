@@ -18,6 +18,12 @@
   - Armory
   - Maintenance
   - Service
+  special:
+    - !type:AddComponentSpecial
+      components:
+        - type: RoundHighlightTracker
+          tags:
+            - security
 
 - type: startingGear
   id: HoSGear
