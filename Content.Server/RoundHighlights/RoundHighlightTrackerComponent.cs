@@ -1,7 +1,7 @@
 namespace Content.Server.RoundHighlight
 {
     /// <summary>
-    /// A tag-component for RoundSummarySystem.
+    /// A tag-component for RoundHighlightSystem.
     /// </summary>
     [RegisterComponent]
     public sealed class RoundHighlightTrackerComponent : Component
