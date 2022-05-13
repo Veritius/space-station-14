@@ -21,7 +21,7 @@ namespace Content.Server.RoundHighlight
             base.Initialize();
             SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
             SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEnd);
-            SubscribeLocalEvent<BeatingTrackerComponent, MeleeHitEvent>(OnMeleeHit);
+            SubscribeLocalEvent<RoundHighlightTrackerComponent, MeleeHitEvent>(OnMeleeHit);
         }
 
         private void Reset(RoundRestartCleanupEvent args)
@@ -37,7 +37,7 @@ namespace Content.Server.RoundHighlight
             }
         }
 
-        private void OnMeleeHit(EntityUid uid, BeatingTrackerComponent component, MeleeHitEvent args)
+        private void OnMeleeHit(EntityUid uid, RoundHighlightTrackerComponent component, MeleeHitEvent args)
         {
             if (component.OwnerTags.Contains("clown"))
             {
