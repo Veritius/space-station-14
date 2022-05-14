@@ -26,7 +26,7 @@ namespace Content.Server.RoundHighlight
             base.Initialize();
             SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
             SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEnd);
-            SubscribeAllEvent<MeleeHitEvent>(OnMeleeHit);
+            SubscribeLocalEvent<MeleeHitEvent>(OnMeleeHit);
             SubscribeLocalEvent<RoundHighlightTrackerComponent, DisarmedEvent>(OnDisarm);
         }
 
