@@ -6,3 +6,7 @@ round-highlight-security-disarms = Security officers were disarmed [color=green]
 [1] time
 *[2] times
 }.
+round-highlight-security-harmbaton = Security officers used harmbatons [color=green]{$count}[/color] { $count ->
+[1] time
+*[2] times
+}.

@@ -27,6 +27,9 @@
     size: 20
     Slots:
     - Belt
+  - type: RoundHighlightTracker
+    tags:
+      - stunbaton
 
 - type: entity
   name: flash
