@@ -33,7 +33,6 @@ namespace Content.Server.RoundHighlight
         private void Reset(RoundRestartCleanupEvent args)
         {
             ClownsBrutalisedCounter = 0;
-            ClownsBrutalisedCounter = 0;
             SecurityDisarmedCounter = 0;
             SecurityHarmbatonCounter = 0;
         }
@@ -61,7 +60,8 @@ namespace Content.Server.RoundHighlight
 
         private void OnMeleeHit(MeleeHitEvent args)
         {
-            _entityManager.TryGetComponent<RoundHighlightTrackerComponent>(args.User, out var userComp);
+            _entityManager.TryGetComponent<RoundHighlightTrackerComponent>(args.User, out var weaponComp);
+            _entityManager.TryGetComponent<RoundHighlightTrackerComponent>(weaponComp.Owner, out var wielderComp);
             foreach (var entity in args.HitEntities)
             {
                 _entityManager.TryGetComponent<RoundHighlightTrackerComponent>(entity, out var victimComp);
@@ -73,10 +73,10 @@ namespace Content.Server.RoundHighlight
                 }
 
                 // Track security harmbaton-ings
-                if (userComp.OwnerTags.Contains("stunbaton"))
+                if (weaponComp.OwnerTags.Contains("stunbaton"))
                 {
-                    _entityManager.TryGetComponent<StunbatonComponent>(userComp.Owner, out var batonComponent);
-                    if (!batonComponent.Activated)
+                    _entityManager.TryGetComponent<StunbatonComponent>(weaponComp.Owner, out var batonComponent);
+                    if (!batonComponent.Activated && wielderComp.OwnerTags.Contains("security"))
                     {
                         SecurityHarmbatonCounter += 1;
                     }
