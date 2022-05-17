@@ -93,6 +93,7 @@
       groups:
         - id: Gas
           rateModifier: 100.0
+        - id: Medicine #For the Acetone>Dexalin reaction
 
 - type: entity
   id: OrganSerpentidHeart

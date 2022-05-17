@@ -10,11 +10,11 @@
     Medicine:
       effects:
         - !type:AdjustReagent
-          reagent: Dexalin
-          amount: 1
           conditions:
             - !type:OrganType
               type: Serpentid
+          reagent: Dexalin
+          amount: 1
 
 - type: reagent
   id: Phenol
