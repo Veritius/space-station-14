@@ -5,6 +5,8 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable  
   - type: Sprite
     netsync: false
   - type: Icon
@@ -46,6 +48,8 @@
   id: SmgAtreides
   description: Pla-ket-ket-ket-ket!
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/atreides.rsi
     layers:
@@ -87,6 +91,8 @@
   id: SmgC20r
   description: A firearm that is often used by the infamous nuclear operatives.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
     layers:
@@ -130,6 +136,8 @@
   id: SmgDrozd
   description: An excellent fully automatic Heavy SMG.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
     layers:
@@ -172,6 +180,8 @@
   id: SmgWt550
   description: An excellent SMG, produced by NanoTrasen's Small Arms Division.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
     layers:
@@ -213,6 +223,8 @@
   id: SmgZoric
   description: A compact, robust SMG that uses high caliber rounds.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/zoric.rsi
     layers:
@@ -252,5 +264,7 @@
   description: An excellent fully automatic Heavy SMG.
   suffix: Non-Lethal
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: MagazineBarrel
     magFillPrototype: MagazineMagnumSmgRubber
