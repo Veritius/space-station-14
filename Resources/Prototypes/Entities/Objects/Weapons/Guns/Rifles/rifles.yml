@@ -376,7 +376,7 @@
   description: A carbine with a unique cylindrical magazine design which allows for high capacity loads.
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/calico.rsi
     layers:
