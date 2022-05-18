@@ -6,7 +6,7 @@
   abstract: true
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     netsync: false
   - type: Icon
@@ -50,7 +50,7 @@
   description: A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip.
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
     layers:
@@ -88,7 +88,7 @@
   description: A well preserved and maintained antique weapon of war.
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/LMGs/pk.rsi
     layers:
