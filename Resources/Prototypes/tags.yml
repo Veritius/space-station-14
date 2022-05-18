@@ -43,7 +43,7 @@
   id: Carpet
 
 - type: Tag
-  id: SerpentidHuntingUsable #can be used by a serpentid in hunting mode
+  id: SerpentidHuntingUnusable #cannot be used by a serpentid in hunting mode
 
 - type: Tag
   id: CanPilot
@@ -269,7 +269,7 @@
 
 - type: Tag
   id: PlantSampleTaker
-  
+
 - type: Tag
   id: Plastic
 
@@ -278,7 +278,7 @@
 
 - type: Tag
   id: PussyWagonKeys
-  
+
 - type: Tag
   id: RawMaterial
 
