@@ -5,6 +5,8 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable 
   - type: Sprite
     netsync: false
     state: icon
@@ -37,6 +39,8 @@
   id: ShotgunBojevic
   description: It's a magazine-fed shotgun designed for close quarters combat.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable 
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Shotguns/bojevic.rsi
@@ -89,6 +93,8 @@
   id: ShotgunDB
   description: An immortal classic.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable 
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun.rsi
     layers:
@@ -136,6 +142,8 @@
   id: ShotgunBull
   description: A Frozen Star pump-action shotgun.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable 
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/bull.rsi
     layers:
@@ -168,6 +176,8 @@
   id: ShotgunGladstone
   description: A next-generation Frozen Star shotgun.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable 
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/gladstone.rsi
   - type: Icon
@@ -187,6 +197,8 @@
   id: ShotgunRegulator
   description: Ol' reliable.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable 
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/regulator.rsi
   - type: Icon
@@ -206,6 +218,8 @@
   id: ShotgunPump
   description: When an old Remington design meets modern materials, this is the result. A favourite weapon of militia forces throughout many worlds.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable 
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
   - type: Icon
@@ -225,6 +239,8 @@
   id: ShotgunSawn
   description: Omar's coming!
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable 
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/sawn.rsi
     layers:
