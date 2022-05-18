@@ -5,6 +5,8 @@
   description: Spray and pray
   abstract: true
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     netsync: false
   - type: Icon
@@ -47,6 +49,8 @@
   parent: HMGBase
   description: Vzzzzzt! Rahrahrahrah! Vrrrrr!
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/HMGs/minigun.rsi
     layers:
@@ -74,4 +78,3 @@
       magState: mag
       steps: 4
       zeroVisible: true
-

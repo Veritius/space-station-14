@@ -5,6 +5,8 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     netsync: false
     state: icon
@@ -15,6 +17,8 @@
   id: RevolverDeckard
   description: A rare, custom-built revolver. Use when there is no time for Voight-Kampff test.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/deckard.rsi
     layers:
@@ -61,6 +65,8 @@
   id: RevolverInspector
   description: A detective's best friend.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi
   - type: Item
@@ -93,6 +99,8 @@
   id: RevolverMateba
   description: The iconic sidearm of the dreaded death squads.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
   - type: Item
@@ -125,6 +133,8 @@
   id: RevolverPredator
   description: A robust revolver favoured by Syndicate agents.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/predator.rsi
   - type: Item
@@ -157,6 +167,8 @@
   id: RevolverPirate
   description: An odd, muzzle-loading revolver, favoured by pirate crews.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/pirate_revolver.rsi
   - type: Item

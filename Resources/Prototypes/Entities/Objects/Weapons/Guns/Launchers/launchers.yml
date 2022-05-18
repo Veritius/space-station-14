@@ -5,6 +5,8 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     netsync: false
   - type: Item
@@ -16,6 +18,8 @@
   id: LauncherChinaLake
   description: PLOOP
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
     layers:
@@ -51,6 +55,8 @@
   id: LauncherRocket
   description: A modified ancient rocket-propelled grenade launcher.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
     layers:
@@ -89,6 +95,8 @@
   id: LauncherMultipleRocket
   description: A modified ancient rocket-propelled grenade launcher.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
     layers:
