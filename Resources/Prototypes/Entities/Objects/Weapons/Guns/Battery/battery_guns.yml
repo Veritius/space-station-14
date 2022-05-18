@@ -3,6 +3,8 @@
   parent: BaseItem
   abstract: true
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: RangedWeapon
   - type: BatteryBarrel
     fireRate: 2
@@ -58,6 +60,8 @@
   id: LaserGun
   description: A weapon using light amplified by the stimulated emission of radiation.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
@@ -87,6 +91,8 @@
   id: MakeshiftLaser
   description: Better pray it won't burn your hands off.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/makeshift.rsi
@@ -109,6 +115,8 @@
   id: LaserPistolSvalinn
   description: A cheap and widely used laser pistol.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/svalinn.rsi
@@ -130,6 +138,8 @@
   id: PulsePistolPdw
   description: A state of the art energy pistol favoured as a sidearm by the NT-ERT operatives.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi
@@ -160,6 +170,8 @@
   id: LaserRifleCog
   description: Favoured by Nanotrasen Security for being cheap and easy to use.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/cog.rsi
@@ -182,6 +194,8 @@
   id: LaserRifleSniper
   description: A scoped high capacity laser rifle.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/nightfall.rsi
@@ -210,6 +224,8 @@
   id: PulseCarbineDeac
   description: A high tech energy carbine favoured by the NT-ERT operatives.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
@@ -240,6 +256,8 @@
   id: PulseRifleDeathSquad
   description: A weapon that fully lives up to its name. 
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
@@ -270,6 +288,8 @@
   id: LaserCannon
   description: A heavy duty, high powered laser weapon.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
@@ -300,6 +320,8 @@
   id: XrayCannon
   description: An experimental weapon that uses concentrated x-ray energy against its target.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/xray.rsi
@@ -336,6 +358,8 @@
   id: TaserGun
   description: A low-capacity, energy-based stun gun used by security teams to subdue targets at range.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Tag
     tags:
     - Taser
@@ -381,6 +405,8 @@
   id: AntiqueLaserGun
   description: This is an antique laser gun. All craftsmanship is of the highest quality. It is decorated with assistant leather and chrome. The object menaces with spikes of energy.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Battery/antiquelasergun.rsi
