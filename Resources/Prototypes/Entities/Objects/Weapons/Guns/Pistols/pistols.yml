@@ -5,6 +5,8 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     netsync: false
     layers:
@@ -59,6 +61,8 @@
   id: PistolClarissa
   description: A small, easily concealable, but somewhat underpowered gun.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/clarissa.rsi
   - type: Icon
@@ -84,6 +88,8 @@
   id: PistolColt
   description: An outdated but classic pistol.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/colt.rsi
     layers:
@@ -116,6 +122,8 @@
   id: PistolGiskard
   description: A popular "Frozen Star" brand pocket pistol.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/giskard.rsi
   - type: Icon
@@ -140,6 +148,8 @@
   id: PistolHMPistol
   description: Looks unreliable.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Pistols/hm_pistol.rsi
@@ -191,6 +201,8 @@
   id: PistolLamia
   description: A heavy pistol chambered in .40 Magnum.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/lamia.rsi
     layers:
@@ -241,6 +253,8 @@
   id: PistolMandella
   description: A rugged, robust operator handgun with inbuilt silencer.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusabl
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/mandella.rsi
     layers:
@@ -275,6 +289,8 @@
   id: PistolMk58
   description: A cheap, ubiquitous sidearm, produced by a NanoTrasen subsidiary.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
     layers:
@@ -307,6 +323,8 @@
   id: PistolMk58Wood
   description: A cheap, ubiquitous sidearm, that was produced by a NanoTrasen subsidiary.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/mk58_wood.rsi
     layers:
@@ -339,6 +357,8 @@
   id: PistolMolly
   description: An experimental fully automatic pistol.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/molly.rsi
   - type: Icon
@@ -369,6 +389,8 @@
   id: PistolBasilisk
   description: A fully automatic handgun chambered in .40 magnum. Can use both pistol and SMG type magazines.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/gyro_pistol.rsi
   - type: Icon
@@ -399,6 +421,8 @@
   id: PistolOlivaw
   description: A popular "Frozen Star" machine pistol.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/olivaw_civil.rsi
     layers:
@@ -432,6 +456,8 @@
   id: PistolPaco
   description: A modern and reliable sidearm for the soldier in the field.
   components:
+  - type: Tag
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/paco.rsi
   - type: Icon
