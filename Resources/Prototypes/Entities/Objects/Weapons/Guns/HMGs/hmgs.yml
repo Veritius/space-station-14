@@ -6,7 +6,7 @@
   abstract: true
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     netsync: false
   - type: Icon
@@ -50,7 +50,7 @@
   description: Vzzzzzt! Rahrahrahrah! Vrrrrr!
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/HMGs/minigun.rsi
     layers:
