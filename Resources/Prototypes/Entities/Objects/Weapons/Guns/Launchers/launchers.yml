@@ -6,7 +6,7 @@
   abstract: true
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     netsync: false
   - type: Item
@@ -19,7 +19,7 @@
   description: PLOOP
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
     layers:
@@ -56,7 +56,7 @@
   description: A modified ancient rocket-propelled grenade launcher.
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
     layers:
@@ -96,7 +96,7 @@
   description: A modified ancient rocket-propelled grenade launcher.
   components:
   - type: Tag
-     - SerpentidHuntingUnusabl
+     - SerpentidHuntingUnusable
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
     layers:
