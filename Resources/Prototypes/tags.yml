@@ -43,9 +43,6 @@
   id: Carpet
 
 - type: Tag
-  id: SerpentidHuntingUnusable #cannot be used by a serpentid in hunting mode
-
-- type: Tag
   id: CanPilot
 
 - type: Tag
@@ -300,6 +297,9 @@
 
 - type: Tag
   id: SecwayKeys
+
+- type: Tag
+  id: SerpentidHuntingUnusable #cannot be used by a serpentid in hunting mode
 
 - type: Tag
   id: Sheet

@@ -4,8 +4,6 @@
   id: ImprovisedPneumaticCannon
   description: Improvised using nothing but a pipe, some zipties, and a pneumatic cannon.
   components:
-  - type: Tag
-     - SerpentidHuntingUnusable 
   - type: Sprite
     sprite: Objects/Weapons/Guns/Cannons/pneumatic_cannon.rsi
     netsync: false
@@ -29,6 +27,9 @@
   - type: Construction
     graph: PneumaticCannon
     node: cannon
+  - type: Tag
+    tags:
+     - SerpentidHuntingUnusable
 
 - type: entity
   name: pie cannon

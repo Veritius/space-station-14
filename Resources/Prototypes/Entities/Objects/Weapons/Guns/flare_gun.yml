@@ -4,8 +4,6 @@
   id: FlareGun
   description: A compact, single-shot pistol that fires shotgun shells.
   components:
-  - type: Tag
-     - SerpentidHuntingUnusable 
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/flaregun.rsi
     layers:
