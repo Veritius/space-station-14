@@ -284,8 +284,6 @@
       noRot: true
     - type: Access
       tags:
-        - Security
-        - Brig
         - Maintenance
         - Service
     - type: Strap
