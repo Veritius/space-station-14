@@ -13,6 +13,15 @@
   spritePath: absintheglass.rsi
 
 - type: reagent
+  id: Amaretto
+  name: amaretto
+  parent: BaseAlcohol
+  desc: A gentle and syrup like drink, tastes of almonds and apricots.
+  physicalDesc: strong-smelling
+  color: "#a66e60"
+  spritePath: amarettoglass.rsi
+
+- type: reagent
   id: Ale
   name: reagent-name-ale
   parent: BaseAlcohol
@@ -38,6 +47,15 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   color: "#0000CD"
   spritePath: curacaoglass.rsi
+
+- type: reagent
+  id: Champagne
+  name: champagne
+  parent: BaseAlcohol
+  desc: A sparkling wine known for its ability to strike fast and hard.
+  physicalDesc: strong-smelling
+  color: "#0000CD"
+  spritePath: champagneglass.rsi
 
 - type: reagent
   id: Cognac
@@ -154,6 +172,15 @@
   desc: reagent-desc-tequila
   physicalDesc: reagent-physical-desc-strong-smelling
   color: "#d7d1d155"
+
+- type: reagent
+  id: TripleSec
+  name: triple sec
+  parent: BaseAlcohol
+  desc: A sweet and vibrant orange liqueur.
+  physicalDesc: strong-smelling
+  color: "#FFA500"
+  spritePath: triplesecglass.rsi
 
 - type: reagent
   id: Vermouth
@@ -320,6 +347,15 @@
   spritePath: blackrussianglass.rsi
 
 - type: reagent
+  id: BlankPaper
+  name: blank paper
+  parent: BaseAlcohol
+  desc: A fizzy cocktail for those looking to start fresh. #This should in the future be able to reinstiute the oath of silence within a mime.
+  physicalDesc: strong-smelling
+  color: "#360000"
+  spritePath: blankpaperglass.rsi
+
+- type: reagent
   id: BloodyMary
   name: reagent-name-bloody-mary
   parent: BaseAlcohol
@@ -417,6 +453,15 @@
   spritePath: erikasurprise.rsi
 
 - type: reagent
+  id: FetchingFizz
+  name: fetching fizz
+  parent: BaseAlcohol
+  desc: Whiskey sour/iron/uranium mixture resulting in highly magnetic slurry. Mild alcohol content.
+  physicalDesc: strong-smelling
+  color: "#2E6671"
+  spritePath: fetchingfizzglass.rsi
+
+- type: reagent
   id: GargleBlaster
   name: reagent-name-gargle-blaster
   parent: BaseAlcohol
@@ -435,6 +480,15 @@
   spritePath: ginfizzglass.rsi
 
 - type: reagent
+  id: GingerAmaretto
+  name: ginger amaretto
+  parent: BaseAlcohol
+  desc: Refreshingly lemony, deliciously dry.
+  physicalDesc: strong-smelling
+  color: "#664300"
+  spritePath: gingeramarettoglass.rsi
+
+- type: reagent
   id: GinTonic
   name: reagent-name-gin-tonic
   parent: BaseAlcohol
@@ -442,6 +496,24 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   color: "#004166"
   spritePath: gintonicglass.rsi
+
+- type: reagent
+  id: Godfather
+  name: godfather
+  parent: BaseAlcohol
+  desc: A classic from old Italy and enjoyed by gangsters, pray the orange peel doesnt end up in your mouth.  
+  physicalDesc: strong-smelling
+  color: "#004166"
+  spritePath: godfatherglass.rsi
+
+- type: reagent
+  id: Godmother
+  name: godmother
+  parent: BaseAlcohol
+  desc:   A lovely fresh smelling cocktail, a true Sicilian delight.  
+  physicalDesc: strong-smelling
+  color: "#004166"
+  spritePath: godmotherglass.rsi
 
 - type: reagent
   id: Goldschlager
@@ -514,6 +586,15 @@
   physicalDesc: reagent-physical-desc-cloudy
   color: "#664300"
   spritePath: irishcoffeeglass.rsi
+
+- type: reagent
+  id: Kamikaze
+  name: kamikaze
+  parent: BaseAlcohol
+  desc: Divinely windy.
+  physicalDesc: creamy
+  color: "#664300"
+  spritePath: kamikazeglass.rsi
 
 - type: reagent
   id: KiraSpecial
@@ -603,6 +684,24 @@
   desc: reagent-desc-moonshine
   physicalDesc: reagent-physical-desc-strong-smelling
   color: "#d1d7d155"
+
+- type: reagent
+  id: MoscowMule
+  name: moscowmule
+  parent: BaseAlcohol
+  desc: A chilly drink that reminds you of the Derelict.
+  physicalDesc: strong-smelling
+  color: "#d1d7d155"
+  spritePath: moscowmuleglass.rsi
+
+- type: reagent
+  id: Narsour
+  name: narsour
+  parent: BaseAlcohol
+  desc: A new hit cocktail inspired by THE ARM Breweries will have you shouting Fuu ma'jin in no time!
+  physicalDesc: strong-smelling
+  color: "#d1d7d155"
+  spritePath: narsourglass.rsi
 
 - type: reagent
   id: Neurotoxin

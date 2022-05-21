@@ -97,6 +97,22 @@
 
 - type: entity
   parent: DrinkGlassBase
+  id: DrinkAmarettoGlass
+  name: amaretto glass
+  description: A gentle and syrup like drink, tastes of almonds and apricots.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Amaretto
+          Quantity: 50
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/amarettoglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
   id: DrinkAcidSpitGlass
   name: acid spit glass
   description: A drink from the company archives. Made from live aliens.
@@ -379,6 +395,23 @@
 
 - type: entity
   parent: DrinkGlassBase
+  id: DrinkBlankPaperGlass
+  name: blank paper glass
+  description: A fizzy cocktail for those looking to start fresh.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: BlankPaper
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/blankpaperglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
   id: DrinkBlueCuracaoGlass
   name: blue curacao
   description: Exotically blue, fruity drink, distilled from oranges.
@@ -464,6 +497,23 @@
 
 - type: entity
   parent: DrinkGlassBase
+  id: DrinkChampagneGlass
+  name: champagne glass_brown
+  description: A sparkling wine known for its ability to strike fast and hard.
+  components:
+  - type: Drink
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Champagne
+          Quantity: 50
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/champagneglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
   id: DrinkChocolateGlass
   name: hot chocolate
   description: A heated drink consisting melted chocolate and heated milk.
@@ -488,6 +538,24 @@
   - type: Drink
   - type: Sprite
     sprite: Objects/Consumable/Drinks/cafe_latte.rsi
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkCreamSodaGlass
+  name: cream soda
+  description: A classic space-American vanilla flavored soft drink.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: CreamSoda
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/creamsodaglass.rsi
+
 
 - type: entity
   parent: DrinkGlassBase
@@ -674,6 +742,23 @@
 
 - type: entity
   parent: DrinkGlassBase
+  id: DrinkFetchingFizzGlass
+  name: fetching fizz glass
+  description: Whiskey sour/iron/uranium mixture resulting in highly magnetic slurry. Mild alcohol content. 
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: FetchingFizz
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/fetchingfizzglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
   id: DrinkFourteenLokoGlass
   name: Fourteen loko glass
   description: This is a container of Fourteen Loko, it appears to be of the highest quality. The drink, not the container.
@@ -742,6 +827,23 @@
 
 - type: entity
   parent: DrinkGlassBase
+  id: DrinkGingerAmarettoGlass
+  name: ginger amaretto glass
+  description: The sprig of rosemary adds a nice aroma to the drink, and isn't just to be pretentious afterall!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: GingerAmaretto
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/gingeramarettoglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
   id: DrinkGinTonicglass
   name: gin and tonic
   description: A mild but still great cocktail. Drink up, like a true Englishman.
@@ -756,6 +858,40 @@
   - type: Drink
   - type: Sprite
     sprite: Objects/Consumable/Drinks/gintonicglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkGodfatherglass
+  name: godfather glass
+  description: A classic from old Italy and enjoyed by gangsters, pray the orange peel doesnt end up in your mouth. 
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Godfather
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/godfatherglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkGodmotherglass
+  name: godmother glass
+  description: A lovely fresh smelling cocktail, a true Sicilian delight.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Godmother
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/godmotherglass.rsi
 
 - type: entity
   parent: DrinkGlassBase
@@ -1037,6 +1173,22 @@
           Quantity: 50
   - type: Sprite
     sprite: Objects/Consumable/Drinks/kahluaglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkKamikazeGlass
+  name: kamikaze glass
+  description: Divinely windy.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Kamikaze
+          Quantity: 50
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/kamikazeglass.rsi
 
 - type: entity
   parent: DrinkGlassBase
@@ -1544,6 +1696,23 @@
 
 - type: entity
   parent: DrinkGlassBase
+  id: DrinkSolDryGlass
+  name: sol dry glass
+  description: A soothing, mellow drink made from ginger. 
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: SolDry
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/soldryglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
   id: DrinkSuiDreamGlass
   name: sui dream glass
   description: A froofy, fruity, and sweet mixed drink. Understanding the name only brings shame.
@@ -1592,6 +1761,40 @@
   - type: Drink
   - type: Sprite
     sprite: Objects/Consumable/Drinks/glass_clear.rsi
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkMoscowMuleGlass
+  name: moscow mule glass
+  description: A chilly drink that reminds you of the Derelict.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: MoscowMule
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/moscowmuleglass.rsi
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkNarsourGlass
+  name: narsour glass
+  description: A new hit cocktail inspired by THE ARM Breweries will have you shouting Fuu ma'jin in no time!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Narsour
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/narsourglass.rsi
 
 - type: entity
   parent: DrinkGlassBase
@@ -1775,6 +1978,24 @@
   - type: Drink
   - type: Sprite
     sprite: Objects/Consumable/Drinks/tequillaglass.rsi
+
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkTripleSecGlass
+  name: triple sec glass
+  description: A sweet and vibrant orange liqueur.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: TripleSec
+          Quantity: 50
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/triplesecglass.rsi
 
 - type: entity
   parent: DrinkGlassBase
