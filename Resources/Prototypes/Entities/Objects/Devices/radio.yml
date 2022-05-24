@@ -23,7 +23,7 @@
 
 - type: entity
   name: newscaster microphone
-  description: A handy handheld radio.
+  description: A reporter's best friend.
   parent: RadioBase
   id: NewscasterMicrophone
   components:

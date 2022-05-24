@@ -21,7 +21,6 @@ namespace Content.Server.NewsCaster
             base.Initialize();
             SubscribeLocalEvent<NewsCasterMicrophoneComponent, ComponentInit>(OnMicrophoneCompInit);
             SubscribeLocalEvent<NewsCasterSpeakerComponent, ComponentInit>(OnSpeakerCompInit);
-            SubscribeLocalEvent<NewsCasterMicrophoneComponent, UseInHandEvent>((uid, component, args) => ToggleNewsCasterMicrophone(uid, component, args.User));
             SubscribeLocalEvent<NewsCasterMicrophoneComponent, ActivateInWorldEvent>((uid, component, args) => ToggleNewsCasterMicrophone(uid, component, args.User));
             SubscribeLocalEvent<NewsCasterMicrophoneComponent, ExaminedEvent>(OnMicrophoneExamine);
             SubscribeLocalEvent<NewsCasterMicrophoneComponent, ListenerMessageHeardEvent>(OnMicrophoneHeardMessage);
