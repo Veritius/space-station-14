@@ -5,6 +5,7 @@ using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Ghost.Components;
 using Content.Server.Headset;
+using Content.Server.Listener;
 using Content.Server.Players;
 using Content.Server.Popups;
 using Content.Server.Radio.EntitySystems;
@@ -38,7 +39,7 @@ public sealed class ChatSystem : SharedChatSystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly AdminLogSystem _logs = default!;
     [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
-    [Dependency] private readonly ListeningSystem _listener = default!;
+    [Dependency] private readonly ListenerSystem _listenerSystem = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
 
@@ -147,11 +148,11 @@ public sealed class ChatSystem : SharedChatSystem
         if (!_actionBlocker.CanSpeak(source)) return;
         message = TransformSpeech(source, message);
 
-        _listener.PingListeners(source, message);
         var messageWrap = Loc.GetString("chat-manager-entity-say-wrap-message",
             ("entityName", Name(source)));
 
         SendInVoiceRange(ChatChannel.Local, message, messageWrap, source, hideChat);
+        _listenerSystem.CheckAllListeners(source, message);
 
         var ev = new EntitySpokeEvent(message);
         RaiseLocalEvent(source, ev, false);
@@ -163,7 +164,6 @@ public sealed class ChatSystem : SharedChatSystem
         if (!_actionBlocker.CanSpeak(source)) return;
 
         message = TransformSpeech(source, message);
-        _listener.PingListeners(source, message);
         var obfuscatedMessage = ObfuscateMessageReadability(message, 0.2f);
 
         var transformSource = Transform(source);
@@ -189,11 +189,13 @@ public sealed class ChatSystem : SharedChatSystem
                 ghosts.HasComponent(playerEntity))
             {
                 _chatManager.ChatMessageToOne(ChatChannel.Whisper, message, messageWrap, source, hideChat, session.ConnectedClient);
+                _listenerSystem.CheckAllListeners(source, message);
             }
             else
             {
                 _chatManager.ChatMessageToOne(ChatChannel.Whisper, obfuscatedMessage, messageWrap, source, hideChat,
                     session.ConnectedClient);
+                _listenerSystem.CheckAllListeners(source, obfuscatedMessage);
             }
         }
 

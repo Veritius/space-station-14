@@ -20,3 +20,22 @@
   - type: Item
     sprite: Objects/Devices/communication.rsi
     HeldPrefix: walkietalkie
+
+- type: entity
+  name: newscaster microphone
+  description: A handy handheld radio.
+  parent: RadioBase
+  id: NewscasterMicrophone
+  components:
+    - type: Listener
+      distance: 4
+    - type: NewsCasterMicrophone
+    - type: Sprite
+      sprite: Objects/Devices/communication.rsi
+      layers:
+        - state: walkietalkie
+        - state: walkietalkie-on
+      state: walkietalkie
+    - type: Item
+      sprite: Objects/Devices/communication.rsi
+      HeldPrefix: walkietalkie
