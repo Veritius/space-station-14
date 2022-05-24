@@ -7,7 +7,7 @@
         /// Is this microphone listening
         /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]
-        public bool Enabled = true;
+        public bool Enabled = false;
 
         /// <summary>
         /// Distance at which voices will be picked up
