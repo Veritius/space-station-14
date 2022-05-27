@@ -24,6 +24,7 @@ namespace Content.Shared.HuntingMode
             SubscribeLocalEvent<SharedHuntingModeComponent, ToggleHuntingModeEvent>(OnPerformHuntingAction);
         }
 
+        // TODO: Fix this not being predicted properly
         private void TryPickupEvent(EntityUid uid, SharedHuntingModeComponent component, PickupAttemptEvent args)
         {
             if (!component.IsInHuntingMode || !_tagSystem.HasTag(args.Item, "SerpentidHuntingUnusable")) return;
