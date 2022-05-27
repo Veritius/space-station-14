@@ -1,5 +1,0 @@
-uniform highp float intensity;
-
-void fragment() {
-
-}
