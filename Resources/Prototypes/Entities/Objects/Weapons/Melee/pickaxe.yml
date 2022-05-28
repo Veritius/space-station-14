@@ -4,6 +4,9 @@
   id: Pickaxe
   description: Notched to perfection, for jamming it into rocks
   components:
+  - type: Tag     
+     tags:     
+     - SerpentidHuntingUnusable
   - type: Tag
     tags:
     - Pickaxe
