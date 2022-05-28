@@ -4,6 +4,9 @@
   id: CaptainSabre
   description: A ceremonial weapon belonging to the captain of the station.
   components:
+  - type: Tag     
+     tags:     
+     - SerpentidHuntingUnusable
   - type: Sharp
   - type: Sprite
     sprite: Objects/Weapons/Melee/captain_sabre.rsi
