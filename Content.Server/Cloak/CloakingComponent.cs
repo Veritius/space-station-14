@@ -8,12 +8,6 @@ namespace Content.Server.Cloak
     public sealed class CloakingComponent : Component
     {
         /// <summary>
-        /// If the entity's owner had the interaction overlay component
-        /// Used for bypassing the renderer limitations
-        /// </summary>
-        public bool OwnerHadInteractionOverlayComp;
-
-        /// <summary>
         /// Defines whether the entity is cloaked at the moment
         /// </summary>
         /// <remarks>

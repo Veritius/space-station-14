@@ -2,6 +2,10 @@ using Content.Server.Administration.Logs;
 using Content.Server.DoAfter;
 using Content.Server.Popups;
 using Content.Shared.Actions;
+using Content.Shared.Administration.Logs;
+using Content.Shared.Cloak;
+using Content.Shared.Database;
+using Content.Shared.Singularity;
 
 namespace Content.Server.Cloak
 {
@@ -9,7 +13,8 @@ namespace Content.Server.Cloak
     {
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
-        [Dependency] private readonly AdminLogSystem _adminLogs = default!;
+        [Dependency] private readonly SharedAdminLogSystem _adminLog = default!;
+        [Dependency] private readonly SharedCloakingSystem _sharedCloakingSystem = default!;
 
         public override void Initialize()
         {
@@ -35,6 +40,7 @@ namespace Content.Server.Cloak
         {
             object ev;
             float delay;
+            
             if (comp.Cloaked)
             {
                 ev = new DoDecloakEvent(comp);
@@ -55,8 +61,8 @@ namespace Content.Server.Cloak
             {
                 var doAfterArgs = new DoAfterEventArgs(uid, delay)
                 {
-                    BreakOnDamage = true,
-                    BreakOnStun = true,
+                    BreakOnDamage = false,
+                    BreakOnStun = false,
                     BreakOnTargetMove = true,
                     BreakOnUserMove = true,
                     NeedHand = false,
@@ -69,11 +75,13 @@ namespace Content.Server.Cloak
 
         private void OnSuccessfullyCloaked(DoCloakEvent args)
         {
+            _adminLog.Add(LogType.Thirst, $"{EntityManager.ToPrettyString(args.Comp.Owner):entity} has cloaked themselves");
             ChangeCloakStatus(args.Comp, false);
         }
 
         private void OnSuccessfullyDecloaked(DoDecloakEvent args)
         {
+            _adminLog.Add(LogType.Thirst, $"{EntityManager.ToPrettyString(args.Comp.Owner):entity} has decloaked themselves");
             ChangeCloakStatus(args.Comp, false);
         }
 
