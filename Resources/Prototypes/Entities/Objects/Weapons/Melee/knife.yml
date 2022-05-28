@@ -3,9 +3,9 @@
   id: BaseKnife
   abstract: true
   components:
-   - type: Tag     
-     tags:     
-     - SerpentidHuntingUnusable
+  - type: Tag     
+    tags:     
+    - SerpentidHuntingUnusable
   - type: Tag
     tags:
     - Knife
