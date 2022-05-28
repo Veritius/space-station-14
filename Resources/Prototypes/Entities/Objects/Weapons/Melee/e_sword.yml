@@ -6,7 +6,11 @@
   components:
   - type: EnergySword
     litDamageBonus:
-        types:
+      - type: Tag     
+        tags:     
+        - SerpentidHuntingUnusable
+       
+       types:
             Slash: 12.5
             Heat: 12.5
             Blunt: -7
