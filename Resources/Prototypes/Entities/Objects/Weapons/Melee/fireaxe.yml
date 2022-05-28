@@ -7,7 +7,10 @@
   - type: Tag
     tags:
     - FireAxe
-  - type: Sharp
+      - type: Tag     
+        tags:     
+        - SerpentidHuntingUnusable
+- type: Sharp
   - type: Sprite
     sprite: Objects/Weapons/Melee/fireaxe.rsi
     state: icon
