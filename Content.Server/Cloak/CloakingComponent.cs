@@ -4,6 +4,12 @@ using Robust.Shared.Utility;
 
 namespace Content.Server.Cloak
 {
+    /// <summary>
+    /// Makes people invisible through altering opacity
+    /// </summary>
+    /// <remarks>
+    /// TODO: Replace this with a cool shader like in https://cdn.discordapp.com/attachments/770682801607278632/980005437120331816/shitty_stelth.mp4 when engine is less ass
+    /// </remarks>
     [RegisterComponent]
     public sealed class CloakingComponent : Component
     {
