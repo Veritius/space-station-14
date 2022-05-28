@@ -4,12 +4,11 @@
   id: FireAxe
   description: Truly, the weapon of a madman. Who would think to fight fire with an axe?
   components:
+  - type: Tag     
+     tags:     
+     - SerpentidHuntingUnusable
   - type: Tag
     tags:
-    - FireAxe
-      - type: Tag     
-        tags:     
-        - SerpentidHuntingUnusable
 - type: Sharp
   - type: Sprite
     sprite: Objects/Weapons/Melee/fireaxe.rsi
