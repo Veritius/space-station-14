@@ -1,11 +1,8 @@
-using Content.Server.Administration.Logs;
 using Content.Server.DoAfter;
-using Content.Server.Popups;
 using Content.Shared.Actions;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Cloak;
 using Content.Shared.Database;
-using Content.Shared.Singularity;
 
 namespace Content.Server.Cloak
 {
@@ -40,7 +37,7 @@ namespace Content.Server.Cloak
         {
             object ev;
             float delay;
-            
+
             if (comp.Cloaked)
             {
                 ev = new DoDecloakEvent(comp);

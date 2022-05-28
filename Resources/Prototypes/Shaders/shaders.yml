@@ -40,8 +40,3 @@
     pixelSize: 32, 32
     alphaCutoff: 0
     removeTransparency: false
-
-- type: shader
-  id: Cloaked
-  kind: source
-  path: "/Textures/Shaders/cloaked.swsl"
