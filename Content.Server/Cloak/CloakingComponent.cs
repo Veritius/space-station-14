@@ -1,22 +1,33 @@
 using Content.Shared.Actions;
 using Content.Shared.Actions.ActionTypes;
-using Content.Shared.Cloak;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Cloak
 {
-    public class CloakingComponent : SharedCloakingComponent
+    [RegisterComponent]
+    public sealed class CloakingComponent : Component
     {
         /// <summary>
-        /// If the entity's owner had the interation overlay component
+        /// If the entity's owner had the interaction overlay component
         /// Used for bypassing the renderer limitations
         /// </summary>
         public bool OwnerHadInteractionOverlayComp;
 
         /// <summary>
+        /// Defines whether the entity is cloaked at the moment
+        /// </summary>
+        /// <remarks>
+        /// DO NOT SET THIS YOURSELF. Use CloakingSystem instead.
+        /// </remarks>
+        [ViewVariables]
+        [DataField("startCloaked")]
+        public bool Cloaked;
+
+        /// <summary>
         /// How long it takes to turn on cloak (doafter)
         /// Leave at 0 to skip the doafter
         /// </summary>
+        [ViewVariables(VVAccess.ReadWrite)]
         [DataField("cloakDelay")]
         public float CloakDelay;
 
@@ -24,6 +35,7 @@ namespace Content.Server.Cloak
         /// How long it takes to turn off cloak (doafter)
         /// Leave at 0 to skip the doafter
         /// </summary>
+        [ViewVariables(VVAccess.ReadWrite)]
         [DataField("decloakDelay")]
         public float DecloakDelay;
 

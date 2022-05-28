@@ -3,6 +3,7 @@ using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.CharacterInterface;
 using Content.Client.Chat.Managers;
+using Content.Client.Cloak;
 using Content.Client.EscapeMenu;
 using Content.Client.Eui;
 using Content.Client.Flash;
@@ -189,6 +190,7 @@ namespace Content.Client.Entry
             overlayMgr.AddOverlay(new CircleMaskOverlay());
             overlayMgr.AddOverlay(new FlashOverlay());
             overlayMgr.AddOverlay(new RadiationPulseOverlay());
+            overlayMgr.AddOverlay(new CloakingOverlay());
 
             IoCManager.Resolve<IChatManager>().Initialize();
             IoCManager.Resolve<IClientPreferencesManager>().Initialize();
