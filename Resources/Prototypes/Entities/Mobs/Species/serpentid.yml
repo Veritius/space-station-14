@@ -95,19 +95,10 @@
       damageContainer: Biological
       damageModifierSet: Serpentid
     - type: Cloaking
-      layers:
-        - map: [ "enum.HumanoidVisualLayers.Chest" ]
-        - map: [ "enum.HumanoidVisualLayers.Head" ]
-        - map: [ "enum.HumanoidVisualLayers.Eyes" ]
-        - map: [ "enum.HumanoidVisualLayers.RArm" ]
-        - map: [ "enum.HumanoidVisualLayers.LArm" ]
-        - map: [ "enum.HumanoidVisualLayers.RLeg" ]
-        - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-        - map: [ "enum.HumanoidVisualLayers.Groin" ]
-        - map: [ "enum.HumanoidVisualLayers.LHand" ]
-        - map: [ "enum.HumanoidVisualLayers.RHand" ]
-        - map: [ "enum.HumanoidVisualLayers.LFoot" ]
-        - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+      cloakDelay: 2
+      decloakDelay: 2
+      alwaysVisibleLayers:
+        - enum.HumanoidVisualLayers.Eyes
     - type: Bloodstream
       bloodReagent: Hemolymph
       bloodlossDamage:

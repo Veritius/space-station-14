@@ -125,6 +125,7 @@ namespace Content.Client.Entry
             "PowerConsumer",
             "Battery",
             "Lung",
+            "Cloaking",
             "BatteryDischarger",
             "Apc",
             "IntrinsicUI",

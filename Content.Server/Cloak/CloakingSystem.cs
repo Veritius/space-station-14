@@ -1,8 +1,5 @@
-using Content.Server.Body.Components;
 using Content.Server.DoAfter;
 using Content.Shared.Actions;
-using Content.Shared.Administration.Logs;
-using Content.Shared.Database;
 using Robust.Server.GameObjects;
 
 namespace Content.Server.Cloak
@@ -11,7 +8,6 @@ namespace Content.Server.Cloak
     {
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
-        [Dependency] private readonly SharedAdminLogSystem _adminLog = default!;
 
         public override void Initialize()
         {
@@ -72,13 +68,11 @@ namespace Content.Server.Cloak
 
         private void OnSuccessfullyCloaked(DoCloakEvent args)
         {
-            _adminLog.Add(LogType.Action, $"{EntityManager.ToPrettyString(args.Comp.Owner):entity} has cloaked themselves");
             ChangeCloakStatus(args.Comp, false);
         }
 
         private void OnSuccessfullyDecloaked(DoDecloakEvent args)
         {
-            _adminLog.Add(LogType.Action, $"{EntityManager.ToPrettyString(args.Comp.Owner):entity} has decloaked themselves");
             ChangeCloakStatus(args.Comp, false);
         }
 
@@ -89,16 +83,16 @@ namespace Content.Server.Cloak
         /// <param name="toState">Whether or not the entity should be cloaked</param>
         public void ChangeCloakStatus(CloakingComponent comp, bool toState)
         {
-            if (toState)
+            var uid = comp.Owner;
+            var visiblity = !toState;
+            EntityManager.TryGetComponent<SpriteComponent>(uid, out var spriteComponent);
+            for (int i = 0; i < spriteComponent.LayerCount; i++)
             {
-                EntityUid uid = comp.Owner;
-                comp.Cloaked = true;
+                // TODO: Don't set ignored layers
+                spriteComponent.LayerSetVisible(i, visiblity);
             }
-            else
-            {
-                EntityUid uid = comp.Owner;
-                comp.Cloaked = false;
-            }
+
+            comp.Cloaked = toState;
         }
     }
 }
