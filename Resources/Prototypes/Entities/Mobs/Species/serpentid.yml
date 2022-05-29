@@ -95,10 +95,10 @@
       damageContainer: Biological
       damageModifierSet: Serpentid
     - type: Cloaking
-      cloakDelay: 2
-      decloakDelay: 2
+      cloakDelay: 1
+      decloakDelay: 1
       alwaysVisibleLayers:
-        - enum.HumanoidVisualLayers.Eyes
+        - 9
     - type: Bloodstream
       bloodReagent: Hemolymph
       bloodlossDamage:

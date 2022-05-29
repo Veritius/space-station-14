@@ -1,4 +1,5 @@
 using Content.Server.DoAfter;
+using Content.Server.Popups;
 using Content.Shared.Actions;
 using Robust.Server.GameObjects;
 
@@ -8,6 +9,7 @@ namespace Content.Server.Cloak
     {
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
+        [Dependency] private readonly PopupSystem _popupSystem = default!;
 
         public override void Initialize()
         {
@@ -84,12 +86,14 @@ namespace Content.Server.Cloak
         public void ChangeCloakStatus(CloakingComponent comp, bool toState)
         {
             var uid = comp.Owner;
-            var visiblity = !toState;
             EntityManager.TryGetComponent<SpriteComponent>(uid, out var spriteComponent);
+
+            Color toColor = toState ? new Color(1f, 1f, 1f, 0.02f) : new Color(1f, 1f, 1f);
+
             for (int i = 0; i < spriteComponent.LayerCount; i++)
             {
-                // TODO: Don't set ignored layers
-                spriteComponent.LayerSetVisible(i, visiblity);
+                if(comp.IgnoreLayers.Contains(i)) continue;
+                spriteComponent.LayerSetColor(i, toColor);
             }
 
             comp.Cloaked = toState;

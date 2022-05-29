@@ -1,7 +1,5 @@
 using Content.Shared.Actions;
 using Content.Shared.Actions.ActionTypes;
-using Robust.Shared.Reflection;
-using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Cloak
@@ -13,7 +11,7 @@ namespace Content.Server.Cloak
     /// TODO: Replace this with a cool shader like in https://cdn.discordapp.com/attachments/770682801607278632/980005437120331816/shitty_stelth.mp4 when engine is less ass
     /// </remarks>
     [RegisterComponent]
-    public sealed class CloakingComponent : Component, ISerializationHooks
+    public sealed class CloakingComponent : Component
     {
         /// <summary>
         /// Defines whether the entity is cloaked at the moment
@@ -45,10 +43,7 @@ namespace Content.Server.Cloak
         /// Layers to affect
         /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]
-        public List<Enum> IgnoreLayers = new();
-
-        [DataField("alwaysVisibleLayers", true)]
-        private List<string> _alwaysVisibleLayers = default!;
+        public List<int> IgnoreLayers = new();
 
         /// <summary>
         /// The InstantAction that toggles cloak
@@ -64,17 +59,6 @@ namespace Content.Server.Cloak
             CheckCanInteract = false,
             Event = new ToggleCloakingEvent()
         };
-
-        // TODO: surely there's a better way to do this that doesn't use obsolete methods
-        void ISerializationHooks.AfterDeserialization()
-        {
-            var reflectionManager = IoCManager.Resolve<IReflectionManager>();
-            foreach (var rawLayer in _alwaysVisibleLayers)
-            {
-                if (reflectionManager.TryParseEnumReference(rawLayer, out var layers))
-                    IgnoreLayers.Add(layers);
-            }
-        }
     }
 
     public sealed class ToggleCloakingEvent : InstantActionEvent { };
