@@ -23,6 +23,7 @@ namespace Content.Shared.CharacterAppearance
         LLeg,
         RFoot,
         LFoot,
+        ThreatDisplay, // for serps
         Handcuffs,
         StencilMask,
         Fire,

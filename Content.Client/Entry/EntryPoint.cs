@@ -3,7 +3,6 @@ using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.CharacterInterface;
 using Content.Client.Chat.Managers;
-using Content.Client.Cloak;
 using Content.Client.EscapeMenu;
 using Content.Client.Eui;
 using Content.Client.Flash;

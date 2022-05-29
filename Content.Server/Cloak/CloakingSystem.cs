@@ -1,17 +1,18 @@
+using Content.Server.Body.Components;
 using Content.Server.DoAfter;
 using Content.Shared.Actions;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Cloak;
 using Content.Shared.Database;
+using Robust.Server.GameObjects;
 
 namespace Content.Server.Cloak
 {
-    public sealed class CloakingSystem : EntitySystem
+    public sealed class CloakingSystem : SharedCloakingSystem
     {
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
         [Dependency] private readonly SharedAdminLogSystem _adminLog = default!;
-        [Dependency] private readonly SharedCloakingSystem _sharedCloakingSystem = default!;
 
         public override void Initialize()
         {
@@ -72,13 +73,13 @@ namespace Content.Server.Cloak
 
         private void OnSuccessfullyCloaked(DoCloakEvent args)
         {
-            _adminLog.Add(LogType.Thirst, $"{EntityManager.ToPrettyString(args.Comp.Owner):entity} has cloaked themselves");
+            _adminLog.Add(LogType.Action, $"{EntityManager.ToPrettyString(args.Comp.Owner):entity} has cloaked themselves");
             ChangeCloakStatus(args.Comp, false);
         }
 
         private void OnSuccessfullyDecloaked(DoDecloakEvent args)
         {
-            _adminLog.Add(LogType.Thirst, $"{EntityManager.ToPrettyString(args.Comp.Owner):entity} has decloaked themselves");
+            _adminLog.Add(LogType.Action, $"{EntityManager.ToPrettyString(args.Comp.Owner):entity} has decloaked themselves");
             ChangeCloakStatus(args.Comp, false);
         }
 
@@ -91,10 +92,12 @@ namespace Content.Server.Cloak
         {
             if (toState)
             {
+                EntityUid uid = comp.Owner;
                 comp.Cloaked = true;
             }
             else
             {
+                EntityUid uid = comp.Owner;
                 comp.Cloaked = false;
             }
         }
