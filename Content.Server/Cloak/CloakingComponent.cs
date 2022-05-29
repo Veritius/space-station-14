@@ -1,6 +1,5 @@
 using Content.Shared.Actions;
 using Content.Shared.Actions.ActionTypes;
-using Content.Shared.Cloak;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Cloak
@@ -12,7 +11,7 @@ namespace Content.Server.Cloak
     /// TODO: Replace this with a cool shader like in https://cdn.discordapp.com/attachments/770682801607278632/980005437120331816/shitty_stelth.mp4 when engine is less ass
     /// </remarks>
     [RegisterComponent]
-    public sealed class CloakingComponent : SharedCloakingComponent
+    public sealed class CloakingComponent : Component
     {
         /// <summary>
         /// Defines whether the entity is cloaked at the moment

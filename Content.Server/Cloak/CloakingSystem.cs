@@ -2,13 +2,12 @@ using Content.Server.Body.Components;
 using Content.Server.DoAfter;
 using Content.Shared.Actions;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Cloak;
 using Content.Shared.Database;
 using Robust.Server.GameObjects;
 
 namespace Content.Server.Cloak
 {
-    public sealed class CloakingSystem : SharedCloakingSystem
+    public sealed class CloakingSystem : EntitySystem
     {
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
