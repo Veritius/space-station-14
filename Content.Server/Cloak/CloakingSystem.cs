@@ -86,7 +86,7 @@ namespace Content.Server.Cloak
         public void ChangeCloakStatus(CloakingComponent comp, bool toState)
         {
             var uid = comp.Owner;
-            EntityManager.TryGetComponent<SpriteComponent>(uid, out var spriteComponent);
+            if(!EntityManager.TryGetComponent<SpriteComponent>(uid, out var spriteComponent)) return;
 
             Color toColor = toState ? new Color(1f, 1f, 1f, 0.02f) : new Color(1f, 1f, 1f);
 
