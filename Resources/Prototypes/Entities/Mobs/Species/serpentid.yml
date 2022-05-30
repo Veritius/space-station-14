@@ -97,8 +97,6 @@
     - type: Cloaking
       cloakDelay: 1
       decloakDelay: 1
-      alwaysVisibleLayers:
-        - 9
     - type: Bloodstream
       bloodReagent: Hemolymph
       bloodlossDamage:

@@ -273,6 +273,26 @@
           color: "#FF0000"
         Burn:
           sprite: Mobs/Effects/burn_damage.rsi
+    - type: CloakingVisualizer
+      cloakLayers:
+        - "enum.HumanoidVisualLayers.Tail"
+        - "enum.HumanoidVisualLayers.Hair"
+        - "enum.HumanoidVisualLayers.FacialHair"
+        - "enum.HumanoidVisualLayers.Chest"
+        - "enum.HumanoidVisualLayers.Groin"
+        - "enum.HumanoidVisualLayers.Head"
+        - "enum.HumanoidVisualLayers.Snout"
+        - "enum.HumanoidVisualLayers.HeadSide"
+        - "enum.HumanoidVisualLayers.HeadTop"
+        - "enum.HumanoidVisualLayers.RArm"
+        - "enum.HumanoidVisualLayers.LArm"
+        - "enum.HumanoidVisualLayers.RHand"
+        - "enum.HumanoidVisualLayers.LHand"
+        - "enum.HumanoidVisualLayers.RLeg"
+        - "enum.HumanoidVisualLayers.LLeg"
+        - "enum.HumanoidVisualLayers.RFoot"
+        - "enum.HumanoidVisualLayers.LFoot"
+        - "enum.HumanoidVisualLayers.ThreatDisplay"
   - type: CombatMode
   - type: Climbing
   - type: Cuffable

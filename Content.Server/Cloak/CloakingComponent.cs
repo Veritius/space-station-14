@@ -1,5 +1,6 @@
 using Content.Shared.Actions;
 using Content.Shared.Actions.ActionTypes;
+using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Cloak
@@ -38,12 +39,6 @@ namespace Content.Server.Cloak
         [ViewVariables(VVAccess.ReadWrite)]
         [DataField("decloakDelay")]
         public float DecloakDelay;
-
-        /// <summary>
-        /// Layers to affect
-        /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public List<int> IgnoreLayers = new();
 
         /// <summary>
         /// The InstantAction that toggles cloak

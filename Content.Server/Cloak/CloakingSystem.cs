@@ -1,7 +1,7 @@
 using Content.Server.DoAfter;
 using Content.Server.Popups;
 using Content.Shared.Actions;
-using Robust.Server.GameObjects;
+using Content.Shared.Cloak;
 
 namespace Content.Server.Cloak
 {
@@ -9,7 +9,7 @@ namespace Content.Server.Cloak
     {
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
-        [Dependency] private readonly PopupSystem _popupSystem = default!;
+        [Dependency] private readonly IEntityManager _entityManager = default!;
 
         public override void Initialize()
         {
@@ -24,6 +24,7 @@ namespace Content.Server.Cloak
         private void OnComponentAdded(EntityUid uid, CloakingComponent comp, ComponentInit args)
         {
             _actionsSystem.AddAction(uid, comp.ToggleAction, null);
+            UpdateAppearance(uid, false, comp);
         }
 
         private void OnComponentRemoved(EntityUid uid, CloakingComponent comp, ComponentRemove args)
@@ -38,12 +39,12 @@ namespace Content.Server.Cloak
 
             if (comp.Cloaked)
             {
-                ev = new DoDecloakEvent(comp);
+                ev = new DoDecloakEvent(uid, comp);
                 delay = comp.DecloakDelay;
             }
             else
             {
-                ev = new DoCloakEvent(comp);
+                ev = new DoCloakEvent(uid, comp);
                 delay = comp.CloakDelay;
             }
 
@@ -70,33 +71,25 @@ namespace Content.Server.Cloak
 
         private void OnSuccessfullyCloaked(DoCloakEvent args)
         {
-            ChangeCloakStatus(args.Comp, false);
+            if(!_entityManager.TryGetComponent<AppearanceComponent>(args.Uid, out var appearanceComp)) return;
+            UpdateAppearance(args.Uid, true, args.Comp, appearanceComp);
         }
 
         private void OnSuccessfullyDecloaked(DoDecloakEvent args)
         {
-            ChangeCloakStatus(args.Comp, false);
+            if(!_entityManager.TryGetComponent<AppearanceComponent>(args.Uid, out var appearanceComp)) return;
+            UpdateAppearance(args.Uid, false, args.Comp, appearanceComp);
         }
 
-        /// <summary>
-        /// Sets whether or not the entity is cloaked.
-        /// </summary>
-        /// <param name="comp">The cloaking component</param>
-        /// <param name="toState">Whether or not the entity should be cloaked</param>
-        public void ChangeCloakStatus(CloakingComponent comp, bool toState)
+        private void UpdateAppearance(EntityUid uid,
+            bool cloaked,
+            CloakingComponent? cloakComp = null,
+            AppearanceComponent? appearance = null)
         {
-            var uid = comp.Owner;
-            if(!EntityManager.TryGetComponent<SpriteComponent>(uid, out var spriteComponent)) return;
+            if (!Resolve(uid, ref cloakComp, ref appearance, false))
+                return;
 
-            Color toColor = toState ? new Color(1f, 1f, 1f, 0.02f) : new Color(1f, 1f, 1f);
-
-            for (int i = 0; i < spriteComponent.LayerCount; i++)
-            {
-                if(comp.IgnoreLayers.Contains(i)) continue;
-                spriteComponent.LayerSetColor(i, toColor);
-            }
-
-            comp.Cloaked = toState;
+            appearance.SetData(CloakingVisuals.IsCloaked, cloaked);
         }
     }
 }

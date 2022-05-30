@@ -1,5 +1,5 @@
 namespace Content.Server.Cloak
 {
-    public record DoDecloakEvent(CloakingComponent Comp);
-    public record DoCloakEvent(CloakingComponent Comp);
+    public record DoDecloakEvent(EntityUid Uid, CloakingComponent Comp);
+    public record DoCloakEvent(EntityUid Uid, CloakingComponent Comp);
 }
