@@ -2,6 +2,9 @@
 using Content.Server.Cargo.Systems;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking.Rules.Configurations;
+using Content.Server.Players;
+using Content.Server.RandomAppearance;
+using Content.Server.Roles;
 using Content.Server.RoundEnd;
 using Content.Server.Spawners.Components;
 using Content.Server.Station.Components;
@@ -45,6 +48,8 @@ public sealed class PiratesRuleSystem : GameRuleSystem
     private double _initialShipValue;
 
     public override string Prototype => "Pirates";
+
+    private const string PiratePrototypeId = "Pirate";
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -126,25 +131,54 @@ public sealed class PiratesRuleSystem : GameRuleSystem
 
     private void OnPlayerSpawningEvent(RulePlayerSpawningEvent ev)
     {
-        // Forgive me for copy-pasting nukies.
         if (!Enabled)
-        {
             return;
-        }
 
         _pirates.Clear();
         _initialItems.Clear();
 
-        // Between 1 and <max pirate count>: needs at least n players per op.
-        var numOps = Math.Max(1,
-            (int)Math.Min(
-                Math.Floor((double)ev.PlayerPool.Count / _cfg.GetCVar(CCVars.PiratesPlayersPerOp)), _cfg.GetCVar(CCVars.PiratesMaxOps)));
-        var ops = new IPlayerSession[numOps];
-        for (var i = 0; i < numOps; i++)
+        // Basically copied verbatim from nukie code
+        var playersPerPirate = _cfg.GetCVar(CCVars.PiratesPlayersPerOp);
+        var maxPirates = _cfg.GetCVar(CCVars.PiratesMaxOps);
+
+        var everyone = new List<IPlayerSession>(ev.PlayerPool);
+        var prefList = new List<IPlayerSession>();
+        var pirates = new List<IPlayerSession>();
+
+        // The LINQ expression ReSharper keeps suggesting is completely unintelligible so I'm disabling it
+        // ReSharper disable once ForeachCanBeConvertedToQueryUsingAnotherGetEnumerator
+        foreach (var player in everyone)
         {
-            ops[i] = _random.PickAndTake(ev.PlayerPool);
+            if(player.ContentData()?.Mind?.AllRoles.All(role => role is not Job {CanBeAntag: false}) ?? false) continue;
+            if (!ev.Profiles.ContainsKey(player.UserId))
+            {
+                continue;
+            }
+            var profile = ev.Profiles[player.UserId];
+            if (profile.AntagPreferences.Contains(PiratePrototypeId))
+            {
+                prefList.Add(player);
+            }
         }
 
+        var numPirates = MathHelper.Clamp(ev.PlayerPool.Count / playersPerPirate, 1, maxPirates);
+
+        for (var i = 0; i < numPirates; i++)
+        {
+            if (prefList.Count == 0)
+            {
+                if (everyone.Count == 0)
+                {
+                    Logger.InfoS("preset", "Insufficient ready players to fill up with pirates, stopping the selection");
+                    break;
+                }
+                pirates.Add(_random.PickAndTake(everyone));
+                Logger.InfoS("preset", "Insufficient preferred nukeops, picking at random.");
+            }
+            pirates.Add(_random.PickAndTake(prefList));
+        }
+
+        // TODO: Make this a prototype
         var map = "/Maps/pirate.yml";
 
         var aabbs = _stationSystem.Stations.SelectMany(x =>
@@ -164,7 +198,7 @@ public sealed class PiratesRuleSystem : GameRuleSystem
         if (!gridId.HasValue)
         {
             Logger.ErrorS("pirates", $"Gridid was null when loading \"{map}\", aborting.");
-            foreach (var session in ops)
+            foreach (var session in pirates)
             {
                 ev.PlayerPool.Add(session);
             }
@@ -189,16 +223,16 @@ public sealed class PiratesRuleSystem : GameRuleSystem
         if (spawns.Count == 0)
         {
             spawns.Add(Transform(_pirateShip).Coordinates);
-            Logger.WarningS("pirates", $"Fell back to default spawn for nukies!");
+            Logger.WarningS("pirates", $"Fell back to default spawn for pirates!");
         }
 
-        for (var i = 0; i < ops.Length; i++)
+        for (var i = 0; i < pirates.Count; i++)
         {
             var sex = _random.Prob(0.5f) ? Sex.Male : Sex.Female;
 
             var name = sex.GetName("Human", _prototypeManager, _random);
 
-            var session = ops[i];
+            var session = pirates[i];
             var newMind = new Mind.Mind(session.UserId)
             {
                 CharacterName = name
@@ -207,6 +241,7 @@ public sealed class PiratesRuleSystem : GameRuleSystem
 
             var mob = Spawn("MobHuman", _random.Pick(spawns));
             MetaData(mob).EntityName = name;
+            EntityManager.AddComponent<RandomAppearanceComponent>(mob);
 
             newMind.TransferTo(mob);
             _stationSpawningSystem.EquipStartingGear(mob, pirateGear, null);

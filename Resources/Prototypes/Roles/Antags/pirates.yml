@@ -1,0 +1,6 @@
+- type: antag
+  id: Pirate
+  name: "Pirate"
+  antagonist: true
+  setPreference: true
+  objective: "Steal anything valuable from the station, by any means necessary."
