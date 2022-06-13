@@ -34,6 +34,7 @@
   - type: Tag
     tags:
     - SerpentidHuntingUnusable
+  - type: UnusableWhileHunting
 
 - type: entity
   name: Bulldog
@@ -81,6 +82,7 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: UnusableWhileHunting
 
 - type: entity
   name: double-barreled shotgun

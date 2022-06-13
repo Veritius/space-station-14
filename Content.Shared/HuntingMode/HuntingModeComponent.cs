@@ -6,7 +6,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 namespace Content.Shared.HuntingMode
 {
     [RegisterComponent]
-    public sealed class SharedHuntingModeComponent : Component
+    public sealed class HuntingModeComponent : Component
     {
         [ViewVariables]
         public bool IsInHuntingMode = false;

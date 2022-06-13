@@ -1096,3 +1096,11 @@
   desc: It's not real snake venom, but will probably make you just as ill.
   physicalDesc: bubbly
   color: "#f2aee3"
+  metabolisms:
+    Drink:
+      effects:
+        - !type:SatiateThirst
+          factor: 2
+        - !type:AdjustReagent
+          reagent: Ethanol
+          amount: 0.15

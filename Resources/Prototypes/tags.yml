@@ -379,9 +379,6 @@
   id: SecwayKeys
 
 - type: Tag
-  id: SerpentidHuntingUnusable #cannot be used by a serpentid in hunting mode
-
-- type: Tag
   id: Sheet
 
 - type: Tag

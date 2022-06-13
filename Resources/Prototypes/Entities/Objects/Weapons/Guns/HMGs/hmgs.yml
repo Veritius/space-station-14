@@ -18,6 +18,7 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   # No chamber because HMG may want its own
+  - type: UnusableWhileHunting
 
 - type: entity
   name: minigun

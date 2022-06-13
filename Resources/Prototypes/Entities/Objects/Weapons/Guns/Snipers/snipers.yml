@@ -27,6 +27,7 @@
     whitelist:
       tags:
       - CartridgeLightRifle
+  - type: UnusableWhileHunting
 
 - type: entity
   name: Kardashev-Mosin
