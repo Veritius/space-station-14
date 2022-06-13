@@ -27,9 +27,7 @@
   - type: Construction
     graph: PneumaticCannon
     node: cannon
-  - type: Tag
-    tags:
-     - SerpentidHuntingUnusable
+  - type: UnusableWhileHunting
 
 - type: entity
   name: pie cannon

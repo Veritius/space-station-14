@@ -31,8 +31,9 @@ namespace Content.Client.Cloak
 
             if (!args.Component.TryGetData(CloakingVisuals.IsCloaked, out bool isCloaked)) return;
 
-            foreach (var layer in component.CloakLayers)
+            foreach (var enumObject in component.CloakLayers)
             {
+                var layer = args.Sprite.LayerMapGet(enumObject);
                 args.Sprite.LayerSetVisible(layer, isCloaked);
             }
         }

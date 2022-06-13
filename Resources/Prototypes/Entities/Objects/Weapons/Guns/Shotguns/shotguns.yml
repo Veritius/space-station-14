@@ -31,9 +31,6 @@
     proto: ShellShotgun
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
-  - type: Tag
-    tags:
-    - SerpentidHuntingUnusable
   - type: UnusableWhileHunting
 
 - type: entity

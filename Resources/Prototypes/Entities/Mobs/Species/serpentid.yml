@@ -130,7 +130,7 @@
       heatDamage:
         types:
           Heat: 1 #per second, scales with temperature & other constants
-    - type: UnarmedCombat
+    - type: MeleeWeapon
       range: 1.5
       arcwidth: 0
       arc: claw
