@@ -1,0 +1,15 @@
+- type: entity
+  name: microbomb injector
+  parent: BaseItem
+  id: MicrobombInjector
+  description: Injects an undetectable explosive into your body that can be detonated at will, killing you instantly.
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Medical/hypospray.rsi
+      state: combat_hypo
+      netsync: false
+    - type: AddComponentsToTarget
+      delay: 3
+      charges: 1
+      components:
+        - type: MicrobombImplant

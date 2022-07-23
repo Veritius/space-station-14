@@ -193,7 +193,16 @@
   icon: Objects/Tanks/Jetpacks/black.rsi/icon.png
   price: 5
 
-#TODO: Increase the price of this to 4-5/remove it when we get encrpytion keys
+- type: uplinkListing
+  id: UplinkMicrobombInjector
+  category: Utility
+  itemId: MicrobombInjector
+  listingName: Microbomb Injector
+  description: Implants an undetectable micro-explosive inside you that can be activated at will, killing you instantly.
+  icon: Objects/Specific/Medical/hypospray.rsi/combat_hypo.png
+  price: 4
+
+#TODO: Increase the price of this to 4-5/remove it when we get encryption keys
 - type: uplinkListing
   id: UplinkHeadset
   category: Utility
