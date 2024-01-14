@@ -82,6 +82,7 @@
     - Service
     - Supply
     - Syndicate
+    - DionaHivemind
     globalReceive: true
   - type: Physics
     bodyType: Dynamic

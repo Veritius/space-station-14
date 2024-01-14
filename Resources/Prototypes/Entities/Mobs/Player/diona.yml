@@ -4,6 +4,13 @@
   parent: BaseMobDiona
   id: MobDiona
   components:
+    - type: IntrinsicRadioReceiver
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - DionaHivemind
+    - type: ActiveRadio
+      channels:
+      - DionaHivemind
     - type: Respirator
       damage:
         types:

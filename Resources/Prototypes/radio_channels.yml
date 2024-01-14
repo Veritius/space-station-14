@@ -95,3 +95,12 @@
   color: "#f6ce64"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+
+- type: radioChannel
+  id: DionaHivemind
+  name: chat-radio-diona-hivemind
+  keycode: 'p'
+  frequency: 1002
+  color: "#307206"
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
