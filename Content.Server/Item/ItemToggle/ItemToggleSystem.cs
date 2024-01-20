@@ -1,8 +1,7 @@
-using Content.Shared.Item;
 using Content.Server.CombatMode.Disarm;
-using Content.Server.Kitchen.Components;
 using Content.Shared.Item.ItemToggle;
 using Content.Shared.Item.ItemToggle.Components;
+using Content.Shared.Kitchen.Components;
 using ItemToggleComponent = Content.Shared.Item.ItemToggle.Components.ItemToggleComponent;
 
 namespace Content.Server.Item;

@@ -23,6 +23,15 @@
       <Private>false</Private>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Kitchen\EntitySystems" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Kitchen\Components\ReagentGrinderComponent.cs" />
+    <Compile Remove="Kitchen\Components\MicrowaveComponent.cs" />
+    <Compile Remove="Kitchen\Components\ActivelyMicrowavedComponent.cs" />
+    <Compile Remove="Kitchen\Components\ActiveMicrowaveComponent.cs" />
+  </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />
 </Project>
