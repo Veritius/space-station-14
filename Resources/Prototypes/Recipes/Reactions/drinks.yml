@@ -1190,7 +1190,7 @@
     Mayo:
       amount: 1
   products:
-    CementMixer: 2
+    SmokersCough: 2
 
 - type: reaction
   id: Paralyzer
@@ -1204,4 +1204,4 @@
     Cola:
       amount: 4
   products:
-    CementMixer: 5
+    Paralyzer: 5
