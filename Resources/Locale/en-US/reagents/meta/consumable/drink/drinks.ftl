@@ -102,3 +102,6 @@ reagent-desc-cement-mixer = A curdled mix of cream liqueur and lime juice. Remin
 
 reagent-name-smokers-cough = smoker's cough
 reagent-desc-smokers-cough = TODO
+
+reagent-name-paralyzer = paralyzer
+reagent-desc-paralyzer = TODO

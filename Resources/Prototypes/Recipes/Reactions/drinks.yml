@@ -1191,3 +1191,17 @@
       amount: 1
   products:
     CementMixer: 2
+
+- type: reaction
+  id: Paralyzer
+  reactants:
+    Vodka:
+      amount: 1
+    CoffeeLiqueur:
+      amount: 1
+    Cream:
+      amount: 1
+    Cola:
+      amount: 4
+  products:
+    CementMixer: 5

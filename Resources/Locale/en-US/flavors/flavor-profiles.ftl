@@ -215,7 +215,6 @@ flavor-complex-milk = like milk
 flavor-complex-tea = like tea
 flavor-complex-ice = like ice
 flavor-complex-mopwata = like stagnant, dirty water
-flavor-complex-cement-mixer = TODO
 
 ## Cocktails
 flavor-complex-arnold-palmer = like a hole-in-one
@@ -255,6 +254,9 @@ flavor-complex-themartinez = like violets and lemon vodka
 flavor-complex-cogchamp = like brass
 flavor-complex-white-gilgamesh = like lightly carbonated cream
 flavor-complex-antifreeze = warm
+flavor-complex-cement-mixer = TODO
+flavor-complex-smokers-cough = TODO
+flavor-complex-paralyzer = TODO
 
 ### This is exactly what pilk tastes like. I'm not even joking. I might've been a little drunk though
 flavor-complex-pilk = like sweet milk

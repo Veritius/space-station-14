@@ -1963,9 +1963,26 @@
     Drink:
       effects:
         - !type:SatiateThirst
-          factor: 0.3
+          factor: 0.2
         - !type:ChemVomit
           probability: 0.2
+        - !type:AdjustReagent
+          reagent: Ethanol
+          amount: 0.2
+
+- type: reagent
+  id: Paralyzer
+  name: reagent-name-paralyzer
+  parent: BaseDrink
+  desc: reagent-desc-paralyzer
+  physicalDesc: reagent-physical-desc-thick
+  flavor: paralyzer
+  color: "#9B6B45"
+  metabolisms:
+    Drink:
+      effects:
+        - !type:SatiateThirst
+          factor: 0.3
         - !type:AdjustReagent
           reagent: Ethanol
           amount: 0.2
