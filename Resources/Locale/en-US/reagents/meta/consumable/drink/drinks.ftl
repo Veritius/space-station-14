@@ -96,3 +96,9 @@ reagent-desc-white-gilgamesh = A sickening mixture of milk and beer. Makes you f
 
 reagent-name-mopwata = mopwata
 reagent-desc-mopwata = Dirty, stagnant mop water.
+
+reagent-name-cement-mixer = cement mixer
+reagent-desc-cement-mixer = A curdled mix of cream liqueur and lime juice. Reminiscent of cottage cheese.
+
+reagent-name-smokers-cough = smoker's cough
+reagent-desc-smokers-cough = TODO

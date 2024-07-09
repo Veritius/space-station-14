@@ -1171,3 +1171,23 @@
       amount: 1
   products:
     Cola: 4
+
+- type: reaction
+  id: CementMixer
+  reactants:
+    IrishCream:
+      amount: 2
+    JuiceLime:
+      amount: 1
+  products:
+    CementMixer: 3
+
+- type: reaction
+  id: SmokersCough
+  reactants:
+    CoffeeLiqueur:
+      amount: 2
+    Mayo:
+      amount: 1
+  products:
+    CementMixer: 2
