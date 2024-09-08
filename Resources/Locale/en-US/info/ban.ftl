@@ -85,3 +85,9 @@ server-ban-string-never = never
 
 # Kick on ban
 ban-kick-reason = You have been banned
+
+# obliterate command
+cmd-obliterate-desc = Bans someone permanently, and erases them from the round.
+cmd-obliterate-help = Usage: obliterate <name or user ID> [ban reason, leave empty for raiders]
+cmd-obliterate-player = Unable to find a player with that name.
+cmd-obliterate-invalid-arguments = Invalid amount of arguments
