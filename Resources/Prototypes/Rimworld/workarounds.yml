@@ -35,8 +35,8 @@
   - type: PlacementReplacement
     key: walls
   - type: Icon
-      sprite: Structures/Walls/rock.rsi
-      state: rock_wall
+    sprite: Structures/Walls/rock.rsi
+    state: rock_wall
   - type: IconSmooth
     key: walls
     mode: NoSprite
