@@ -34,11 +34,13 @@
 - type: entity
   parent: [ CorruptedSiliconBeamGun, BaseInherent ]
   id: CorruptedSiliconBeamGunMounted
+  description: An ultra-heavy particle cannon with an internal recharging battery. Specialised into long-range anti-personnel use.
   suffix: Mounted, DO NOT SPAWN
 
 - type: entity
   parent: [ CorruptedSiliconBeamGun ]
   id: CorruptedSiliconBeamGunDropped
+  description: A massive heavy rifle with innumerable strange protrusions and glowing doodads.
   suffix: Dropped
   components:
   - type: Wieldable
@@ -92,11 +94,13 @@
 - type: entity
   parent: [ CorruptedSiliconRailGun, BaseInherent ]
   id: CorruptedSiliconRailGunMounted
+  description: An ultra-heavy rail gun with an internal ammunition fabrication unit. Specialised into an anti-materiel role.
   suffix: Mounted, DO NOT SPAWN
 
 - type: entity
   parent: [ CorruptedSiliconRailGun ]
   id: CorruptedSiliconRailGunDropped
+  description: A massive heavy rifle with innumerable strange protrusions and spinning gizmos.
   suffix: Dropped
   components:
   - type: Wieldable
