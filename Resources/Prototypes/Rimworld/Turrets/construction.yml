@@ -12,6 +12,7 @@
   parent: BaseTurretFlatpack
   id: GrenadeTurretNanotrasenFlatpack
   name: grenade turret flatpack
+  components:
   - type: Flatpack
     entity: WeaponTurretStaticGrenadeNanoTrasen
 
@@ -19,6 +20,7 @@
   parent: BaseTurretFlatpack
   id: SniperTurretNanotrasenFlatpack
   name: sniper turret flatpack
+  components:
   - type: Flatpack
     entity: WeaponTurretStaticSniperNanoTrasen
 
@@ -26,6 +28,7 @@
   parent: BaseTurretFlatpack
   id: ShotgunTurretNanotrasenFlatpack
   name: shotgun turret flatpack
+  components:
   - type: Flatpack
     entity: WeaponTurretStaticShotgunNanoTrasen
 
@@ -33,6 +36,7 @@
   parent: BaseTurretFlatpack
   id: MinigunTurretNanotrasenFlatpack
   name: minigun turret flatpack
+  components:
   - type: Flatpack
     entity: WeaponTurretStaticMinigunNanoTrasen
 
@@ -40,6 +44,7 @@
   parent: BaseTurretFlatpack
   id: IncendiaryTurretNanotrasenFlatpack
   name: incendiary turret flatpack
+  components:
   - type: Flatpack
     entity: WeaponTurretStaticIncendiaryNanotrasen
 
@@ -47,6 +52,7 @@
   parent: BaseTurretFlatpack
   id: DisablerTurretNanotrasenFlatpack
   name: disabler turret flatpack
+  components:
   - type: Flatpack
     entity: WeaponTurretStaticDisablerNanoTrasen
 
@@ -54,6 +60,7 @@
   parent: BaseTurretFlatpack
   id: LaserTurretNanotrasenFlatpack
   name: laser turret flatpack
+  components:
   - type: Flatpack
     entity: WeaponTurretStaticLaserNanoTrasen
 
@@ -61,5 +68,6 @@
   parent: BaseTurretFlatpack
   id: HeavyLaserTurretNanotrasenFlatpack
   name: heavy laser turret flatpack
+  components:
   - type: Flatpack
     entity: WeaponTurretStaticHeavyLaserNanoTrasen
