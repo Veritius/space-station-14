@@ -5,14 +5,20 @@
   abstract: true
   components:
   - type: Gun
-    fireRate: 0.2
+    fireRate: 0.1
     minAngle: 0
     maxAngle: 5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
-  - type: BallisticAmmoProvider
+  - type: ProjectileBatteryAmmoProvider
     proto: GrenadeFrag
-    capacity: 20
+    fireCost: 1
+  - type: Battery
+    maxCharge: 10
+    startingCharge: 10
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.02
 
 - type: entity
   parent: WeaponTurretAbstract
@@ -24,9 +30,15 @@
     fireRate: 1
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
-  - type: BallisticAmmoProvider
+  - type: ProjectileBatteryAmmoProvider
     proto: CartridgeAntiMateriel
-    capacity: 60
+    fireCost: 1
+  - type: Battery
+    maxCharge: 20
+    startingCharge: 20
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.1
 
 - type: entity
   parent: WeaponTurretAbstract
@@ -38,9 +50,15 @@
     fireRate: 0.9
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
-  - type: BallisticAmmoProvider
+  - type: ProjectileBatteryAmmoProvider
     proto: ShellShotgun
-    capacity: 150
+    fireCost: 1
+  - type: Battery
+    maxCharge: 35
+    startingCharge: 35
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.1
 
 - type: entity
   parent: WeaponTurretAbstract
@@ -49,14 +67,20 @@
   abstract: true
   components:
   - type: Gun
-    fireRate: 14
+    fireRate: 12
     minAngle: 0
     maxAngle: 8
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/minigun.ogg
-  - type: BallisticAmmoProvider
+  - type: ProjectileBatteryAmmoProvider
     proto: CartridgeMinigun
-    capacity: 1000
+    fireCost: 1
+  - type: Battery
+    maxCharge: 400
+    startingCharge: 400
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 3
 
 - type: entity
   parent: WeaponTurretAbstract
@@ -68,9 +92,15 @@
     fireRate: 1.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
-  - type: BallisticAmmoProvider
+  - type: ProjectileBatteryAmmoProvider
     proto: CartridgePistolIncendiary
-    capacity: 150
+    fireCost: 1
+  - type: Battery
+    maxCharge: 50
+    startingCharge: 50
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.4
 
 - type: entity
   parent: WeaponTurretAbstract
@@ -84,10 +114,13 @@
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletDisabler
-    fireCost: 10
+    fireCost: 1
   - type: Battery
-    maxCharge: 300
-    startingCharge: 300
+    maxCharge: 20
+    startingCharge: 20
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.4
 
 - type: entity
   parent: WeaponTurretAbstract
@@ -101,10 +134,13 @@
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
   - type: HitscanBatteryAmmoProvider
     proto: RedLaser
-    fireCost: 10
+    fireCost: 1
   - type: Battery
-    maxCharge: 4000
-    startingCharge: 4000
+    maxCharge: 80
+    startingCharge: 80
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.5
 
 - type: entity
   parent: WeaponTurretAbstract
@@ -118,10 +154,13 @@
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
     proto: RedHeavyLaser
-    fireCost: 40
+    fireCost: 1
   - type: Battery
-    maxCharge: 4000
-    startingCharge: 4000
+    maxCharge: 30
+    startingCharge: 30
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.1
 
 - type: entity
   parent: [ WeaponTurretStaticGrenade, TurretFactionSimpleHostile ]
