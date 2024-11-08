@@ -1,6 +1,6 @@
 - type: entity
   parent: [ BaseWeaponBattery ]
-  id: CorruptedSiliconTitanBeamGun
+  id: CorruptedSiliconBeamGun
   abstract: true
   name: particle cannon
   components:
@@ -32,13 +32,13 @@
   - type: Appearance
 
 - type: entity
-  parent: [ CorruptedSiliconTitanBeamGun, BaseInherent ]
-  id: CorruptedSiliconTitanBeamGunMounted
+  parent: [ CorruptedSiliconBeamGun, BaseInherent ]
+  id: CorruptedSiliconBeamGunMounted
   suffix: Mounted, DO NOT SPAWN
 
 - type: entity
-  parent: [ CorruptedSiliconTitanBeamGun ]
-  id: CorruptedSiliconTitanBeamGunDropped
+  parent: [ CorruptedSiliconBeamGun ]
+  id: CorruptedSiliconBeamGunDropped
   suffix: Dropped
   components:
   - type: Wieldable
@@ -62,7 +62,7 @@
 
 - type: entity
   parent: [ BaseItem ]
-  id: CorruptedSiliconTitanRailGun
+  id: CorruptedSiliconRailGun
   abstract: true
   name: rail gun
   components:
@@ -90,13 +90,13 @@
   - type: AmmoCounter
 
 - type: entity
-  parent: [ CorruptedSiliconTitanRailGun, BaseInherent ]
-  id: CorruptedSiliconTitanRailGunMounted
+  parent: [ CorruptedSiliconRailGun, BaseInherent ]
+  id: CorruptedSiliconRailGunMounted
   suffix: Mounted, DO NOT SPAWN
 
 - type: entity
-  parent: [ CorruptedSiliconTitanRailGun ]
-  id: CorruptedSiliconTitanRailGunDropped
+  parent: [ CorruptedSiliconRailGun ]
+  id: CorruptedSiliconRailGunDropped
   suffix: Dropped
   components:
   - type: Wieldable
