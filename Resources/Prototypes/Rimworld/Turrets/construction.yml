@@ -1,0 +1,65 @@
+- type: entity
+  parent: BaseFlatpack
+  id: BaseTurretFlatpack
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: grounding-rod
+
+- type: entity
+  parent: BaseTurretFlatpack
+  id: GrenadeTurretNanotrasenFlatpack
+  name: grenade turret flatpack
+  - type: Flatpack
+    entity: WeaponTurretStaticGrenadeNanoTrasen
+
+- type: entity
+  parent: BaseTurretFlatpack
+  id: SniperTurretNanotrasenFlatpack
+  name: sniper turret flatpack
+  - type: Flatpack
+    entity: WeaponTurretStaticSniperNanoTrasen
+
+- type: entity
+  parent: BaseTurretFlatpack
+  id: ShotgunTurretNanotrasenFlatpack
+  name: shotgun turret flatpack
+  - type: Flatpack
+    entity: WeaponTurretStaticShotgunNanoTrasen
+
+- type: entity
+  parent: BaseTurretFlatpack
+  id: MinigunTurretNanotrasenFlatpack
+  name: minigun turret flatpack
+  - type: Flatpack
+    entity: WeaponTurretStaticMinigunNanoTrasen
+
+- type: entity
+  parent: BaseTurretFlatpack
+  id: IncendiaryTurretNanotrasenFlatpack
+  name: incendiary turret flatpack
+  - type: Flatpack
+    entity: WeaponTurretStaticIncendiaryNanotrasen
+
+- type: entity
+  parent: BaseTurretFlatpack
+  id: DisablerTurretNanotrasenFlatpack
+  name: disabler turret flatpack
+  - type: Flatpack
+    entity: WeaponTurretStaticDisablerNanoTrasen
+
+- type: entity
+  parent: BaseTurretFlatpack
+  id: LaserTurretNanotrasenFlatpack
+  name: laser turret flatpack
+  - type: Flatpack
+    entity: WeaponTurretStaticLaserNanoTrasen
+
+- type: entity
+  parent: BaseTurretFlatpack
+  id: HeavyLaserTurretNanotrasenFlatpack
+  name: heavy laser turret flatpack
+  - type: Flatpack
+    entity: WeaponTurretStaticHeavyLaserNanoTrasen
