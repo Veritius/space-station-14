@@ -89,11 +89,11 @@
   abstract: true
   components:
   - type: Gun
-    fireRate: 1.5
+    fireRate: 1.2
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: CartridgePistolIncendiary
+    proto: CartridgeMagnumIncendiary
     fireCost: 1
   - type: Battery
     maxCharge: 50
