@@ -106,6 +106,7 @@
   parent: [ BaseCartridge, BaseMajorContraband ]
   id: CartridgeTitanRailGun
   name: cartridge (.100 rail gun)
+  categories: [ HideSpawnMenu ]
   components:
   - type: CartridgeAmmo
     proto: BulletTitanRailGun
