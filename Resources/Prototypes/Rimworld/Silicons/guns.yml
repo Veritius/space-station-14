@@ -19,6 +19,12 @@
   - type: HitscanBatteryAmmoProvider
     proto: CorruptedSiliconTitanBeam
     fireCost: 1
+  - type: Battery
+    maxCharge: 15
+    startingCharge: 15
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.09
   - type: MagazineVisuals
     magState: mag
     steps: 5
@@ -36,6 +42,7 @@
   suffix: Dropped
   components:
   - type: Wieldable
+  - type: GunRequiresWield
 
 - type: hitscan
   id: CorruptedSiliconTitanBeam
@@ -71,9 +78,15 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
-  - type: BallisticAmmoProvider
+  - type: ProjectileBatteryAmmoProvider
     proto: CartridgeTitanRailGun
-    capacity: 400
+    fireCost: 1
+  - type: Battery
+    maxCharge: 8
+    startingCharge: 8
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 0.2
   - type: AmmoCounter
 
 - type: entity
@@ -87,6 +100,7 @@
   suffix: Dropped
   components:
   - type: Wieldable
+  - type: GunRequiresWield
 
 - type: entity
   parent: [ BaseCartridge, BaseMajorContraband ]
