@@ -116,14 +116,3 @@
   - type: NpcFactionMember
     factions:
     - CorruptSilicon
-
-- type: npcFaction
-  id: ShootWhateverMoves
-  hostile:
-  - NanoTrasen
-  - Syndicate
-  - Passive
-  - PetsNT
-  - Zombie
-  - SimpleHostile
-  - CorruptSilicon
