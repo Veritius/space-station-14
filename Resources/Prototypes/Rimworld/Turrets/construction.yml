@@ -35,7 +35,7 @@
 - type: entity
   parent: BaseTurretFlatpack
   id: MinigunTurretNanotrasenFlatpack
-  name: minigun turret flatpack
+  name: machine gun turret flatpack
   components:
   - type: Flatpack
     entity: WeaponTurretStaticMinigunNanoTrasen

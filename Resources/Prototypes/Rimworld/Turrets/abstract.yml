@@ -109,6 +109,14 @@
     factions:
     - Syndicate
 
+- type: entity
+  id: TurretFactionCorruptSilicon
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - CorruptSilicon
+
 - type: npcFaction
   id: ShootWhateverMoves
   hostile:
@@ -119,3 +127,4 @@
   - Zombie
   - Revolutionary
   - SimpleHostile
+  - CorruptSilicon

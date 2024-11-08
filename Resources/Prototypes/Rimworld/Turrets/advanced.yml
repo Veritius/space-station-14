@@ -321,3 +321,43 @@
   parent: [ WeaponTurretStaticHeavyLaser, TurretFactionSyndicate ]
   id: WeaponTurretStaticHeavyLaserSyndicate
   suffix: Syndicate
+
+- type: entity
+  parent: [ WeaponTurretStaticGrenade, TurretFactionCorruptSilicon ]
+  id: WeaponTurretStaticGrenadeCorruptSilicon
+  suffix: Corrupt Silicon
+
+- type: entity
+  parent: [ WeaponTurretStaticSniper, TurretFactionCorruptSilicon ]
+  id: WeaponTurretStaticSniperCorruptSilicon
+  suffix: Corrupt Silicon
+
+- type: entity
+  parent: [ WeaponTurretStaticShotgun, TurretFactionCorruptSilicon ]
+  id: WeaponTurretStaticShotgunCorruptSilicon
+  suffix: Corrupt Silicon
+
+- type: entity
+  parent: [ WeaponTurretStaticMinigun, TurretFactionCorruptSilicon ]
+  id: WeaponTurretStaticMinigunCorruptSilicon
+  suffix: Corrupt Silicon
+
+- type: entity
+  parent: [ WeaponTurretStaticIncendiary, TurretFactionCorruptSilicon ]
+  id: WeaponTurretStaticIncendiaryCorruptSilicon
+  suffix: Corrupt Silicon
+
+- type: entity
+  parent: [ WeaponTurretStaticDisabler, TurretFactionCorruptSilicon ]
+  id: WeaponTurretStaticDisablerCorruptSilicon
+  suffix: Corrupt Silicon
+
+- type: entity
+  parent: [ WeaponTurretStaticLaser, TurretFactionCorruptSilicon ]
+  id: WeaponTurretStaticLaserCorruptSilicon
+  suffix: Corrupt Silicon
+
+- type: entity
+  parent: [ WeaponTurretStaticHeavyLaser, TurretFactionCorruptSilicon ]
+  id: WeaponTurretStaticHeavyLaserCorruptSilicon
+  suffix: Corrupt Silicon

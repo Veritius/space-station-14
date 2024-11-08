@@ -1,6 +1,6 @@
 - type: entity
   parent: BasePowerCell
-  id: PowerCellCorruptedSilicon
+  id: PowerCellCorruptSilicon
   name: corrupted power cell
   description: A power cell in the standard Nanotrasen form factor, salvaged from a destroyed corrupted silicon.
   components:

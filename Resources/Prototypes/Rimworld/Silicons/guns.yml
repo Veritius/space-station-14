@@ -1,6 +1,6 @@
 - type: entity
   parent: [ BaseWeaponBattery ]
-  id: CorruptedSiliconBeamGun
+  id: CorruptSiliconBeamGun
   abstract: true
   name: particle cannon
   components:
@@ -17,7 +17,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: CorruptedSiliconTitanBeam
+    proto: CorruptSiliconTitanBeam
     fireCost: 1
   - type: Battery
     maxCharge: 15
@@ -32,14 +32,14 @@
   - type: Appearance
 
 - type: entity
-  parent: [ CorruptedSiliconBeamGun, BaseInherent ]
-  id: CorruptedSiliconBeamGunMounted
+  parent: [ CorruptSiliconBeamGun, BaseInherent ]
+  id: CorruptSiliconBeamGunMounted
   description: An ultra-heavy particle cannon with an internal recharging battery. Specialised into long-range anti-personnel use.
   suffix: Mounted, DO NOT SPAWN
 
 - type: entity
-  parent: [ CorruptedSiliconBeamGun ]
-  id: CorruptedSiliconBeamGunDropped
+  parent: [ CorruptSiliconBeamGun ]
+  id: CorruptSiliconBeamGunDropped
   description: A massive heavy rifle with innumerable strange protrusions and glowing doodads.
   suffix: Dropped
   components:
@@ -47,7 +47,7 @@
   - type: GunRequiresWield
 
 - type: hitscan
-  id: CorruptedSiliconTitanBeam
+  id: CorruptSiliconTitanBeam
   damage:
     types:
       Heat: 60
@@ -64,7 +64,7 @@
 
 - type: entity
   parent: [ BaseItem ]
-  id: CorruptedSiliconRailGun
+  id: CorruptSiliconRailGun
   abstract: true
   name: rail gun
   components:
@@ -92,14 +92,14 @@
   - type: AmmoCounter
 
 - type: entity
-  parent: [ CorruptedSiliconRailGun, BaseInherent ]
-  id: CorruptedSiliconRailGunMounted
+  parent: [ CorruptSiliconRailGun, BaseInherent ]
+  id: CorruptSiliconRailGunMounted
   description: An ultra-heavy rail gun with an internal ammunition fabrication unit. Specialised into an anti-materiel role.
   suffix: Mounted, DO NOT SPAWN
 
 - type: entity
-  parent: [ CorruptedSiliconRailGun ]
-  id: CorruptedSiliconRailGunDropped
+  parent: [ CorruptSiliconRailGun ]
+  id: CorruptSiliconRailGunDropped
   description: A massive heavy rifle with innumerable strange protrusions and spinning gizmos.
   suffix: Dropped
   components:
