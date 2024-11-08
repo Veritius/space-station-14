@@ -1,0 +1,284 @@
+- type: entity
+  parent: WeaponTurretAbstract
+  id: WeaponTurretStaticGrenade
+  name: grenade turret
+  abstract: true
+  components:
+  - type: Gun
+    fireRate: 0.2
+    minAngle: 0
+    maxAngle: 5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+  - type: BallisticAmmoProvider
+    proto: GrenadeFrag
+    capacity: 20
+
+- type: entity
+  parent: WeaponTurretAbstract
+  id: WeaponTurretStaticSniper
+  name: sniper turret
+  abstract: true
+  components:
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMateriel
+    capacity: 60
+
+- type: entity
+  parent: WeaponTurretAbstract
+  id: WeaponTurretStaticShotgun
+  name: shotgun turret
+  abstract: true
+  components:
+  - type: Gun
+    fireRate: 0.9
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+  - type: BallisticAmmoProvider
+    proto: ShellShotgun
+    capacity: 150
+
+- type: entity
+  parent: WeaponTurretAbstract
+  id: WeaponTurretStaticMinigun
+  name: machine gun turret
+  abstract: true
+  components:
+  - type: Gun
+    fireRate: 14
+    minAngle: 0
+    maxAngle: 8
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/minigun.ogg
+  - type: BallisticAmmoProvider
+    proto: CartridgeMinigun
+    capacity: 1000
+
+- type: entity
+  parent: WeaponTurretAbstract
+  id: WeaponTurretStaticIncendiary
+  name: incendiary turret
+  abstract: true
+  components:
+  - type: Gun
+    fireRate: 1.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: BallisticAmmoProvider
+    proto: CartridgePistolIncendiary
+    capacity: 150
+
+- type: entity
+  parent: WeaponTurretAbstract
+  id: WeaponTurretStaticDisabler
+  name: disabler turret
+  abstract: true
+  components:
+  - type: Gun
+    fireRate: 1.2
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisabler
+    fireCost: 10
+  - type: Battery
+    maxCharge: 300
+    startingCharge: 300
+
+- type: entity
+  parent: WeaponTurretAbstract
+  id: WeaponTurretStaticLaser
+  name: laser turret
+  abstract: true
+  components:
+  - type: Gun
+    fireRate: 1.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 10
+  - type: Battery
+    maxCharge: 4000
+    startingCharge: 4000
+
+- type: entity
+  parent: WeaponTurretAbstract
+  id: WeaponTurretStaticHeavyLaser
+  name: heavy laser turret
+  abstract: true
+  components:
+  - type: Gun
+    fireRate: 0.8
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedHeavyLaser
+    fireCost: 40
+  - type: Battery
+    maxCharge: 4000
+    startingCharge: 4000
+
+- type: entity
+  parent: [ WeaponTurretStaticGrenade, TurretFactionSimpleHostile ]
+  id: WeaponTurretStaticGrenadeSimpleHostile
+  suffix: SimpleHostile
+
+- type: entity
+  parent: [ WeaponTurretStaticSniper, TurretFactionSimpleHostile ]
+  id: WeaponTurretStaticSniperSimpleHostile
+  suffix: SimpleHostile
+
+- type: entity
+  parent: [ WeaponTurretStaticShotgun, TurretFactionSimpleHostile ]
+  id: WeaponTurretStaticShotgunSimpleHostile
+  suffix: SimpleHostile
+
+- type: entity
+  parent: [ WeaponTurretStaticMinigun, TurretFactionSimpleHostile ]
+  id: WeaponTurretStaticMinigunSimpleHostile
+  suffix: SimpleHostile
+
+- type: entity
+  parent: [ WeaponTurretStaticIncendiary, TurretFactionSimpleHostile ]
+  id: WeaponTurretStaticIncendiarySimpleHostile
+  suffix: SimpleHostile
+
+- type: entity
+  parent: [ WeaponTurretStaticDisabler, TurretFactionSimpleHostile ]
+  id: WeaponTurretStaticDisablerSimpleHostile
+  suffix: SimpleHostile
+
+- type: entity
+  parent: [ WeaponTurretStaticLaser, TurretFactionSimpleHostile ]
+  id: WeaponTurretStaticLaserSimpleHostile
+  suffix: SimpleHostile
+
+- type: entity
+  parent: [ WeaponTurretStaticHeavyLaser, TurretFactionSimpleHostile ]
+  id: WeaponTurretStaticHeavyLaserSimpleHostile
+  suffix: SimpleHostile
+
+- type: entity
+  parent: [ WeaponTurretStaticGrenade, TurretFactionShootWhateverMoves ]
+  id: WeaponTurretStaticGrenadeShootWhateverMoves
+  suffix: ShootWhateverMoves
+
+- type: entity
+  parent: [ WeaponTurretStaticSniper, TurretFactionShootWhateverMoves ]
+  id: WeaponTurretStaticSniperShootWhateverMoves
+  suffix: ShootWhateverMoves
+
+- type: entity
+  parent: [ WeaponTurretStaticShotgun, TurretFactionShootWhateverMoves ]
+  id: WeaponTurretStaticShotgunShootWhateverMoves
+  suffix: ShootWhateverMoves
+
+- type: entity
+  parent: [ WeaponTurretStaticMinigun, TurretFactionShootWhateverMoves ]
+  id: WeaponTurretStaticMinigunShootWhateverMoves
+  suffix: ShootWhateverMoves
+
+- type: entity
+  parent: [ WeaponTurretStaticIncendiary, TurretFactionShootWhateverMoves ]
+  id: WeaponTurretStaticIncendiaryShootWhateverMoves
+  suffix: ShootWhateverMoves
+
+- type: entity
+  parent: [ WeaponTurretStaticDisabler, TurretFactionShootWhateverMoves ]
+  id: WeaponTurretStaticDisablerShootWhateverMoves
+  suffix: ShootWhateverMoves
+
+- type: entity
+  parent: [ WeaponTurretStaticLaser, TurretFactionShootWhateverMoves ]
+  id: WeaponTurretStaticLaserShootWhateverMoves
+  suffix: ShootWhateverMoves
+
+- type: entity
+  parent: [ WeaponTurretStaticHeavyLaser, TurretFactionShootWhateverMoves ]
+  id: WeaponTurretStaticHeavyLaserShootWhateverMoves
+  suffix: ShootWhateverMoves
+
+- type: entity
+  parent: [ WeaponTurretStaticGrenade, TurretFactionNanoTrasen ]
+  id: WeaponTurretStaticGrenadeNanoTrasen
+  suffix: NanoTrasen
+
+- type: entity
+  parent: [ WeaponTurretStaticSniper, TurretFactionNanoTrasen ]
+  id: WeaponTurretStaticSniperNanoTrasen
+  suffix: NanoTrasen
+
+- type: entity
+  parent: [ WeaponTurretStaticShotgun, TurretFactionNanoTrasen ]
+  id: WeaponTurretStaticShotgunNanoTrasen
+  suffix: NanoTrasen
+
+- type: entity
+  parent: [ WeaponTurretStaticMinigun, TurretFactionNanoTrasen ]
+  id: WeaponTurretStaticMinigunNanoTrasen
+  suffix: NanoTrasen
+
+- type: entity
+  parent: [ WeaponTurretStaticIncendiary, TurretFactionNanoTrasen ]
+  id: WeaponTurretStaticIncendiaryNanotrasen
+  suffix: NanoTrasen
+
+- type: entity
+  parent: [ WeaponTurretStaticDisabler, TurretFactionNanoTrasen ]
+  id: WeaponTurretStaticDisablerNanoTrasen
+  suffix: NanoTrasen
+
+- type: entity
+  parent: [ WeaponTurretStaticLaser, TurretFactionNanoTrasen ]
+  id: WeaponTurretStaticLaserNanoTrasen
+  suffix: NanoTrasen
+
+- type: entity
+  parent: [ WeaponTurretStaticHeavyLaser, TurretFactionNanoTrasen ]
+  id: WeaponTurretStaticHeavyLaserNanoTrasen
+  suffix: NanoTrasen
+
+- type: entity
+  parent: [ WeaponTurretStaticGrenade, TurretFactionSyndicate ]
+  id: WeaponTurretStaticGrenadeSyndicate
+  suffix: Syndicate
+
+- type: entity
+  parent: [ WeaponTurretStaticSniper, TurretFactionSyndicate ]
+  id: WeaponTurretStaticSniperSyndicate
+  suffix: Syndicate
+
+- type: entity
+  parent: [ WeaponTurretStaticShotgun, TurretFactionSyndicate ]
+  id: WeaponTurretStaticShotgunSyndicate
+  suffix: Syndicate
+
+- type: entity
+  parent: [ WeaponTurretStaticMinigun, TurretFactionSyndicate ]
+  id: WeaponTurretStaticMinigunSyndicate
+  suffix: Syndicate
+
+- type: entity
+  parent: [ WeaponTurretStaticIncendiary, TurretFactionSyndicate ]
+  id: WeaponTurretStaticIncendiarySyndicate
+  suffix: Syndicate
+
+- type: entity
+  parent: [ WeaponTurretStaticDisabler, TurretFactionSyndicate ]
+  id: WeaponTurretStaticDisablerSyndicate
+  suffix: Syndicate
+
+- type: entity
+  parent: [ WeaponTurretStaticLaser, TurretFactionSyndicate ]
+  id: WeaponTurretStaticLaserSyndicate
+  suffix: Syndicate
+
+- type: entity
+  parent: [ WeaponTurretStaticHeavyLaser, TurretFactionSyndicate ]
+  id: WeaponTurretStaticHeavyLaserSyndicate
+  suffix: Syndicate

@@ -1,0 +1,5 @@
+- type: entity
+  id: BaseInherent
+  abstract: true
+  components:
+  - type: Unremoveable

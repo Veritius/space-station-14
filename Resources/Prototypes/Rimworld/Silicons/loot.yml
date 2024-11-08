@@ -1,0 +1,22 @@
+- type: entity
+  parent: BasePowerCell
+  id: PowerCellCorruptedSilicon
+  name: corrupted power cell
+  description: A power cell in the standard Nanotrasen form factor, salvaged from a destroyed corrupted silicon.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: small
+      color: "#b8ea23"
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 80
+  - type: DetailExaminable
+    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. Tiny crevices in the shell of the cell glow in a brilliant, pulsating white light. It smells awful, like a combination of burning rubber and chemical waste.

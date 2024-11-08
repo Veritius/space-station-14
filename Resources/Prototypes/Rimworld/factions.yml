@@ -1,0 +1,12 @@
+- type: npcFaction
+  id: CorruptSilicon
+  hostile:
+  - SimpleHostile
+  - NanoTrasen
+  - Syndicate
+  - Xeno
+  - Mouse
+  - Dragon
+  - Passive
+  - PetsNT
+  - Zombie

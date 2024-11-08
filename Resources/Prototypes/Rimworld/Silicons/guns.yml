@@ -1,0 +1,114 @@
+- type: entity
+  parent: [ BaseWeaponBattery ]
+  id: CorruptedSiliconTitanBeamGun
+  abstract: true
+  name: particle cannon
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Gun
+    fireRate: 0.333
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: CorruptedSiliconTitanBeam
+    fireCost: 1
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  parent: [ CorruptedSiliconTitanBeamGun, BaseInherent ]
+  id: CorruptedSiliconTitanBeamGunMounted
+  suffix: Mounted, DO NOT SPAWN
+
+- type: entity
+  parent: [ CorruptedSiliconTitanBeamGun ]
+  id: CorruptedSiliconTitanBeamGunDropped
+  suffix: Dropped
+  components:
+  - type: Wieldable
+
+- type: hitscan
+  id: CorruptedSiliconTitanBeam
+  damage:
+    types:
+      Heat: 60
+      Radiation: 15
+  muzzleFlash:
+    sprite: Rimworld/titanbeam.rsi
+    state: muzzle_beam_heavy2
+  travelFlash:
+    sprite: Rimworld/titanbeam.rsi
+    state: beam_heavy2
+  impactFlash:
+    sprite: Rimworld/titanbeam.rsi
+    state: impact_beam_heavy2
+
+- type: entity
+  parent: [ BaseItem ]
+  id: CorruptedSiliconTitanRailGun
+  abstract: true
+  name: rail gun
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Gun
+    fireRate: 0.6
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: BallisticAmmoProvider
+    proto: CartridgeTitanRailGun
+    capacity: 400
+  - type: AmmoCounter
+
+- type: entity
+  parent: [ CorruptedSiliconTitanRailGun, BaseInherent ]
+  id: CorruptedSiliconTitanRailGunMounted
+  suffix: Mounted, DO NOT SPAWN
+
+- type: entity
+  parent: [ CorruptedSiliconTitanRailGun ]
+  id: CorruptedSiliconTitanRailGunDropped
+  suffix: Dropped
+  components:
+  - type: Wieldable
+
+- type: entity
+  parent: [ BaseCartridge, BaseMajorContraband ]
+  id: CartridgeTitanRailGun
+  name: cartridge (.100 rail gun)
+  components:
+  - type: CartridgeAmmo
+    proto: BulletTitanRailGun
+    deleteOnSpawn: true
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BulletTitanRailGun
+  name: bullet (.100 rail gun)
+  components:
+  - type: Sprite
+    scale: 1.5,3
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 45
+        Structural: 50
+  - type: StaminaDamageOnCollide
+    damage: 80
