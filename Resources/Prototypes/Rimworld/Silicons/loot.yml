@@ -19,7 +19,7 @@
     autoRecharge: true
     autoRechargeRate: 80
   - type: DetailExaminable
-    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. Tiny crevices in the shell of the cell glow in a brilliant, pulsating white light. It smells awful, like a combination of burning rubber and chemical waste.
+    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. Tiny crevices in the shell of the cell glow with a brilliant, pulsating white light. It smells awful, like a combination of burning rubber and chemical waste.
 
 - type: entity
   parent: [ CorruptSiliconBeamGun ]
