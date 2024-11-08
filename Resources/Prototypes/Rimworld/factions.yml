@@ -1,12 +1,15 @@
 - type: npcFaction
   id: ShootWhateverMoves
   hostile:
+  - SimpleHostile
   - NanoTrasen
   - Syndicate
+  - Xeno
+  - Mouse
+  - Dragon
   - Passive
   - PetsNT
   - Zombie
-  - SimpleHostile
   - CorruptSilicon
 
 - type: npcFaction
