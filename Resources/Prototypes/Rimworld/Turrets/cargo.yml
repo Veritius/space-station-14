@@ -2,7 +2,7 @@
   id: GrenadeTurretFlatpack
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: icon
+    state: syndie_lethal
   product: GrenadeTurretNanotrasenFlatpack
   cost: 6000
   category: Turrets
@@ -12,7 +12,7 @@
   id: SniperTurretFlatpack
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: icon
+    state: syndie_lethal
   product: SniperTurretNanotrasenFlatpack
   cost: 3000
   category: Turrets
@@ -22,7 +22,7 @@
   id: ShotgunTurretFlatpack
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: icon
+    state: syndie_lethal
   product: ShotgunTurretNanotrasenFlatpack
   cost: 2200
   category: Turrets
@@ -32,7 +32,7 @@
   id: MachineGunTurretFlatpack
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: icon
+    state: syndie_lethal
   product: MinigunTurretNanotrasenFlatpack
   cost: 4500
   category: Turrets
@@ -42,7 +42,7 @@
   id: IncendiaryTurretFlatpack
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: icon
+    state: syndie_lethal
   product: IncendiaryTurretNanotrasenFlatpack
   cost: 5000
   category: Turrets
@@ -52,7 +52,7 @@
   id: DisablerTurretFlatpack
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: icon
+    state: syndie_lethal
   product: DisablerTurretNanotrasenFlatpack
   cost: 1000
   category: Turrets
@@ -62,7 +62,7 @@
   id: LaserTurretFlatpack
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: icon
+    state: syndie_lethal
   product: LaserTurretNanotrasenFlatpack
   cost: 2500
   category: Turrets
@@ -73,7 +73,7 @@
   id: HeavyLaserTurretFlatpack
   icon:
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: icon
+    state: syndie_lethal
   product: HeavyLaserTurretNanotrasenFlatpack
   cost: 4500
   category: Turrets
