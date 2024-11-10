@@ -1,0 +1,80 @@
+- type: cargoProduct
+  id: GrenadeTurretFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: icon
+  product: GrenadeTurretNanotrasenFlatpack
+  cost: 6000
+  category: Turrets
+  group: market
+
+- type: cargoProduct
+  id: SniperTurretFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: icon
+  product: SniperTurretNanotrasenFlatpack
+  cost: 3000
+  category: Turrets
+  group: market
+
+- type: cargoProduct
+  id: ShotgunTurretFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: icon
+  product: ShotgunTurretNanotrasenFlatpack
+  cost: 2200
+  category: Turrets
+  group: market
+
+- type: cargoProduct
+  id: MachineGunTurretFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: icon
+  product: MinigunTurretNanotrasenFlatpack
+  cost: 4500
+  category: Turrets
+  group: market
+
+- type: cargoProduct
+  id: IncendiaryTurretFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: icon
+  product: IncendiaryTurretNanotrasenFlatpack
+  cost: 5000
+  category: Turrets
+  group: market
+
+- type: cargoProduct
+  id: DisablerTurretFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: icon
+  product: DisablerTurretNanotrasenFlatpack
+  cost: 1000
+  category: Turrets
+  group: market
+
+- type: cargoProduct
+  id: LaserTurretFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: icon
+  product: LaserTurretNanotrasenFlatpack
+  cost: 2500
+  category: Turrets
+  group: market
+
+
+- type: cargoProduct
+  id: HeavyLaserTurretFlatpack
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: icon
+  product: HeavyLaserTurretNanotrasenFlatpack
+  cost: 4500
+  category: Turrets
+  group: market
