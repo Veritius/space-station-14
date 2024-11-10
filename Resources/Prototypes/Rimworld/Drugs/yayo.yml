@@ -1,0 +1,71 @@
+- type: reaction
+  id: Yayo
+  impact: Low
+  quantized: true
+  reactants:
+    Desoxyephedrine:
+      amount: 1
+    Water:
+      amount: 1
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: MaterialYayo1
+
+- type: stack
+  id: Yayo
+  name: yayo
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: cotton }
+  spawn: MaterialYayo1
+  maxCount: 30
+
+- type: entity
+  parent: MaterialBase
+  id: MaterialYayo
+  name: yayo
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: Yayo
+    baseLayer: base
+    layerStates:
+    - cotton
+    - cotton_2
+    - cotton_3
+  - type: StackPrice
+    price: 500
+  - type: Sprite
+    state: cotton_3
+    layers:
+    - state: cotton_3
+      map: ["base"]
+  - type: Appearance
+  - type: Food
+  - type: FlavorProfile
+    flavors:
+    - fiber
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 1
+        reagents:
+        - ReagentId: Desoxyephedrine
+          Quantity: 1
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Desoxyephedrine
+        Quantity: 1
+  - type: Tag
+    tags:
+      - ClothMade
+      - RawMaterial
+
+- type: entity
+  parent: MaterialYayo
+  id: MaterialYayo1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: cotton
+  - type: Stack
+    count: 1
