@@ -1,0 +1,194 @@
+- type: entity
+  parent: MarkerBase
+  id: CrashSiteCargoSpawnerAll
+  name: ship cargo spawner
+  suffix: Everything
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Storage/Crates/generic.rsi
+        state: icon
+  - type: RandomSpawner
+    chance: 0.4
+    prototypes:
+    # security gear
+    - CrateArmoryLaser
+    - CrateArmoryPistols
+    - CrateTrackingImplants
+    - CrateSecurityHelmet
+    - CrateSecurityArmor
+    # medical gear
+    - CrateMedicalSupplies
+    - CrateEmergencyBurnKit
+    - CrateEmergencyBruteKit
+    - CrateEmergencyToxinKit
+    - CrateEmergencyO2Kit
+    # engie gear
+    - CrateEngineeringCableBulk
+    - CrateEngineering
+    # service gear
+    - CrateFoodPizza
+    - CrateFoodMRE
+    - CrateFoodCooking
+    - CrateFoodBarSupply
+    - CrateFoodSoftdrinks
+    - CrateServiceJanitorialSupplies
+    - CrateServiceBureaucracy
+    # materials
+    - CrateMaterialSteel
+    - CrateMaterialGlass
+    - CrateMaterialPlastic
+    - CrateMaterialWood
+    - CrateMaterialTextiles
+    rareChance: 0.1
+    rarePrototypes:
+    # security gear
+    - CrateArmoryShotgun
+    - CrateArmorySMG
+    - CrateSecurityRiot
+    - CrateSecurityNonlethal
+    # medical gear
+    - CrateEmergencyAdvancedKit
+    # service gear
+    - CrateFoodPizzaLarge
+    - CrateFoodSoftdrinksLarge
+    - CrateHydroponicsSeedsMedicinal
+    - CrateHydroponicsSeedsExotic
+    # materials
+    - CrateMaterialPlasteel
+    - CrateMaterialPlasma
+
+- type: entity
+  parent: MarkerBase
+  id: CrashSiteCargoSpawnerMaterials
+  name: ship cargo spawner
+  suffix: Materials
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Storage/Crates/engineering.rsi
+        state: icon
+  - type: RandomSpawner
+    chance: 0.7
+    prototypes:
+    - CrateMaterialSteel
+    - CrateMaterialGlass
+    - CrateMaterialPlastic
+    - CrateMaterialWood
+    - CrateMaterialTextiles
+    rareChance: 0.1
+    rarePrototypes:
+    - CrateMaterialPlasteel
+    - CrateMaterialPlasma
+
+- type: entity
+  parent: MarkerBase
+  id: CrashSiteCargoSpawnerSecGearLesser
+  name: ship cargo spawner
+  suffix: Sec Gear, Lesser
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Storage/Crates/sec_gear.rsi
+        state: icon
+  - type: RandomSpawner
+    chance: 0.7
+    prototypes:
+    - CrateArmoryLaser
+    - CrateArmoryPistols
+    - CrateTrackingImplants
+    - CrateSecurityHelmet
+    - CrateSecurityArmor
+    rareChance: 0.1
+    rarePrototypes:
+    - CrateArmoryShotgun
+    - CrateArmorySMG
+    - CrateSecurityRiot
+    - CrateSecurityNonlethal
+
+- type: entity
+  parent: MarkerBase
+  id: CrashSiteCargoSpawnerSecGearGreater
+  name: ship cargo spawner
+  suffix: Sec Gear, Greater
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Storage/Crates/weapon.rsi
+        state: icon
+  - type: RandomSpawner
+    chance: 0.7
+    prototypes:
+    - CrateArmoryShotgun
+    - CrateArmorySMG
+    - CrateSecurityRiot
+    - CrateSecurityNonlethal
+
+- type: entity
+  parent: MarkerBase
+  id: CrashSiteCargoSpawnerMedical
+  name: ship cargo spawner
+  suffix: Medical
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Storage/Crates/medical.rsi
+        state: icon
+  - type: RandomSpawner
+    chance: 0.7
+    prototypes:
+    - CrateMedicalSupplies
+    - CrateEmergencyBurnKit
+    - CrateEmergencyBruteKit
+    - CrateEmergencyToxinKit
+    - CrateEmergencyO2Kit
+    rareChance: 0.1
+    rarePrototypes:
+    - CrateEmergencyRadiationKit
+    - CrateEmergencyAdvancedKit
+
+- type: entity
+  parent: MarkerBase
+  id: CrashSiteCargoSpawnerChem
+  name: ship cargo spawner
+  suffix: Chemistry
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+        state: icon
+  - type: RandomSpawner
+    chance: 0.7
+    prototypes:
+    - CrateChemistryP
+    - CrateChemistryS
+    rareChance: 0.1
+    rarePrototypes:
+    - CrateChemistryD
+
+- type: entity
+  parent: MarkerBase
+  id: CrashSiteCargoSpawnerBotany
+  name: ship cargo spawner
+  suffix: Botany
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Storage/Crates/hydroponics.rsi
+        state: icon
+  - type: RandomSpawner
+    chance: 0.7
+    prototypes:
+    - CrateHydroponicsTools
+    - CrateHydroponicsSeeds
+    rareChance: 0.1
+    rarePrototypes:
+    - CrateHydroponicsSeedsMedicinal
+    - CrateHydroponicsSeedsExotic
