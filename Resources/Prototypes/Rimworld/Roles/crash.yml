@@ -1,4 +1,20 @@
 - type: entity
+  parent: BaseEventRoleSpawn
+  id: EventRoleSpawnCrashedBase
+  abstract: true
+  suffix: Survivor
+  components:
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: GhostRole
+    name: crash survivor
+    description: You were a crewmember of a ship that crashed to the planet. Survive and escape the planet.
+    rules: You are not an antagonist. Your goal is to get off the planet and get home. Follow the server rules unless told otherwise by an administrator.
+    raffle:
+      settings: default
+
+- type: entity
   parent: MobHuman
   id: EventRoleHumanCrashedCaptain
   categories: [ HideSpawnMenu ]
@@ -9,22 +25,16 @@
     roleLoadout: [ JobCaptain ]
 
 - type: entity
-  parent: BaseEventRoleSpawn
+  parent: EventRoleSpawnCrashedBase
   id: EventRoleSpawnCrashedCaptain
-  name: crashed captain
-  suffix: Event Role
+  name: captain
   components:
   - type: Sprite
-    sprite: Markers/jobs.rsi
     layers:
-      - state: blue
-      - state: captain
-  - type: GhostRole
-    name: crashed captain
-    description: You are a member of the command team of the cargo ship Valiant. Something went horribly wrong and ship engines failed. You just barely managed to survive the crash. Figure out what to do to get home.
-    rules: You are not an antagonist. Your goal is to get off the planet and get home. Follow the server rules unless told otherwise by an administrator.
-    raffle:
-      settings: default
+    - sprite: Markers/cross.rsi
+      state: blue
+    - sprite: Markers/jobs.rsi
+      state: captain
   - type: GhostRoleMobSpawner
     prototype: EventRoleHumanCrashedCaptain
 
@@ -39,22 +49,16 @@
     roleLoadout: [ JobStationEngineer ]
 
 - type: entity
-  parent: BaseEventRoleSpawn
+  parent: EventRoleSpawnCrashedBase
   id: EventRoleSpawnCrashedEngineer
-  name: crashed engineer
-  suffix: Event Role
+  name: engineer
   components:
   - type: Sprite
-    sprite: Markers/jobs.rsi
     layers:
-      - state: blue
-      - state: captain
-  - type: GhostRole
-    name: crashed engineer
-    description: You are a member of the engineering team of the cargo ship Valiant. Something went horribly wrong and ship engines failed. You just barely managed to survive the crash. Figure out what to do to get home.
-    rules: You are not an antagonist. Your goal is to get off the planet and get home. Follow the server rules unless told otherwise by an administrator.
-    raffle:
-      settings: default
+    - sprite: Markers/cross.rsi
+      state: blue
+    - sprite: Markers/jobs.rsi
+      state: engineer
   - type: GhostRoleMobSpawner
     prototype: EventRoleHumanCrashedEngineer
 
@@ -69,21 +73,15 @@
     roleLoadout: [ JobMedicalDoctor ]
 
 - type: entity
-  parent: BaseEventRoleSpawn
+  parent: EventRoleSpawnCrashedBase
   id: EventRoleSpawnCrashedDoctor
-  name: crashed doctor
-  suffix: Event Role
+  name: doctor
   components:
   - type: Sprite
-    sprite: Markers/jobs.rsi
     layers:
-      - state: blue
-      - state: captain
-  - type: GhostRole
-    name: crashed doctor
-    description: You are a member of the medical team of the cargo ship Valiant. Something went horribly wrong and ship engines failed. You just barely managed to survive the crash. Figure out what to do to get home.
-    rules: You are not an antagonist. Your goal is to get off the planet and get home. Follow the server rules unless told otherwise by an administrator.
-    raffle:
-      settings: default
+    - sprite: Markers/cross.rsi
+      state: blue
+    - sprite: Markers/jobs.rsi
+      state: doctor
   - type: GhostRoleMobSpawner
     prototype: EventRoleHumanCrashedDoctor
