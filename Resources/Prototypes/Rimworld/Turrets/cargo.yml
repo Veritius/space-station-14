@@ -1,12 +1,12 @@
-- type: cargoProduct
-  id: GrenadeTurretFlatpack
-  icon:
-    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    state: syndie_lethal
-  product: GrenadeTurretNanotrasenFlatpack
-  cost: 6000
-  category: Turrets
-  group: market
+# - type: cargoProduct
+#   id: GrenadeTurretFlatpack
+#   icon:
+#     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+#     state: syndie_lethal
+#   product: GrenadeTurretNanotrasenFlatpack
+#   cost: 6000
+#   category: Turrets
+#   group: market
 
 - type: cargoProduct
   id: SniperTurretFlatpack
