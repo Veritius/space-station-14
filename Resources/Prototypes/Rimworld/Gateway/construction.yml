@@ -134,7 +134,7 @@
 - type: entity
   parent: EventGatewayStructure
   id: EventGatewayFrame
-  name: WormholeGeneratorFrame
+  name: wormhole generator frame
   categories: [ HideSpawnMenu ]
   components:
   - type: Construction
