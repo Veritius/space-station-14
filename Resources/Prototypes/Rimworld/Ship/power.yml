@@ -1,0 +1,9 @@
+- type: entity
+  parent: GeneratorRTG
+  id: GeneratorRTGAdmin
+  name: admin power source
+  description: If you're reading this, an admin fucked up. Please ahelp.
+  suffix: 1000kw
+  components:
+  - type: PowerSupplier
+    supplyRate: 10000000
