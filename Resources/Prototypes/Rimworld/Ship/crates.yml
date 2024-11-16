@@ -10,7 +10,7 @@
       - sprite: Structures/Storage/Crates/generic.rsi
         state: icon
   - type: RandomSpawner
-    chance: 0.4
+    chance: 0.2
     prototypes:
     # security gear
     - CrateArmoryLaser
