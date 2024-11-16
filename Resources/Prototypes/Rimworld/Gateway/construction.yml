@@ -87,6 +87,8 @@
         doAfter: 3
       - tool: Screwing
         doAfter: 2
+      - tool: Welding
+        doAfter: 4
   - node: needs_shell
     edges:
     - to: finished
