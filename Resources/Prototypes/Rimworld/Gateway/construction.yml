@@ -102,9 +102,9 @@
         doAfter: 2
 
   - node: shell
+    entity: EventGatewayFrame
     actions:
     - !type:AppearanceChange
-    entity: EventGatewayFrame
     edges:
     - to: finish
       steps:
@@ -122,14 +122,26 @@
 
   - node: finish
     entity: EventGateway
-    # edges:
-    # - to: finished_datadisk
-    #   steps:
-    #   - tag: WormholeGenPartMapData
-    #     name: subspace map data
-    #     icon:
-    #       sprite: Objects/Misc/module.rsi
-    #       state: holodisk
+
+- type: constructionGraph
+  id: WormholeGeneratorUpgrades
+  start: default
+  graph:
+  - node: default
+    edges:
+    - to: disked
+      steps:
+      - tag: WormholeGenPartMapData
+        name: subspace map data
+        icon:
+          sprite: Objects/Misc/module.rsi
+          state: holodisk
+      completed:
+      - !type:SpawnPrototype
+        prototype: EventGatewayDisked
+      - !type:DeleteEntity
+  
+  - node: disked
 
 - type: entity
   parent: EventGatewayStructure

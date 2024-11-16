@@ -38,6 +38,9 @@
   name: wormhole generator
   description: A device to punch a hole through reality itself, bridging any two points in spacetime. Looks complicated.
   components:
+  - type: Construction
+    graph: WormholeGeneratorUpgrades
+    node: default
   - type: Sprite
     sprite: Structures/Machines/gateway.rsi
     noRot: true
