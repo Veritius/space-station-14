@@ -1,0 +1,7 @@
+- type: radioChannel
+  id: CorruptSilicon
+  name: Corrupt Hivemind
+  keycode: 'k'
+  frequency: 9483
+  color: "#ce201a"
+  longRange: true
