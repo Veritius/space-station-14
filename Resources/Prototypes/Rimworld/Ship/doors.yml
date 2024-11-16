@@ -1,0 +1,8 @@
+- type: entity
+  parent: AirlockEngineeringLocked
+  id: AirlockHatchFtlCore
+  name: ftl core hatch
+  description: A heavily shielded airlock leading to the inner FTL core.
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/hatch.rsi
