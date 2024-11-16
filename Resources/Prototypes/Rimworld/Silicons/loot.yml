@@ -22,6 +22,23 @@
     content: Upon further examination, you see that it is covered in a thin film of iridescent slime. Tiny crevices in the shell of the cell glow with a brilliant, pulsating white light. It smells awful, like a combination of burning rubber and chemical waste.
 
 - type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCorruptSilicon
+  name: corrupt encryption key
+  description: An power cell in the standard Nanotrasen form factor, salvaged from a destroyed corrupted silicon.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CorruptSilicon
+    defaultChannel: CorruptSilicon
+  - type: Sprite
+    layers:
+    - state: crypt_rusted
+    - state: ai_label
+  - type: DetailExaminable
+    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. The casing is rusted, and in places replaced with an unidentifable black metal. The electrical contacts seem to be in working order.
+
+- type: entity
   parent: [ CorruptSiliconBeamGun ]
   id: CorruptSiliconBeamGunDropped
   description: A massive heavy rifle with innumerable strange protrusions and glowing doodads.
@@ -38,20 +55,3 @@
   components:
   - type: Wieldable
   - type: GunRequiresWield
-
-- type: entity
-  parent: EncryptionKey
-  id: EncryptionKeyCorruptSilicon
-  name: corrupt encryption key
-  description: An power cell in the standard Nanotrasen form factor, salvaged from a destroyed corrupted silicon.
-  components:
-  - type: EncryptionKey
-    channels:
-    - CorruptSilicon
-    defaultChannel: CorruptSilicon
-  - type: Sprite
-    layers:
-    - state: crypt_rusted
-    - state: ai_label
-  - type: DetailExaminable
-    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. The casing is rusted, and in places replaced with an unidentifable black metal. The electrical contacts seem to be in working order.
