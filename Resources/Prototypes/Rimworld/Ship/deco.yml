@@ -20,3 +20,91 @@
   - type: Sprite
     sprite: Structures/Machines/gravity_generator.rsi
     state: broken
+
+- type: entity
+  id: AmeControllerBroken
+  parent: BaseStructure
+  name: broken AME controller
+  description: This used to be a controller for an antimatter engine. Looks like it's thoroughly fried now.
+  placement:
+    mode: AlignTileAny
+  components:
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Anchorable
+  - type: Pullable
+  - type: Sprite
+    sprite: Structures/Power/Generation/ame.rsi
+    state: control
+
+- type: entity
+  id: AmeShieldingBroken
+  name: destroyed AME shielding
+  parent: BaseStructure
+  description: This used to be shielding for an antimatter engine. Judging by the holes in it, this one's not in good shape.
+  components:
+  - type: Transform
+    anchored: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        density: 190
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    drawdepth: Walls
+    sprite: Structures/Power/Generation/ame.rsi
+    state: shield_0
+    layers:
+    - state: shield_0
