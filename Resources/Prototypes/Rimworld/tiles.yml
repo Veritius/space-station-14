@@ -1,0 +1,5 @@
+- type: tile
+  id: FloorDesertLattice
+  name: lattice
+  sprite: /Textures/Rimworld/Tiles/desert_lattice.png
+  isSubfloor: true
