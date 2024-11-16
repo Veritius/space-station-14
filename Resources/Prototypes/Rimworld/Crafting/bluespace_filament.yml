@@ -1,0 +1,88 @@
+- type: material
+  id: BluespaceFilament
+  stackEntity: BluespaceFilament1
+  name: bluespace filament
+  icon:
+    sprite: Objects/Materials/Sheets/glass.rsi
+    state: glass
+  color: "#3185d8"
+  price: 0.0 # todo
+
+- type: stack
+  id: BluespaceFilament
+  name: bluespace filament
+  icon:
+    sprite: Objects/Materials/Sheets/glass.rsi
+    state: glass
+  spawn: BluespaceFilament1
+  maxCount: 60
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BluespaceFilamentBase
+  name: bluespace filament spool
+  description: A spool of bluespace filament, used in technology that manipulates spacetime.
+  components:
+  - type: Sprite
+    sprite: Objects/Materials/Sheets/glass.rsi # todo
+    state: glass
+  - type: Item
+    sprite: Objects/Materials/Sheets/glass.rsi # todo
+    state: glass
+    size: Normal
+  - type: StaticPrice
+    price: 0
+  - type: Tag
+    tags:
+    - Sheet
+  - type: Material
+  - type: Appearance
+
+- type: entity
+  parent: BluespaceFilamentBase
+  id: BluespaceFilament
+  suffix: Full
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      BluespaceFilament: 100
+  - type: Stack
+    stackType: BluespaceFilament
+    baseLayer: base
+    layerStates:
+    - glass
+    - glass_2
+    - glass_3
+  - type: Sprite
+    state: glass_3
+    layers:
+    - state: glass_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: glass
+  - type: Construction
+    graph: Glass
+    node: SheetGlass
+
+- type: entity
+  parent: BluespaceFilament
+  id: BluespaceFilament10
+  suffix: 10
+  components:
+  - type: Sprite
+    state: glass_2
+  - type: Stack
+    stackType: BluespaceFilament
+    count: 10
+
+- type: entity
+  parent: BluespaceFilament
+  id: BluespaceFilament1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: glass
+  - type: Stack
+    stackType: BluespaceFilament
+    count: 1

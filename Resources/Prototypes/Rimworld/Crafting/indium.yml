@@ -1,0 +1,119 @@
+- type: material
+  id: Indium
+  stackEntity: todo
+  name: indium
+  icon:
+    sprite: Objects/Materials/Sheets/glass.rsi
+    state: glass
+  color: "#cc91ea"
+  price: 0.0 # todo
+
+- type: stack
+  id: Indium
+  name: indium
+  icon:
+    sprite: Objects/Materials/ore.rsi
+    state: iron
+  spawn: SheetIndium1
+  maxCount: 10
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: SheetIndiumBase
+  description: Refined indium metal, used in advanced electronic technology.
+  components:
+  - type: Sprite
+    sprite: Objects/Materials/Sheets/metal.rsi
+  - type: Item
+    sprite: Objects/Materials/Sheets/metal.rsi
+    size: Normal
+  - type: StaticPrice
+    price: 0
+  - type: Tag
+    tags:
+    - Sheet
+    - Metal
+
+- type: entity
+  parent: SheetIndiumBase
+  id: SheetIndium
+  name: indium
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Indium: 100
+  - type: Stack
+    stackType: Indium
+    baseLayer: base
+    layerStates:
+    - steel
+    - steel_2
+    - steel_3
+  - type: Sprite
+    state: steel_3
+    layers:
+    - state: steel_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: steel
+  - type: Appearance
+
+- type: entity
+  parent: SheetIndium
+  id: SheetIndium10
+  suffix: 10
+  components:
+  - type: Sprite
+    state: steel_2
+  - type: Stack
+    stackType: Indium
+    count: 10
+
+- type: entity
+  parent: SheetIndium
+  id: SheetIndium1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: steel
+  - type: Stack
+    stackType: Indium
+    count: 1
+
+- type: stack
+  id: IndiumOre
+  name: indium ore
+  icon:
+    sprite: Objects/Materials/Sheets/glass.rsi
+    state: glass
+  spawn: IndiumOre1
+  maxCount: 10
+
+- type: ore
+  id: OreIndium
+  oreEntity: IndiumOre1
+  minOreYield: 1
+  maxOreYield: 3
+
+- type: entity
+  parent: OreBase
+  id: IndiumOre
+  name: indium
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: IndiumOre
+  - type: Sprite
+    state: iron
+  - type: Material
+
+- type: entity
+  id: IndiumOre1
+  parent: IndiumOre
+  suffix: Single
+  components:
+    - type: Stack
+      count: 1

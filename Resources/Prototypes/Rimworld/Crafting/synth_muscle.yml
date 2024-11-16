@@ -1,0 +1,88 @@
+- type: material
+  id: SyntheticMuscle
+  stackEntity: SyntheticMuscle1
+  name: synthetic muscle
+  icon:
+    sprite: Objects/Materials/Sheets/glass.rsi
+    state: glass
+  color: "#515151"
+  price: 0.0 # todo
+
+- type: stack
+  id: SyntheticMuscle
+  name: synthetic muscle
+  icon:
+    sprite: Objects/Materials/Sheets/glass.rsi
+    state: glass
+  spawn: SyntheticMuscle1
+  maxCount: 10
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: SyntheticMuscleBase
+  name: synthetic muscle bundle
+  description: Advanced polymer technology that contracts with electrical impulses.
+  components:
+  - type: Sprite
+    sprite: Objects/Materials/Sheets/glass.rsi # todo
+    state: glass
+  - type: Item
+    sprite: Objects/Materials/Sheets/glass.rsi # todo
+    state: glass
+    size: Normal
+  - type: StaticPrice
+    price: 0
+  - type: Tag
+    tags:
+    - Sheet
+  - type: Material
+  - type: Appearance
+
+- type: entity
+  parent: SyntheticMuscleBase
+  id: SyntheticMuscle
+  suffix: Full
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      SyntheticMuscle: 100
+  - type: Stack
+    stackType: SyntheticMuscle
+    baseLayer: base
+    layerStates:
+    - glass
+    - glass_2
+    - glass_3
+  - type: Sprite
+    state: glass_3
+    layers:
+    - state: glass_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: glass
+  - type: Construction
+    graph: Glass
+    node: SheetGlass
+
+- type: entity
+  parent: SyntheticMuscle
+  id: SyntheticMuscle10
+  suffix: 10
+  components:
+  - type: Sprite
+    state: glass
+  - type: Stack
+    stackType: SyntheticMuscle
+    count: 10
+
+- type: entity
+  parent: SyntheticMuscle
+  id: SyntheticMuscle1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: glass
+  - type: Stack
+    stackType: SyntheticMuscle
+    count: 1
