@@ -54,4 +54,4 @@
     - state: crypt_rusted
     - state: ai_label
   - type: DetailExaminable
-    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. The shell is rusted, and in places replaced with an unidentifable black metal.
+    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. The casing is rusted, and in places replaced with an unidentifable black metal. The electrical contacts seem to be in working order.
