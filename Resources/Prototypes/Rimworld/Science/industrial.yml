@@ -1,0 +1,11 @@
+- type: technology
+  id: HazardResistantHardsuits
+  name: all-environment hardsuits
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Industrial
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter

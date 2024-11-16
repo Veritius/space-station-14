@@ -1,0 +1,35 @@
+- type: technology
+  id: PersonalTeleporters
+  name: personal teleportation devices
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Experimental
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+
+- type: technology
+  id: CloakingFields
+  name: cloaking field generation
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Experimental
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+
+- type: technology
+  id: ForcefieldProjection
+  name: forcefield projection
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Experimental
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter

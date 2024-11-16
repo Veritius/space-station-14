@@ -1,0 +1,83 @@
+- type: technology
+  id: WeaponFabrication
+  name: weapon fabrication
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+
+- type: technology
+  id: HeavyAssaultRifles
+  name: high-caliber rifles
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+
+- type: technology
+  id: LightMachineGuns
+  name: light machine guns
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+
+- type: technology
+  id: LightTurretProduction
+  name: light-class turrets
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+
+- type: technology
+  id: PulseEnergyWeapons
+  name: pulse weaponry
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+
+- type: technology
+  id: HeavyTurretProduction
+  name: heavy-class turrets
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+
+- type: technology
+  id: WarCyborgs
+  name: combat cyborgs
+  icon:
+    sprite: Objects/Devices/swapper.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
