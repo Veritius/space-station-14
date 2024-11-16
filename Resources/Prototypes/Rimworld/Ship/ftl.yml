@@ -11,8 +11,8 @@
   - type: LightningArcShooter
     arcDepth: 1
     maxLightningArc: 1
-    shootMinInterval: 30.0
-    shootMaxInterval: 60.0
+    shootMinInterval: 10.0
+    shootMaxInterval: 30.0
     shootRange: 5
   - type: Sprite
     sprite: Structures/Machines/gravity_generator_mini.rsi
