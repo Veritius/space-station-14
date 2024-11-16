@@ -1,0 +1,86 @@
+- type: constructionGraph
+  id: WormholeGeneratorCosmeticTriggers
+  start: inactive
+  graph:
+  - node: inactive
+    entity: EventGateway
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: charging
+      steps:
+      - tag: WormholeGeneratorCosmeticTriggerCharging
+    - to: established
+      steps:
+      - tag: WormholeGeneratorCosmeticTriggerEstablished
+
+  - node: charging
+    entity: EventGateway
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: inactive
+      steps:
+      - tag: WormholeGeneratorCosmeticTriggerInactive
+    - to: established
+      steps:
+      - tag: WormholeGeneratorCosmeticTriggerEstablished
+
+  - node: established
+    entity: EventGateway
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: inactive
+      steps:
+      - tag: WormholeGeneratorCosmeticTriggerInactive
+    - to: charging
+      steps:
+      - tag: WormholeGeneratorCosmeticTriggerCharging
+
+- type: entity
+  parent: BaseItem
+  id: WormholeGeneratorTriggerBase
+  name: wormhole generator trigger
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: /Textures/Objects/Devices/hand_teleporter.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: WormholeGeneratorTriggerBase
+  id: WormholeGeneratorTriggerInactive
+  suffix: Inactive
+  components:
+  - type: Tag
+    tags:
+    - WormholeGeneratorCosmeticTriggerInactive
+
+- type: entity
+  parent: WormholeGeneratorTriggerBase
+  id: WormholeGeneratorTriggerCharging
+  suffix: Charging
+  components:
+  - type: Tag
+    tags:
+    - WormholeGeneratorCosmeticTriggerCharging
+
+- type: entity
+  parent: WormholeGeneratorTriggerBase
+  id: WormholeGeneratorTriggerEstablish
+  suffix: Establish
+  components:
+  - type: Tag
+    tags:
+    - WormholeGeneratorCosmeticTriggerEstablished
+
+- type: Tag
+  id: WormholeGeneratorCosmeticTriggerInactive
+
+- type: Tag
+  id: WormholeGeneratorCosmeticTriggerCharging
+
+- type: Tag
+  id: WormholeGeneratorCosmeticTriggerEstablished

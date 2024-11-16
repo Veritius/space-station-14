@@ -13,7 +13,7 @@
   parent: MacguffinPinpointer
   id: MacguffinPinpointerProcessor
   description: A pinpointer tuned to a component necessary to escape the planet. This one points to the processor component.
-  suffix: Processor, Essential
+  suffix: Processor
   components:
   - type: Pinpointer
     targetName: quantum processor
@@ -22,7 +22,7 @@
   parent: MacguffinPinpointer
   id: MacguffinPinpointerTransport
   description: A pinpointer tuned to a component necessary to escape the planet. This one points to the transportation component.
-  suffix: Transport, Essential
+  suffix: Transport
   components:
   - type: Pinpointer
     targetName: calabi-yau wormhole core
@@ -31,16 +31,16 @@
   parent: MacguffinPinpointer
   id: MacguffinPinpointerPower
   description: A pinpointer tuned to a component necessary to escape the planet. This one points to the energy source component.
-  suffix: Power, Essential
+  suffix: Power Cell
   components:
   - type: Pinpointer
     targetName: zero-point energy cell
 
 - type: entity
   parent: MacguffinPinpointer
-  id: MacguffinPinpointerData
-  description: A pinpointer tuned to a component useful in escaping the planet. This one points to a map of subspace. It's not necessary to escape.
-  suffix: Data, Optional
+  id: MacguffinPinpointerMapData
+  description: A pinpointer tuned to a component necessary to escape the planet. This one points to a map of subspace.
+  suffix: Map Data
   components:
   - type: Pinpointer
     targetName: subspace map data

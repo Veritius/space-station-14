@@ -39,20 +39,24 @@
   description: A device to punch a hole through reality itself, bridging any two points in spacetime. Looks complicated.
   components:
   - type: Construction
-    graph: WormholeGeneratorUpgrades
-    node: default
+    graph: WormholeGeneratorCosmeticTriggers
+    node: inactive
   - type: Sprite
-    sprite: Structures/Machines/gateway.rsi
+    sprite: Rimworld/Structures/wormholegenerator.rsi
     noRot: true
     layers:
     - state: frame
-    - state: on
+    - state: unlit
       shader: unshaded
-
-- type: entity
-  parent: EventGateway
-  id: EventGatewayDisked
-  categories: [ HideSpawnMenu ]
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          inactive: { color: "#ffffff00" }
+          charging: { color: "#edb834ff" }
+          established: { color: "#55f4fcff" }
 
 - type: entity
   parent: BasePortal

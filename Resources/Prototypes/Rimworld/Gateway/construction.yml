@@ -4,7 +4,7 @@
   description: Your ticket out of here.
   graph: WormholeGenerator
   startNode: start
-  targetNode: finished
+  targetNode: finish
   category: Event
   icon:
     sprite: Structures/Machines/gateway.rsi
@@ -106,7 +106,7 @@
     actions:
     - !type:AppearanceChange
     edges:
-    - to: finish
+    - to: disk
       steps:
       - material: Steel
         amount: 8
@@ -115,21 +115,13 @@
         doAfter: 3
       - tool: Welding
         doAfter: 4
-      completed:
-      - !type:SpawnPrototype
-        prototype: EventGateway
-      - !type:DeleteEntity
 
-  - node: finish
-    entity: EventGateway
-
-- type: constructionGraph
-  id: WormholeGeneratorUpgrades
-  start: default
-  graph:
-  - node: default
+  - node: disk
+    entity: EventGatewayFrame
+    actions:
+    - !type:AppearanceChange
     edges:
-    - to: disked
+    - to: finish
       steps:
       - tag: WormholeGenPartMapData
         name: subspace map data
@@ -138,10 +130,10 @@
           state: holodisk
       completed:
       - !type:SpawnPrototype
-        prototype: EventGatewayDisked
+        prototype: EventGateway
       - !type:DeleteEntity
-  
-  - node: disked
+
+  - node: finish
 
 - type: entity
   parent: EventGatewayStructure
