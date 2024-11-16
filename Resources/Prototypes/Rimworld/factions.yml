@@ -1,4 +1,3 @@
-
 - type: npcFaction
   id: Dragon
   hostile:
@@ -8,7 +7,7 @@
   - PetsNT
   - Zombie
   - Revolutionary
-  - ShootWhateverMoves
+  - TurretHostile
 
 - type: npcFaction
   id: NanoTrasen
@@ -23,7 +22,7 @@
   id: Mouse
   hostile:
   - PetsNT
-  - ShootWhateverMoves
+  - TurretHostile
 
 - type: npcFaction
   id: Passive
@@ -35,7 +34,7 @@
   - SimpleHostile
   - Zombie
   - Xeno
-  - ShootWhateverMoves
+  - TurretHostile
 
 - type: npcFaction
   id: SimpleHostile
@@ -46,12 +45,12 @@
   - PetsNT
   - Zombie
   - Revolutionary
-  - ShootWhateverMoves
+  - TurretHostile
 
 - type: npcFaction
   id: SimpleNeutral
   hostile:
-  - ShootWhateverMoves
+  - TurretHostile
 
 - type: npcFaction
   id: Syndicate
@@ -61,7 +60,7 @@
   - Xeno
   - PetsNT
   - Zombie
-  - ShootWhateverMoves
+  - TurretHostile
 
 - type: npcFaction
   id: Xeno
@@ -72,7 +71,7 @@
   - PetsNT
   - Zombie
   - Revolutionary
-  - ShootWhateverMoves
+  - TurretHostile
 
 - type: npcFaction
   id: Zombie
@@ -84,7 +83,7 @@
   - Passive
   - PetsNT
   - Revolutionary
-  - ShootWhateverMoves
+  - TurretHostile
 
 - type: npcFaction
   id: Revolutionary
@@ -93,10 +92,10 @@
   - Zombie
   - SimpleHostile
   - Dragon
-  - ShootWhateverMoves
+  - TurretHostile
 
 - type: npcFaction
-  id: ShootWhateverMoves
+  id: TurretHostile
   hostile:
   - SimpleHostile
   - NanoTrasen

@@ -203,42 +203,42 @@
   suffix: SimpleHostile
 
 - type: entity
-  parent: [ WeaponTurretStaticGrenade, TurretFactionShootWhateverMoves ]
+  parent: [ WeaponTurretStaticGrenade, TurretFactionAlwaysHostile ]
   id: WeaponTurretStaticGrenadeShootWhateverMoves
   suffix: ShootWhateverMoves
 
 - type: entity
-  parent: [ WeaponTurretStaticSniper, TurretFactionShootWhateverMoves ]
+  parent: [ WeaponTurretStaticSniper, TurretFactionAlwaysHostile ]
   id: WeaponTurretStaticSniperShootWhateverMoves
   suffix: ShootWhateverMoves
 
 - type: entity
-  parent: [ WeaponTurretStaticShotgun, TurretFactionShootWhateverMoves ]
+  parent: [ WeaponTurretStaticShotgun, TurretFactionAlwaysHostile ]
   id: WeaponTurretStaticShotgunShootWhateverMoves
   suffix: ShootWhateverMoves
 
 - type: entity
-  parent: [ WeaponTurretStaticMinigun, TurretFactionShootWhateverMoves ]
+  parent: [ WeaponTurretStaticMinigun, TurretFactionAlwaysHostile ]
   id: WeaponTurretStaticMinigunShootWhateverMoves
   suffix: ShootWhateverMoves
 
 - type: entity
-  parent: [ WeaponTurretStaticIncendiary, TurretFactionShootWhateverMoves ]
+  parent: [ WeaponTurretStaticIncendiary, TurretFactionAlwaysHostile ]
   id: WeaponTurretStaticIncendiaryShootWhateverMoves
   suffix: ShootWhateverMoves
 
 - type: entity
-  parent: [ WeaponTurretStaticDisabler, TurretFactionShootWhateverMoves ]
+  parent: [ WeaponTurretStaticDisabler, TurretFactionAlwaysHostile ]
   id: WeaponTurretStaticDisablerShootWhateverMoves
   suffix: ShootWhateverMoves
 
 - type: entity
-  parent: [ WeaponTurretStaticLaser, TurretFactionShootWhateverMoves ]
+  parent: [ WeaponTurretStaticLaser, TurretFactionAlwaysHostile ]
   id: WeaponTurretStaticLaserShootWhateverMoves
   suffix: ShootWhateverMoves
 
 - type: entity
-  parent: [ WeaponTurretStaticHeavyLaser, TurretFactionShootWhateverMoves ]
+  parent: [ WeaponTurretStaticHeavyLaser, TurretFactionAlwaysHostile ]
   id: WeaponTurretStaticHeavyLaserShootWhateverMoves
   suffix: ShootWhateverMoves
 

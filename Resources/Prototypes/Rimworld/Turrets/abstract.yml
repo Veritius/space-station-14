@@ -86,12 +86,12 @@
     - SimpleHostile
 
 - type: entity
-  id: TurretFactionShootWhateverMoves
+  id: TurretFactionAlwaysHostile
   abstract: true
   components:
   - type: NpcFactionMember
     factions:
-    - ShootWhateverMoves
+    - TurretHostile
 
 - type: entity
   id: TurretFactionNanoTrasen
