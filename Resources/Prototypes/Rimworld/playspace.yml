@@ -51,9 +51,11 @@
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
     state: rock_sand
+    color: "#bbbbbb"
   - type: Icon
     sprite: Structures/Walls/rock.rsi
     state: rock_sand
+    color: "#bbbbbb"
 
 - type: entity
   parent: BaseWallInvulnerable
@@ -64,6 +66,8 @@
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
     state: rock_wall
+    color: "#bbbbbb"
   - type: Icon
     sprite: Structures/Walls/rock.rsi
     state: rock_wall
+    color: "#bbbbbb"
