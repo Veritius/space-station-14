@@ -1,3 +1,100 @@
+
+- type: npcFaction
+  id: Dragon
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Xeno
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - ShootWhateverMoves
+
+- type: npcFaction
+  id: NanoTrasen
+  hostile:
+  - SimpleHostile
+  - Syndicate
+  - Xeno
+  - Zombie
+  - Revolutionary
+
+- type: npcFaction
+  id: Mouse
+  hostile:
+  - PetsNT
+  - ShootWhateverMoves
+
+- type: npcFaction
+  id: Passive
+
+- type: npcFaction
+  id: PetsNT
+  hostile:
+  - Mouse
+  - SimpleHostile
+  - Zombie
+  - Xeno
+  - ShootWhateverMoves
+
+- type: npcFaction
+  id: SimpleHostile
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - ShootWhateverMoves
+
+- type: npcFaction
+  id: SimpleNeutral
+  hostile:
+  - ShootWhateverMoves
+
+- type: npcFaction
+  id: Syndicate
+  hostile:
+  - NanoTrasen
+  - SimpleHostile
+  - Xeno
+  - PetsNT
+  - Zombie
+  - ShootWhateverMoves
+
+- type: npcFaction
+  id: Xeno
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - ShootWhateverMoves
+
+- type: npcFaction
+  id: Zombie
+  hostile:
+  - NanoTrasen
+  - SimpleNeutral
+  - SimpleHostile
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Revolutionary
+  - ShootWhateverMoves
+
+- type: npcFaction
+  id: Revolutionary
+  hostile:
+  - NanoTrasen
+  - Zombie
+  - SimpleHostile
+  - Dragon
+  - ShootWhateverMoves
+
 - type: npcFaction
   id: ShootWhateverMoves
   hostile:
