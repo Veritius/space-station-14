@@ -14,6 +14,11 @@
   name: crashed captain
   suffix: Event Role
   components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: captain
   - type: GhostRole
     name: crashed captain
     description: You are a member of the command team of the crashed ship Valiant. Something went horribly wrong and ship engines failed. You just managed to survive the crash. Figure out what to do to get home.
@@ -39,6 +44,11 @@
   name: crashed engineer
   suffix: Event Role
   components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: captain
   - type: GhostRole
     name: crashed engineer
     description: You are a member of the engineering team of the crashed ship Valiant. Something went horribly wrong and ship engines failed. You just managed to survive the crash. Figure out what to do to get home.
