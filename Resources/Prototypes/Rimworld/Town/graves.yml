@@ -22,24 +22,7 @@
       state: closed
   - type: RandomSpawner
     prototypes:
-    - DrinkAbsintheBottleFull
-    - DrinkBlueCuracaoBottleFull
-    - DrinkCognacBottleFull
-    - DrinkGrenadineBottleFull
-    - DrinkGinBottleFull
-    - DrinkGildlagerBottleFull
-    - DrinkCoffeeLiqueurBottleFull
-    - DrinkMelonLiquorBottleFull
-    - DrinkPatronBottleFull
-    - DrinkRumBottleFull
-    - DrinkTequilaBottleFull
-    - DrinkVermouthBottleFull
-    - DrinkVodkaBottleFull
-    - DrinkWhiskeyBottleFull
-    - DrinkWineBottleFull
-    - DrinkBeerBottleFull
-    - DrinkAleBottleFull
-    - DrinkChampagneBottleFull
+    - TownGrave
 
 - type: entity
   parent: BaseStructure
