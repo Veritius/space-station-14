@@ -17,7 +17,7 @@
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
-      - state: green
+      - state: blue
       - state: captain
   - type: GhostRole
     name: crashed captain
@@ -47,7 +47,7 @@
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
-      - state: green
+      - state: blue
       - state: captain
   - type: GhostRole
     name: crashed engineer
