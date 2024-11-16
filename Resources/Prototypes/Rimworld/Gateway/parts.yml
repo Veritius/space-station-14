@@ -1,39 +1,48 @@
 - type: entity
   parent: BaseItem
-  id: BaseMacguffin
+  id: BaseWormholeGenPart
   abstract: true
   components:
   - type: Item
     size: Large
 
 - type: entity
-  parent: BaseMacguffin
-  id: EventMacguffinProcessor
+  parent: BaseWormholeGenPart
+  id: WormholeGenPartProcessor
   name: quantum processor
   description: A highly advanced microprocessor capable of performing calculations for FTL travel.
   components:
+  - type: Tag
+    tags:
+    - WormholeGenPartProcessor
   - type: Sprite
     sprite: Objects/Misc/module.rsi
     layers:
     - state: cpu_super
 
 - type: entity
-  parent: BaseMacguffin
-  id: EventMacguffinTransport
+  parent: BaseWormholeGenPart
+  id: WormholeGenPartTransport
   name: calabi-yau wormhole core
   description: The core component of wormhole travel. Nowadays, it's out of date, but it's still useful in your situation.
   components:
+  - type: Tag
+    tags:
+    - WormholeGenPartTransport
   - type: Sprite
     sprite: Objects/Misc/module.rsi
     layers:
     - state: bluespacearray
 
 - type: entity
-  parent: BaseMacguffin
-  id: EventMacguffinPower
+  parent: BaseWormholeGenPart
+  id: WormholeGenPartPowerCell
   name: zero-point energy cell
   description: An incredibly powerful energy source, built specifically for high-intensity workloads such as planetary wormhole generation.
   components:
+  - type: Tag
+    tags:
+    - WormholeGenPartPowerCell
   - type: Sprite
     sprite: Objects/Power/power_cages.rsi
     layers:
@@ -42,12 +51,27 @@
       shader: unshaded
 
 - type: entity
-  parent: BaseMacguffin
-  id: EventMacguffinData
+  parent: BaseWormholeGenPart
+  id: WormholeGenPartMapData
   name: subspace map data
   description: A data storage disk containing a map of subspace in the local area. Expedites the process of forming a wormhole.
   components:
+  - type: Tag
+    tags:
+    - WormholeGenPartMapData
   - type: Sprite
     sprite: Objects/Misc/module.rsi
     layers:
     - state: holodisk
+
+- type: Tag
+  id: WormholeGenPartProcessor
+
+- type: Tag
+  id: WormholeGenPartTransport
+
+- type: Tag
+  id: WormholeGenPartPowerCell
+
+- type: Tag
+  id: WormholeGenPartMapData
