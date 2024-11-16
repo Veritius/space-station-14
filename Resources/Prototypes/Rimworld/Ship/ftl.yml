@@ -8,6 +8,12 @@
   components:
   - type: RadiationSource
     intensity: 3.0
+  - type: LightningArcShooter
+    arcDepth: 1
+    maxLightningArc: 1
+    shootMinInterval: 30.0
+    shootMaxInterval: 60.0
+    shootRange: 5
   - type: Sprite
     sprite: Structures/Machines/gravity_generator_mini.rsi
     state: broken
@@ -15,3 +21,56 @@
     radius: 2
     energy: 1
     color: "#46b9e2"
+
+- type: entity
+  id: FtlGroundingRod
+  name: reinforced grounding rod
+  description: A reinforced grounding rod to absorb electric arcs. This one is especially beefy for use in an FTL core.
+  suffix: FTL Core
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 110
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Sprite
+    sprite: Structures/Power/Generation/Tesla/coil.rsi
+    noRot: true
+    snapCardinals: true
+    layers:
+      - state: grounding_rod
+        map: ["power"]
+      - state: grounding_rodhit
+        visible: false
+        map: ["hit"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.TeslaCoilVisuals.Lightning:
+        hit:
+          True: { visible: true }
+          False: { visible: false }
+      enum.TeslaCoilVisuals.Enabled:
+        power:
+          True: { state: grounding_rod }
+          False: { state: grounding_rod_open }
+  - type: LightningSparking
+  - type: LightningTarget
+    priority: 99
+    lightningResistance: 10
+    lightningExplode: false
+    damageFromLightning: 0
+  - type: Anchorable
+  - type: Clickable
