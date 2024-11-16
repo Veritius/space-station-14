@@ -38,3 +38,20 @@
   components:
   - type: Wieldable
   - type: GunRequiresWield
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyCorruptSilicon
+  name: corrupt encryption key
+  description: An power cell in the standard Nanotrasen form factor, salvaged from a destroyed corrupted silicon.
+  components:
+  - type: EncryptionKey
+    channels:
+    - CorruptSilicon
+    defaultChannel: CorruptSilicon
+  - type: Sprite
+    layers:
+    - state: crypt_rusted
+    - state: ai_label
+  - type: DetailExaminable
+    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. The shell is rusted, and in places replaced with an unidentifable black metal.
