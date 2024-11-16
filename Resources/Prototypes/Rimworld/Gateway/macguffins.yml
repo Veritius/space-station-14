@@ -1,0 +1,53 @@
+- type: entity
+  parent: BaseItem
+  id: BaseMacguffin
+  abstract: true
+  components:
+  - type: Item
+    size: Large
+
+- type: entity
+  parent: BaseMacguffin
+  id: EventMacguffinProcessor
+  name: quantum processor
+  description: A highly advanced microprocessor capable of performing calculations for FTL travel.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: cpu_super
+
+- type: entity
+  parent: BaseMacguffin
+  id: EventMacguffinTransport
+  name: calabi-yau wormhole core
+  description: The core component of wormhole travel. Nowadays, it's out of date, but it's still useful in your situation.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: bluespacearray
+
+- type: entity
+  parent: BaseMacguffin
+  id: EventMacguffinPower
+  name: zero-point energy cell
+  description: An incredibly powerful energy source, built specifically for high-intensity workloads such as planetary wormhole generation.
+  components:
+  - type: Sprite
+    sprite: Objects/Power/power_cages.rsi
+    layers:
+    - state: high
+    - state: o2
+      shader: unshaded
+
+- type: entity
+  parent: BaseMacguffin
+  id: EventMacguffinData
+  name: subspace map data
+  description: A data storage disk containing a map of subspace in the local area. Expedites the process of forming a wormhole.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: holodisk
