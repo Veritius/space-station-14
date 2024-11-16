@@ -1,16 +1,4 @@
 - type: technology
-  id: WeaponFabrication
-  name: weapon fabrication
-  icon:
-    sprite: Objects/Devices/swapper.rsi
-    state: icon
-  discipline: Arsenal
-  tier: 2
-  cost: 10000
-  recipeUnlocks:
-  - DeviceQuantumSpinInverter
-
-- type: technology
   id: HeavyAssaultRifles
   name: high-caliber rifles
   icon:
