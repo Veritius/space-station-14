@@ -1,0 +1,49 @@
+- type: entity
+  parent: MobHuman
+  id: EventRoleHumanCrashedCaptain
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: Loadout
+    roleLoadout: [ JobCaptain ]
+
+- type: entity
+  parent: BaseEventRoleSpawn
+  id: EventRoleSpawnCrashedCaptain
+  name: crashed captain
+  suffix: Event Role
+  components:
+  - type: GhostRole
+    name: crashed captain
+    description: You are a member of the command team of the crashed ship Valiant. Something went horribly wrong and ship engines failed. You just managed to survive the crash. Figure out what to do to get home.
+    rules: You are not an antagonist. Your goal is to get off the planet and get home. Follow the server rules unless told otherwise by an administrator.
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: EventRoleHumanCrashedCaptain
+
+- type: entity
+  parent: MobHuman
+  id: EventRoleHumanCrashedEngineer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: Loadout
+    roleLoadout: [ JobStationEngineer ]
+
+- type: entity
+  parent: BaseEventRoleSpawn
+  id: EventRoleSpawnCrashedEngineer
+  name: crashed engineer
+  suffix: Event Role
+  components:
+  - type: GhostRole
+    name: crashed engineer
+    description: You are a member of the engineering team of the crashed ship Valiant. Something went horribly wrong and ship engines failed. You just managed to survive the crash. Figure out what to do to get home.
+    rules: You are not an antagonist. Your goal is to get off the planet and get home. Follow the server rules unless told otherwise by an administrator.
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: EventRoleHumanCrashedEngineer
