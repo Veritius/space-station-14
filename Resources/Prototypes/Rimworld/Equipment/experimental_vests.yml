@@ -1,0 +1,72 @@
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: EventSkipVest
+  name: scout skip-vest
+  description: A high-tech vest with a built in personal teleportation device.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Armor/armor_reflec.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Armor/armor_reflec.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: ToggleClothing
+    action: ActionActivateVestSkip
+
+- type: entity
+  id: ActionActivateVestSkip
+  name: Vest skip
+  description: Activates your vest's built in teleportation device.
+  components:
+  - type: WorldTargetAction
+    useDelay: 10
+    range: 16
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/blink.ogg
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    repeat: false
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: blink
+    event: !type:TeleportSpellEvent
+
+- type: entity
+  parent: [ ClothingOuterArmorBasic, BaseToggleClothing ]
+  id: EventCloakVest
+  name: scout cloak-vest
+  description: A high-tech vest with a built in personal cloaking device.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Armor/armor_reflec.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Armor/armor_reflec.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: ToggleClothing
+    action: ActionToggleVestCloak
+  - type: ComponentToggler
+    parent: true
+    components:
+    - type: Stealth
+      minVisibility: 0.1
+      lastVisibility: 0.1
+
+- type: entity
+  id: ActionToggleVestCloak
+  name: Vest cloak
+  description: Toggles your vest's cloaking.
+  components:
+  - type: InstantAction
+    priority: -9
+    event: !type:ToggleActionEvent
