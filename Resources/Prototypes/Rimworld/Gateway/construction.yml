@@ -135,6 +135,7 @@
   parent: EventGatewayStructure
   id: EventGatewayFrame
   name: wormhole generator frame
+  description: Your ticket out of here. Eventually.
   categories: [ HideSpawnMenu ]
   components:
   - type: Construction
