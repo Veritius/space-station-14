@@ -1,0 +1,55 @@
+- type: entity
+  parent: MarkerBase
+  id: TownGraveSpawner
+  name: grave
+  components:
+  - type: Icon
+    layers:
+    - sprite: Markers/cross.rsi
+      state: blue
+    - sprite: Structures/Storage/Crates/wooden_grave.rsi
+      state: base
+    - sprite: Structures/Storage/Crates/wooden_grave.rsi
+      state: closed
+  - type: Sprite
+    sprite: Structures/Storage/Crates/wooden_grave.rsi
+    layers:
+    - sprite: Markers/cross.rsi
+      state: blue
+    - sprite: Structures/Storage/Crates/wooden_grave.rsi
+      state: base
+    - sprite: Structures/Storage/Crates/wooden_grave.rsi
+      state: closed
+  - type: RandomSpawner
+    prototypes:
+    - DrinkAbsintheBottleFull
+    - DrinkBlueCuracaoBottleFull
+    - DrinkCognacBottleFull
+    - DrinkGrenadineBottleFull
+    - DrinkGinBottleFull
+    - DrinkGildlagerBottleFull
+    - DrinkCoffeeLiqueurBottleFull
+    - DrinkMelonLiquorBottleFull
+    - DrinkPatronBottleFull
+    - DrinkRumBottleFull
+    - DrinkTequilaBottleFull
+    - DrinkVermouthBottleFull
+    - DrinkVodkaBottleFull
+    - DrinkWhiskeyBottleFull
+    - DrinkWineBottleFull
+    - DrinkBeerBottleFull
+    - DrinkAleBottleFull
+    - DrinkChampagneBottleFull
+
+- type: entity
+  parent: BaseStructure
+  id: TownGrave
+  name: grave
+  description: Someone's final resting place.
+  components:
+  - type: Sprite
+    sprite: Structures/Storage/Crates/wooden_grave.rsi
+    layers:
+    - state: base
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
