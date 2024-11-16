@@ -1,0 +1,68 @@
+- type: entity
+  id: BaseWallInvulnerable
+  name: strange wall
+  description: A strange wall. Looks sturdy enough that you think that you shouldn't bother trying to get through it.
+  suffix: Invulnerable
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+  - type: Occluder
+  - type: Airtight
+  - type: BlockWeather
+  - type: RadiationBlocker
+    resistance: 99999
+  - type: PlacementReplacement
+    key: walls
+  - type: Tag
+    tags:
+      - Structure
+      - Wall
+  - type: Sprite
+    sprite: Structures/Walls/clown.rsi
+    drawdepth: Walls
+  - type: Icon
+    sprite: Structures/Walls/clown.rsi
+
+- type: entity
+  parent: BaseWallInvulnerable
+  id: WallRockSandstoneInvulnerable
+  name: dense sandstone
+  description: Ultra-dense sandstone, compacted by thousands of years of pressure. You don't have a hope of getting through this stuff.
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    state: rock_sand
+  - type: Icon
+    sprite: Structures/Walls/rock.rsi
+    state: rock_sand
+
+- type: entity
+  parent: BaseWallInvulnerable
+  id: WallRockBasaltInvulnerable
+  name: dense basalt
+  description: Ultra-dense basalt, compacted by thousands of years of pressure. You don't have a hope of getting through this stuff.
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    state: rock_wall
+  - type: Icon
+    sprite: Structures/Walls/rock.rsi
+    state: rock_wall
