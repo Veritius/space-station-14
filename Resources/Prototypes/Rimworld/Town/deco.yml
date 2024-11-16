@@ -1,0 +1,57 @@
+- type: entity
+  parent: BaseStructure
+  id: WallClipboard
+  name: clipboard
+  description: A clipboard mounted to the wall.
+  suffix: Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.35,0.25,0.35"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Anchorable
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,5,3
+    whitelist:
+      tags:
+        - Document
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Tag
+    tags:
+    - Folder
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    sprite: Objects/Misc/clipboard.rsi
+    drawdepth: Objects
+    layers:
+    - state: clipboard
+    - state: clipboard_paper
+      map: ["clipboard_paper"]
+      visible: false
+    - state: clipboard_over
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      clipboard_paper:
+        whitelist:
+          tags:
+          - Document
