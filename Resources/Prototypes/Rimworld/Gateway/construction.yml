@@ -1,0 +1,110 @@
+- type: construction
+  id: WormholeGenerator
+  name: wormhole generator
+  description: Your ticket out of here.
+  graph: WormholeGenerator
+  startNode: start
+  targetNode: finished
+  category: Event
+  icon:
+    sprite: Structures/Machines/gateway.rsi
+    state: frame
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: constructionGraph
+  id: WormholeGenerator
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: frame
+      steps:
+      - material: Steel
+        amount: 20
+        doAfter: 7
+      - material: Plastic
+        amount: 8
+        doAfter: 3
+  - node: frame
+    edges:
+    - to: frame_cable
+      steps:
+      - material: Cable
+        amount: 6
+        doAfter: 4
+      - tool: Screwing
+        doAfter: 2
+  - node: frame_cable
+    edges:
+    - to: frame_parts
+      steps:
+      - tag: CapacitorStockPart
+        name: capacitor
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 1
+      - tag: CapacitorStockPart
+        name: capacitor
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 1
+      - tool: Screwing
+        doAfter: 5
+  - node: frame_parts
+    edges:
+    - to: needs_shell
+      steps:
+      - tag: WormholeGenPartProcessor
+        name: quantum processor
+        icon:
+          sprite: Objects/Misc/module.rsi
+          state: cpu_super
+        doAfter: 3
+      - material: Cable
+        amount: 1
+        doAfter: 0.7
+      - tool: Screwing
+        doAfter: 2
+      - tag: WormholeGenPartTransport
+        name: calabi-yau wormhole core
+        icon:
+          sprite: Objects/Misc/module.rsi
+          state: bluespacearray
+        doAfter: 3
+      - material: Cable
+        amount: 2
+        doAfter: 1.5
+      - tool: Screwing
+        doAfter: 0.9
+      - tag: WormholeGenPartPowerCell
+        name: zero-point energy cell
+        icon:
+          sprite: Objects/Power/power_cages.rsi
+          state: high
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 2
+  - node: needs_shell
+    edges:
+    - to: finished
+      steps:
+      - material: Steel
+        amount: 8
+        doAfter: 2.5
+      - tool: Anchoring
+        doAfter: 3
+  - node: finished
+    entity: EventGateway
+    edges:
+    - to: finished_datadisk
+      steps:
+      - tag: WormholeGenPartMapData
+        name: subspace map data
+        icon:
+          sprite: Objects/Misc/module.rsi
+          state: holodisk
+  - node: finished_datadisk
+    entity: EventGatewayDisked

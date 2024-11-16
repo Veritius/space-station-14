@@ -39,7 +39,11 @@
     - state: frame
     - state: on
       shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
+
+- type: entity
+  parent: EventGateway
+  id: EventGatewayDisked
+  categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: BasePortal
