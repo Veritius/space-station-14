@@ -21,7 +21,7 @@
       - state: captain
   - type: GhostRole
     name: crashed captain
-    description: You are a member of the command team of the crashed ship Valiant. Something went horribly wrong and ship engines failed. You just managed to survive the crash. Figure out what to do to get home.
+    description: You are a member of the command team of the cargo ship Valiant. Something went horribly wrong and ship engines failed. You just barely managed to survive the crash. Figure out what to do to get home.
     rules: You are not an antagonist. Your goal is to get off the planet and get home. Follow the server rules unless told otherwise by an administrator.
     raffle:
       settings: default
@@ -51,9 +51,39 @@
       - state: captain
   - type: GhostRole
     name: crashed engineer
-    description: You are a member of the engineering team of the crashed ship Valiant. Something went horribly wrong and ship engines failed. You just managed to survive the crash. Figure out what to do to get home.
+    description: You are a member of the engineering team of the cargo ship Valiant. Something went horribly wrong and ship engines failed. You just barely managed to survive the crash. Figure out what to do to get home.
     rules: You are not an antagonist. Your goal is to get off the planet and get home. Follow the server rules unless told otherwise by an administrator.
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
     prototype: EventRoleHumanCrashedEngineer
+
+- type: entity
+  parent: MobHuman
+  id: EventRoleHumanCrashedDoctor
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: Loadout
+    roleLoadout: [ JobMedicalDoctor ]
+
+- type: entity
+  parent: BaseEventRoleSpawn
+  id: EventRoleSpawnCrashedDoctor
+  name: crashed doctor
+  suffix: Event Role
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: blue
+      - state: captain
+  - type: GhostRole
+    name: crashed doctor
+    description: You are a member of the medical team of the cargo ship Valiant. Something went horribly wrong and ship engines failed. You just barely managed to survive the crash. Figure out what to do to get home.
+    rules: You are not an antagonist. Your goal is to get off the planet and get home. Follow the server rules unless told otherwise by an administrator.
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: EventRoleHumanCrashedDoctor
