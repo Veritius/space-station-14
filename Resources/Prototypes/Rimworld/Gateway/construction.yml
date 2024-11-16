@@ -11,6 +11,9 @@
     state: frame
   objectType: Structure
   placementMode: SnapgridCenter
+  canRotate: false
+  conditions:
+  - !type:TileNotBlocked
 
 - type: constructionGraph
   id: WormholeGenerator
@@ -26,36 +29,46 @@
       - material: Plastic
         amount: 8
         doAfter: 3
+
   - node: frame
+    entity: EventGatewayFrame
     edges:
-    - to: frame_cable
+    - to: wired
       steps:
       - material: Cable
         amount: 6
         doAfter: 4
       - tool: Screwing
         doAfter: 2
-  - node: frame_cable
+
+  - node: wired
+    entity: EventGatewayFrame
+    actions:
+    - !type:AppearanceChange
     edges:
-    - to: frame_parts
+    - to: parts
       steps:
       - tag: CapacitorStockPart
         name: capacitor
         icon:
           sprite: Objects/Misc/stock_parts.rsi
           state: capacitor
-        doAfter: 1
+        doAfter: 0.5
       - tag: CapacitorStockPart
         name: capacitor
         icon:
           sprite: Objects/Misc/stock_parts.rsi
           state: capacitor
-        doAfter: 1
+        doAfter: 0.5
       - tool: Screwing
-        doAfter: 5
-  - node: frame_parts
+        doAfter: 2
+
+  - node: parts
+    entity: EventGatewayFrame
+    actions:
+    - !type:AppearanceChange
     edges:
-    - to: needs_shell
+    - to: shell
       steps:
       - tag: WormholeGenPartProcessor
         name: quantum processor
@@ -87,9 +100,11 @@
         doAfter: 3
       - tool: Screwing
         doAfter: 2
-      - tool: Welding
-        doAfter: 4
-  - node: needs_shell
+
+  - node: shell
+    actions:
+    - !type:AppearanceChange
+    entity: EventGatewayFrame
     edges:
     - to: finished
       steps:
@@ -98,15 +113,44 @@
         doAfter: 2.5
       - tool: Anchoring
         doAfter: 3
+      - tool: Welding
+        doAfter: 4
+      completed:
+      - !type:SpawnPrototype
+        prototype: EventGateway
+      - !type:DeleteEntity
+
   - node: finished
     entity: EventGateway
-    edges:
-    - to: finished_datadisk
-      steps:
-      - tag: WormholeGenPartMapData
-        name: subspace map data
-        icon:
-          sprite: Objects/Misc/module.rsi
-          state: holodisk
-  - node: finished_datadisk
-    entity: EventGatewayDisked
+    # edges:
+    # - to: finished_datadisk
+    #   steps:
+    #   - tag: WormholeGenPartMapData
+    #     name: subspace map data
+    #     icon:
+    #       sprite: Objects/Misc/module.rsi
+    #       state: holodisk
+
+- type: entity
+  parent: EventGatewayStructure
+  id: EventGatewayFrame
+  name: WormholeGeneratorFrame
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Construction
+    graph: WormholeGenerator
+    node: frame
+  - type: Sprite
+    sprite: Structures/Machines/gateway.rsi
+    noRot: true
+    layers:
+    - state: frame
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame: { state: frame }
+          wired: { state: frame }
+          parts: { state: frame }
+          shell: { state: frame }

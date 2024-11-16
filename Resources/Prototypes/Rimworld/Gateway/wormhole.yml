@@ -12,9 +12,8 @@
 
 - type: entity
   parent: BaseStructure
-  id: EventGateway
-  name: wormhole generator
-  description: A device to punch a hole through reality itself, bridging any two points in spacetime. Looks complicated.
+  id: EventGatewayStructure
+  abstract: true
   components:
   - type: Physics
     bodyType: Static
@@ -32,6 +31,13 @@
         - WallLayer
         hard: false
   - type: InteractionOutline
+
+- type: entity
+  parent: EventGatewayStructure
+  id: EventGateway
+  name: wormhole generator
+  description: A device to punch a hole through reality itself, bridging any two points in spacetime. Looks complicated.
+  components:
   - type: Sprite
     sprite: Structures/Machines/gateway.rsi
     noRot: true
