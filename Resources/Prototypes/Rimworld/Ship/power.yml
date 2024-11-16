@@ -6,4 +6,4 @@
   suffix: 1000kw
   components:
   - type: PowerSupplier
-    supplyRate: 10000000
+    supplyRate: 1000000
