@@ -1,0 +1,85 @@
+- type: entity
+  parent: HandTeleporter
+  id: WormholeGeneratorTool
+  name: wormhole tool
+  description: As a reminder, use VV to set AllowPortalsOnDifferentGrids to true.
+  suffix: Admin
+  components:
+  - type: HandTeleporter
+    portalCreationDelay: 0
+    firstPortalPrototype: WormholeStationside
+    secondPortalPrototype: WormholePlanetside
+
+- type: entity
+  parent: BaseStructure
+  id: EventGateway
+  name: wormhole generator
+  description: A device to punch a hole through reality itself, bridging any two points in spacetime. Looks complicated.
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Structures/Machines/gateway.rsi
+    noRot: true
+    layers:
+    - state: frame
+    - state: on
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+
+- type: entity
+  parent: BasePortal
+  id: BaseWormhole
+  abstract: true
+  name: wormhole
+  components:
+  - type: Portal
+    canTeleportToOtherMaps: true
+
+- type: entity
+  parent: BaseWormhole
+  id: WormholePlanetside
+  description: A portal from the planet to... somewhere.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Machines/gateway.rsi
+    color: SkyBlue
+    layers:
+    - state: portal
+  - type: PointLight
+    color: SkyBlue
+    radius: 3
+    energy: 1
+    netsync: false
+
+- type: entity
+  parent: BaseWormhole
+  id: WormholeStationside
+  description: You don't actually want to go back, do you?
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Machines/gateway.rsi
+    color: OrangeRed
+    layers:
+    - state: portal
+  - type: PointLight
+    color: OrangeRed
+    radius: 3
+    energy: 1
+    netsync: false
