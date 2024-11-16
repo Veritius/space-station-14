@@ -2,16 +2,16 @@
   parent: BaseStructure
   id: FtlCoreBroken
   name: broken ftl core
-  description: An ancient design for FTL travel that folds spacetime, phased out due to producing hazardous radiation. This one looks very, very broken. Maybe it's not a good idea to be near it.
+  description: An ancient design for FTL travel that folds spacetime, phased out due to leaking hazardous radiation. This one looks very, very broken. Maybe it's not a good idea to be near it.
   placement:
     mode: AlignTileAny
   components:
   - type: RadiationSource
-    intensity: 1.0
+    intensity: 3.0
   - type: Sprite
     sprite: Structures/Machines/gravity_generator_mini.rsi
     state: broken
   - type: PointLight
-    radius: 5
+    radius: 2
     energy: 1
     color: "#46b9e2"

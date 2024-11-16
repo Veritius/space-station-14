@@ -1,0 +1,18 @@
+- type: entity
+  parent: BaseMachine
+  id: DecoServerCorruptSilicon
+  name: unknown server
+  description: A bulky server array. You're not sure what it's for.
+  placement:
+    mode: AlignTileAny
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/telecomms.rsi
+    layers:
+    - state: icon
+    - state: unlit
+      shader: unshaded
+  - type: PointLight
+    radius: 1.2
+    energy: 1
+    color: "#ce201a"
