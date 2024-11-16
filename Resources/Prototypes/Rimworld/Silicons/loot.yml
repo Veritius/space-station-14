@@ -19,7 +19,7 @@
     autoRecharge: true
     autoRechargeRate: 80
   - type: DetailExaminable
-    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. Tiny crevices in the shell of the cell glow with a brilliant, pulsating white light. It smells awful, like a combination of burning rubber and chemical waste.
+    content: It's covered in a thin film of iridescent slime. Tiny crevices in the shell of the cell glow with a brilliant, pulsating white light. It smells awful, like a combination of burning rubber and chemical waste.
 
 - type: entity
   parent: EncryptionKey
@@ -36,7 +36,7 @@
     - state: crypt_rusted
     - state: ai_label
   - type: DetailExaminable
-    content: Upon further examination, you see that it is covered in a thin film of iridescent slime. The casing is rusted, and in places replaced with an unidentifable black metal. The electrical contacts seem to be in working order.
+    content: It's covered in a thin film of iridescent slime. The casing is rusted, and in places replaced with an unidentifable black metal. The electrical contacts seem to be in working order.
 
 - type: entity
   parent: [ CorruptSiliconBeamGun ]
