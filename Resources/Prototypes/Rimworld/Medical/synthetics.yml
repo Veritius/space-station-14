@@ -272,7 +272,7 @@
 - type: constructionGraph
   id: SyntheticBody
   start: frame
-  nodes:
+  graph:
   - node: frame
     entity: SyntheticEndoskeleton
     edges:
