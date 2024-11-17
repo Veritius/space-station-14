@@ -294,16 +294,16 @@
           state: capacitor
         doAfter: 0.5
       - tag: MicroManipulatorStockPart
-        name: micro_mani
+        name: manipulator
         icon:
           sprite: Objects/Misc/stock_parts.rsi
-          state: capacitor
+          state: micro_mani
         doAfter: 0.5
       - tag: MicroManipulatorStockPart
-        name: micro_mani
+        name: manipulator
         icon:
           sprite: Objects/Misc/stock_parts.rsi
-          state: capacitor
+          state: micro_mani
         doAfter: 0.5
       - material: SyntheticMuscle
         amount: 8

@@ -8,6 +8,14 @@
     },
     "states": [
       {
+        "name": "endo_frame",
+        "directions": 4
+      },
+      {
+        "name": "endo_wires",
+        "directions": 4
+      },
+      {
         "name": "skin",
         "directions": 4
       },
