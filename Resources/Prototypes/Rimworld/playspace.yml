@@ -24,7 +24,6 @@
         layer:
         - MidImpassable
         - LowImpassable
-  - type: Occluder
   - type: Airtight
   - type: BlockWeather
   - type: RadiationBlocker
@@ -48,6 +47,7 @@
   name: dense sandstone
   description: Ultra-dense sandstone, compacted by thousands of years of pressure. You don't have a hope of getting through this stuff.
   components:
+  - type: Occluder
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
     state: rock_sand
@@ -63,6 +63,7 @@
   name: dense basalt
   description: Ultra-dense basalt, compacted by thousands of years of pressure. You don't have a hope of getting through this stuff.
   components:
+  - type: Occluder
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
     state: rock_wall
@@ -70,4 +71,19 @@
   - type: Icon
     sprite: Structures/Walls/rock.rsi
     state: rock_wall
+    color: "#bbbbbb"
+
+- type: entity
+  parent: BaseWallInvulnerable
+  id: WallStalagmiteInvulnerable
+  name: dense stalagmite
+  description: A dense stalagmite, formed over thousands of years. It's large enough to block your passage.
+  components:
+  - type: Sprite
+    sprite: Objects/Decoration/Flora/flora_stalagmite.rsi
+    state: stalagmite2
+    color: "#bbbbbb"
+  - type: Icon
+    sprite: Objects/Decoration/Flora/flora_stalagmite.rsi
+    state: stalagmite2
     color: "#bbbbbb"
