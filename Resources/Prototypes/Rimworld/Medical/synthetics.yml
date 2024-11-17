@@ -4,7 +4,7 @@
   - MobDamageable
   - MobCombat
   - StripableInventoryBase
-  id: MobSynthetic
+  id: SyntheticBody
   name: synthetic
   description: A fully synthetic body visually similar to a human's. Though not as dexterous as the real thing, it's better than nothing. Accepts MMIs and positronic brains.
   save: false
@@ -268,3 +268,95 @@
       part: RightHandHuman
     left_hand:
       part: LeftHandHuman
+
+- type: constructionGraph
+  id: SyntheticBody
+  start: frame
+  nodes:
+  - node: frame
+    entity: SyntheticEndoskeleton
+    edges:
+    - to: wired
+      steps:
+      - material: Cable
+        amount: 4
+        doAfter: 2
+      - tag: CapacitorStockPart
+        name: capacitor
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 0.5
+      - tag: MicroManipulatorStockPart
+        name: micro_mani
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 0.5
+      - tag: MicroManipulatorStockPart
+        name: micro_mani
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 0.5
+      - material: SyntheticMuscle
+        amount: 8
+        doAfter: 4
+      - tool: Screwing
+        doAfter: 3
+
+  - node: wired
+    entity: SyntheticEndoskeleton
+    edges:
+    - to: finish
+      steps:
+      - material: Plastic
+        amount: 6
+        doAfter: 2.5
+      - material: Steel
+        amount: 3
+        doAfter: 2
+      - tool: Screwing
+        doAfter: 1
+      - tool: Welding
+        doAfter: 3
+      completed:
+      - !type:SpawnPrototype
+        prototype: SyntheticBody
+      - !type:DeleteEntity
+
+  - node: finish
+
+- type: entity
+  id: SyntheticEndoskeleton
+  name: synthetic body endoskeleton
+  description: A tightly machined endoskeleton used to construct synthetic bodies. Spooky.
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+        restitution: 0.3
+        friction: 0.2
+  - type: Sprite
+    noRot: true
+    drawdepth: Items
+    sprite: Rimworld/synthbody.rsi
+    state: endo_frame
+  - type: Appearance
+  - type: Construction
+    graph: SyntheticBody
+    node: frame
+    defaultTarget: finish
