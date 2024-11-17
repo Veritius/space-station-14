@@ -6,7 +6,7 @@
   - StripableInventoryBase
   id: MobSynthetic
   name: synthetic
-  description: A fully synthetic body visually similar to a human's. Accepts MMIs and positronic brains.
+  description: A fully synthetic body visually similar to a human's. Though not as dexterous as the real thing, it's better than nothing. Accepts MMIs and positronic brains.
   save: false
   components:
   - type: Sprite
