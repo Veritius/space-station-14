@@ -1,0 +1,259 @@
+- type: entity
+  parent:
+  - BaseMob
+  - MobDamageable
+  - MobCombat
+  - StripableInventoryBase
+  id: MobSynthetic
+  name: synthetic
+  description: A fully synthetic body visually similar to a human's. Accepts MMIs and positronic brains.
+  save: false
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Rimworld/synthbody.rsi
+      state: skin
+    - map: [ "jumpsuit" ]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "outerClothing" ]
+    - map: [ "eyes" ]
+      sprite: Rimworld/synthbody.rsi
+      state: eyes
+      shader: unshaded
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "neck" ]
+    - map: [ "back" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+  - type: DamageVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    targetLayers:
+    - "enum.HumanoidVisualLayers.Chest"
+    - "enum.HumanoidVisualLayers.Head"
+    - "enum.HumanoidVisualLayers.LArm"
+    - "enum.HumanoidVisualLayers.LLeg"
+    - "enum.HumanoidVisualLayers.RArm"
+    - "enum.HumanoidVisualLayers.RLeg"
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#FF0000"
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.CreamPiedVisuals.Creamed:
+        clownedon:
+          True: {visible: true}
+          False: {visible: false}
+  - type: StatusIcon
+    bounds: -0.5,-0.5,0.5,0.5
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 185
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: FloorOcclusion
+  - type: RangedDamageSound
+    soundGroups:
+      Brute:
+        collection:
+          MeatBulletImpact
+    soundTypes:
+      Heat:
+        collection:
+          MeatLaserImpact
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+      Acidic: [Touch, Ingestion]
+    reactions:
+    - reagents: [Water, SpaceCleaner]
+      methods: [Touch]
+      effects:
+      - !type:WashCreamPieReaction
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Electrocution
+    - TemporaryBlindness
+    - Flashed
+  - type: IdExaminable
+  - type: Hands
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: ComplexInteraction
+  - type: Internals
+  - type: FloatingVisuals
+  - type: Climbing
+  - type: Cuffable
+  - type: Ensnareable
+    sprite: Objects/Misc/ensnare.rsi
+    state: icon
+  - type: AnimationPlayer
+  - type: Buckle
+  - type: CombatMode
+    canDisarm: true
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 5
+  - type: SleepEmitSound
+  - type: SSDIndicator
+  - type: StandingState
+  - type: Dna
+  - type: MindContainer
+    showExamineInfo: true
+  - type: CanEnterCryostorage
+  - type: InteractionPopup
+    successChance: 1
+    interactSuccessString: hugging-success-generic
+    interactSuccessSound: /Audio/Effects/thudswoosh.ogg
+    messagePerceivedByOthers: hugging-success-generic-others
+  - type: CreamPied
+  - type: Stripping
+  - type: UserInterface
+    interfaces:
+      enum.HumanoidMarkingModifierKey.Key:
+        type: HumanoidMarkingModifierBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: Puller
+  - type: Emoting
+  - type: BodyEmotes
+    soundsId: GeneralBodyEmotes
+  - type: Grammar
+    attributes:
+      proper: true
+  - type: MobPrice
+    price: 1500 # Kidnapping a living person and selling them for cred is a good move.
+    deathPenalty: 0.01 # However they really ought to be living and intact, otherwise they're worth 100x less.
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+  - type: Blindable
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.0
+    baseSprintSpeed: 4.0
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: false
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+    locPrefix: silicon
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+  - type: ZombieImmune
+  - type: Repairable
+    doAfterDelay: 10
+    allowSelfRepair: true
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBorg
+  - type: Damageable
+    damageContainer: Silicon
+    damageModifierSet: FlimsyMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: UnblockableSpeech
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Slash: 2
+        Heat: 5
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
