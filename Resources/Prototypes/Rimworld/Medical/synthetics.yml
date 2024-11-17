@@ -245,6 +245,12 @@
     - NanoTrasen
   - type: Body
     prototype: Synthetic
+  - type: BorgChassis
+    maxModules: 0
+    brainContainerId: brain
+  - type: ContainerContainer
+    containers:
+      brain: !type:ContainerSlot { }
 
 - type: body
   id: Synthetic
