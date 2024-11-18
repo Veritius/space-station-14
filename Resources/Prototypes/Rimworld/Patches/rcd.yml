@@ -1,0 +1,74 @@
+- type: entity
+  id: RCD
+  parent: [ BaseItem, BaseEngineeringContraband ]
+  name: RCD
+  description: The rapid construction device can be used to quickly place and remove various station structures and fixtures. Requires compressed matter to function.
+  components:
+  - type: RCD
+    availablePrototypes:
+    - WallSolid
+    - FloorSteel
+    - Plating
+    - Catwalk
+    - Grille
+    - Window
+    - WindowDirectional
+    - WindowReinforcedDirectional
+    - ReinforcedWindow
+    - Airlock
+    - AirlockGlass
+    - Firelock
+    - TubeLight
+    - BulbLight
+    - LVCable
+    - MVCable
+    - HVCable
+    - CableTerminal
+    - Deconstruct
+  - type: LimitedCharges
+    maxCharges: 30
+    charges: 30
+  - type: UseDelay
+  - type: Sprite
+    sprite: Objects/Tools/rcd.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: Objects/Tools/rcd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 600
+      Plastic: 100
+  - type: StaticPrice
+    price: 110
+  - type: UserInterface
+    interfaces:
+      enum.RcdUiKey.Key:
+        type: RCDMenuBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.RcdUiKey.Key
+  - type: RandomSpawner
+    prototypes:
+    - RCDInert
+
+- type: entity
+  parent: BaseItem
+  id: RCDInert
+  name: RCD
+  description: Looks like it doesn't work planetside.
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/rcd.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: Objects/Tools/rcd.rsi
+    quickEquip: false
+    slots:
+    - Belt
