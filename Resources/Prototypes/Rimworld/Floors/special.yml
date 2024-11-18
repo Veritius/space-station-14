@@ -3,3 +3,5 @@
   name: lattice
   sprite: /Textures/Rimworld/Tiles/desert_lattice.png
   isSubfloor: true
+  heatCapacity: 10000
+  indestructible: true

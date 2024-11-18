@@ -12,8 +12,9 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
   indestructible: true
+  weather: true
+  
 
 # Desert
 - type: tile
@@ -32,8 +33,9 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
   indestructible: true
+  weather: true
+  
 
 - type: tile
   id: FloorLowDesert
@@ -51,8 +53,9 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
   indestructible: true
+  weather: true
+  
 
 # Grass
 - type: tile
@@ -81,8 +84,9 @@
     collection: FootstepGrass
   itemDrop: FloorTileItemGrass
   heatCapacity: 10000
-  weather: true
   indestructible: true
+  weather: true
+  
 
 # Lava
 - type: tile
@@ -93,8 +97,9 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
   indestructible: true
+  weather: true
+  
 
 # Snow
 - type: tile
@@ -126,8 +131,9 @@
   footstepSounds:
     collection: FootstepSnow
   heatCapacity: 10000
-  weather: true
   indestructible: true
+  weather: true
+  
 
 # Ice
 - type: tile
@@ -137,11 +143,12 @@
   isSubfloor: true
   friction: 0.05
   heatCapacity: 10000
+  indestructible: true
   weather: true
   mobFriction: 0.5
   mobFrictionNoInput: 0.05
   mobAcceleration: 2
-  indestructible: true
+  
 
 # Dug snow
 - type: tile
@@ -158,7 +165,8 @@
   footstepSounds:
     collection: FootstepSnow
   heatCapacity: 10000
-  weather: true
   indestructible: true
+  weather: true
+  
 
 # Wasteland
