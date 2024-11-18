@@ -59,7 +59,7 @@
 - type: entity
   parent: BaseItem
   id: RCDInert
-  name: RCD
+  name: inert RCD
   description: Looks like it doesn't work planetside.
   components:
   - type: Sprite
