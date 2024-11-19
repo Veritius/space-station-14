@@ -1,0 +1,107 @@
+- type: entity
+  parent: BaseItem
+  id: BaseTurretBoard
+  abstract: true
+  name: turret board
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: security
+  - type: Item
+    storedRotation: -90
+
+- type: entity
+  parent: BaseTurretBoard
+  id: TurretBoardGrenade
+  name: grenade turret board
+  components:
+  - type: Tag
+    tags:
+    - GrenadeTurretBoard
+
+- type: Tag
+  id: GrenadeTurretBoard
+
+- type: entity
+  parent: BaseTurretBoard
+  id: TurretBoardSniper
+  name: sniper turret board
+  components:
+  - type: Tag
+    tags:
+    - SniperTurretBoard
+
+- type: Tag
+  id: SniperTurretBoard
+
+- type: entity
+  parent: BaseTurretBoard
+  id: TurretBoardShotgun
+  name: shotgun turret board
+  components:
+  - type: Tag
+    tags:
+    - ShotgunTurretBoard
+
+- type: Tag
+  id: ShotgunTurretBoard
+
+- type: entity
+  parent: BaseTurretBoard
+  id: TurretBoardMinigun
+  name: machine gun turret board
+  components:
+  - type: Tag
+    tags:
+    - MinigunTurretBoard
+
+- type: Tag
+  id: MinigunTurretBoard
+
+- type: entity
+  parent: BaseTurretBoard
+  id: TurretBoardIncendiary
+  name: incendiary turret board
+  components:
+  - type: Tag
+    tags:
+    - IncendiaryTurretBoard
+
+- type: Tag
+  id: IncendiaryTurretBoard
+
+- type: entity
+  parent: BaseTurretBoard
+  id: TurretBoardDisabler
+  name: disabler turret board
+  components:
+  - type: Tag
+    tags:
+    - DisablerTurretBoard
+
+- type: Tag
+  id: DisablerTurretBoard
+
+- type: entity
+  parent: BaseTurretBoard
+  id: TurretBoardLaser
+  name: light laser turret board
+  components:
+  - type: Tag
+    tags:
+    - LaserTurretBoard
+
+- type: Tag
+  id: LaserTurretBoard
+
+- type: entity
+  parent: BaseTurretBoard
+  id: TurretBoardHeavyLaser
+  name: heavy laser turret board
+  components:
+  - type: Tag
+    tags:
+    - HeavyLaserTurretBoard
+
+- type: Tag
+  id: HeavyLaserTurretBoard
