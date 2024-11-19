@@ -38,13 +38,31 @@
   id: LightTurretProduction
   name: light-class turrets
   icon:
-    sprite: Objects/Devices/swapper.rsi
-    state: icon
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
   discipline: Arsenal
   tier: 2
-  cost: 10000
+  cost: 8500
   recipeUnlocks:
-  - DeviceQuantumSpinInverter
+  - SniperTurretBoard
+  - ShotgunTurretBoard
+  - DisablerTurretBoard
+  - LaserTurretBoard
+
+- type: technology
+  id: HeavyTurretProduction
+  name: heavy-class turrets
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    state: syndie_lethal
+  discipline: Arsenal
+  tier: 3
+  cost: 12000
+  recipeUnlocks:
+  - GrenadeTurretBoard
+  - MinigunTurretBoard
+  - IncendiaryTurretBoard
+  - HeavyLaserTurretBoard
 
 - type: technology
   id: PulseEnergyWeapons
@@ -54,19 +72,7 @@
     state: icon
   discipline: Arsenal
   tier: 3
-  cost: 10000
-  recipeUnlocks:
-  - DeviceQuantumSpinInverter
-
-- type: technology
-  id: HeavyTurretProduction
-  name: heavy-class turrets
-  icon:
-    sprite: Objects/Devices/swapper.rsi
-    state: icon
-  discipline: Arsenal
-  tier: 3
-  cost: 10000
+  cost: 14000
   recipeUnlocks:
   - DeviceQuantumSpinInverter
 
