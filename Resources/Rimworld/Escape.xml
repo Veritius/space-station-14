@@ -6,7 +6,7 @@ To escape, you must build, activate, and defend a wormhole generator.
 This is the [bold]primary win condition[/bold].
 
 <Box>
-    <GuideEntityEmbed Entity="EventGateway" Caption="Wormhole Generator">
+  <GuideEntityEmbed Entity="EventGateway" Caption="Wormhole Generator"/>
 </Box>
 
 To build the Wormhole Generator, you must obtain four unique components.
@@ -14,10 +14,10 @@ You will have to leave the safety of your base of operations to find them.
 It's strongly recommended to organise expeditionary teams to find these artifacts.
 
 <Box>
-    <GuideEntityEmbed Entity="WormholeGenPartProcessor" Caption="quantum processor"/>
-    <GuideEntityEmbed Entity="WormholeGenPartTransport" Caption="calabi-yau wormhole core"/>
-    <GuideEntityEmbed Entity="WormholeGenPartPowerCell" Caption="zero-point energy cell"/>
-    <GuideEntityEmbed Entity="WormholeGenPartMapData" Caption="subspace map data"/>
+  <GuideEntityEmbed Entity="WormholeGenPartProcessor" Caption="quantum processor"/>
+  <GuideEntityEmbed Entity="WormholeGenPartTransport" Caption="calabi-yau wormhole core"/>
+  <GuideEntityEmbed Entity="WormholeGenPartPowerCell" Caption="zero-point energy cell"/>
+  <GuideEntityEmbed Entity="WormholeGenPartMapData" Caption="subspace map data"/>
 </Box>
 
 Once you have obtained these parts, you can begin building the Wormhole Generator
@@ -31,8 +31,8 @@ This is an [bold]alternative win condition[/bold] and is not easy. To win, you h
 These threats won't go down easily, so if you want to do this, you'd better be really, really prepared.
 
 <Box>
-    <GuideEntityEmbed Entity="MobXenoQueen" Caption="Xeno nest"/>
-    <GuideEntityEmbed Entity="MobArgocyteLeviathing" Caption="Argocytes"/>
-    <GuideEntityEmbed Entity="EventGateway" Caption="An unknown threat..."/>
+  <GuideEntityEmbed Entity="MobXenoQueen" Caption="Xeno nest"/>
+  <GuideEntityEmbed Entity="MobArgocyteLeviathing" Caption="Argocytes"/>
+  <GuideEntityEmbed Entity="EventGateway" Caption="An unknown threat..."/>
 </Box>
 </Document>
