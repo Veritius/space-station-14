@@ -4,6 +4,19 @@
 ## Coordination
 You must coordinate with your fellow crewmembers to survive.
 The threats you will face are designed to crush uncoordinated teams.
-Seriously. Work together. You'll all die if you don't.
 
+## Threats you'll face
+There are [bold]three factions[/bold] you will be up against.
+They will send [color=red]occasional raiding parties[/color] to ruin your day.
+Make sure your base is fortified and secure if you want to survive these.
+
+<Box>
+  <GuideEntityEmbed Entity="MobXenoQueen" Caption="Xenonids"/>
+  <GuideEntityEmbed Entity="MobArgocyteLeviathing" Caption="Argocytes"/>
+  <GuideEntityEmbed Entity="HonkerChassis" Caption="???"/>
+</Box>
+
+Many players, especially salvagers, will know of xenos and argocytes.
+The third threat is [color=#b8ea23]something else entirely.[/color]
+You will need to adapt to effectively counter this unidentified threat.
 </Document>

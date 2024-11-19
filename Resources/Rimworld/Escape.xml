@@ -3,7 +3,7 @@
 
 ## The Wormhole Generator
 To escape, you must build, activate, and defend a wormhole generator.
-This is the [bold]primary win condition[/bold].
+This is the [color=gold][bold]primary win condition[/bold][/color].
 
 <Box>
   <GuideEntityEmbed Entity="EventGateway" Caption="Wormhole Generator"/>
@@ -26,13 +26,7 @@ You should build it somewhere defensible, ideally in the heart of your base of o
 
 ## Homesteading
 Instead of building the wormhole generator, you can opt to stay on the planet and establish a settlement.
-This is an [bold]alternative win condition[/bold] and is not easy. To win, you have to eliminate
+This is an [color=gold][bold]alternative win condition[/bold][/color] and is not easy. To win, you have to eliminate
 [color=red]all threats in the area![/color] This involves entering the nest/base and destroying the core structure.
 These threats won't go down easily, so if you want to do this, you'd better be really, really prepared.
-
-<Box>
-  <GuideEntityEmbed Entity="MobXenoQueen" Caption="Xeno nest"/>
-  <GuideEntityEmbed Entity="MobArgocyteLeviathing" Caption="Argocytes"/>
-  <GuideEntityEmbed Entity="EventGateway" Caption="An unknown threat..."/>
-</Box>
 </Document>
