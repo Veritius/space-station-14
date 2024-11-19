@@ -1,0 +1,38 @@
+<Document>
+# Escaping the planet
+
+## The Wormhole Generator
+To escape, you must build, activate, and defend a wormhole generator.
+This is the [bold]primary win condition[/bold].
+
+<Box>
+    <GuideEntityEmbed Entity="EventGateway" Caption="Wormhole Generator">
+</Box>
+
+To build the Wormhole Generator, you must obtain four unique components.
+You will have to leave the safety of your base of operations to find them.
+It's strongly recommended to organise expeditionary teams to find these artifacts.
+
+<Box>
+    <GuideEntityEmbed Entity="WormholeGenPartProcessor" Caption="quantum processor"/>
+    <GuideEntityEmbed Entity="WormholeGenPartTransport" Caption="calabi-yau wormhole core"/>
+    <GuideEntityEmbed Entity="WormholeGenPartPowerCell" Caption="zero-point energy cell"/>
+    <GuideEntityEmbed Entity="WormholeGenPartMapData" Caption="subspace map data"/>
+</Box>
+
+Once you have obtained these parts, you can begin building the Wormhole Generator
+using the construction menu. It's under the Objective tab, or just search for the name.
+You should build it somewhere defensible, ideally in the heart of your base of operations.
+
+## Homesteading
+Instead of building the wormhole generator, you can opt to stay on the planet and establish a settlement.
+This is an [bold]alternative win condition[/bold] and is not easy. To win, you have to eliminate
+[color=red]all threats in the area![/color] This involves entering the nest/base and destroying the core structure.
+These threats won't go down easily, so if you want to do this, you'd better be really, really prepared.
+
+<Box>
+    <GuideEntityEmbed Entity="MobXenoQueen" Caption="Xeno nest"/>
+    <GuideEntityEmbed Entity="MobArgocyteLeviathing" Caption="Argocytes"/>
+    <GuideEntityEmbed Entity="EventGateway" Caption="An unknown threat..."/>
+</Box>
+</Document>

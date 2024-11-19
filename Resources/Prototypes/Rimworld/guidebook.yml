@@ -1,0 +1,29 @@
+- type: guideEntry
+  id: RimworldIntro
+  name: Rimworld
+  text: "/Rimworld/Intro.xml"
+  children:
+  - RimworldSurvival
+  - RimworldProgression
+  - RimworldEscape
+  - RimworldTips
+
+- type: guideEntry
+  id: RimworldSurvival
+  name: Survival
+  text: "/Rimworld/Survival.xml"
+
+- type: guideEntry
+  id: RimworldProgression
+  name: Progression
+  text: "/Rimworld/Progression.xml"
+
+- type: guideEntry
+  id: RimworldEscape
+  name: Escape
+  text: "/Rimworld/Escape.xml"
+
+- type: guideEntry
+  id: RimworldTips
+  name: Tips
+  text: "/Rimworld/Tips.xml"
