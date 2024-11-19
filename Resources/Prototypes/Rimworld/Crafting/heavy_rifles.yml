@@ -1,0 +1,9 @@
+- type: latheRecipe
+  id: WeaponRifleVulture
+  result: WeaponRifleVulture
+  category: Shields
+  completetime: 8
+  materials:
+    Steel: 1200
+    Plastic: 200
+    Plasteel: 100
