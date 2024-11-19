@@ -55,7 +55,6 @@
       - RiotShield
       - RiotLaserShield
       - RiotBulletShield
-      - RiotHeavyBulletShield
       - SpeedLoaderMagnum
       - SpeedLoaderMagnumEmpty
       - Stunbaton
@@ -71,6 +70,8 @@
       - BoxShotgunUranium
       - BoxShellTranquilizer
       - ClothingBackpackElectropack
+      - EventSkipVest
+      - EventCloakVest
       - ExplosivePayload
       - FlashPayload
       - GrenadeBlast
@@ -94,6 +95,7 @@
       - MagazineRifleUranium
       - MagazineShotgunBeanbag
       - MagazineShotgunIncendiary
+      - RiotHeavyBulletShield
       - PortableRecharger
       - PowerCageHigh
       - PowerCageMedium

@@ -1,0 +1,23 @@
+- type: latheRecipe
+  id: EventSkipVest
+  result: EventSkipVest
+  category: Shields
+  completetime: 6
+  materials:
+    Steel: 300
+    Plastic: 400
+    Silver: 300
+    Gold: 100
+    BluespaceFilament: 1200
+
+- type: latheRecipe
+  id: EventCloakVest
+  result: EventCloakVest
+  category: Shields
+  completetime: 6
+  materials:
+    Steel: 300
+    Plastic: 400
+    Silver: 600
+    Gold: 50
+    BluespaceFilament: 800
