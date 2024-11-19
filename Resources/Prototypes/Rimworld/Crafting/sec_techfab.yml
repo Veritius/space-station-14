@@ -118,6 +118,10 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
+      - WeaponRifleVulture
+      - WeaponPulsePistol
+      - WeaponPulseCarbine
+      - WeaponPulseRifle
   - type: MaterialStorage
     whitelist:
       tags:

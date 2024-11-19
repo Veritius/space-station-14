@@ -20,7 +20,7 @@
   tier: 2
   cost: 6000
   recipeUnlocks:
-  - DeviceQuantumSpinInverter
+  - WeaponRifleVulture
 
 - type: technology
   id: LightMachineGuns
@@ -74,7 +74,9 @@
   tier: 3
   cost: 14000
   recipeUnlocks:
-  - DeviceQuantumSpinInverter
+  - WeaponPulsePistol
+  - WeaponPulseCarbine
+  - WeaponPulseRifle
 
 - type: technology
   id: WarCyborgs

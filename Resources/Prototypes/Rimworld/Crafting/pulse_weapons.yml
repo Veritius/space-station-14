@@ -1,0 +1,35 @@
+- type: latheRecipe
+  id: WeaponPulsePistol
+  result: WeaponPulsePistol
+  category: Weapons
+  completetime: 8
+  materials:
+    Steel: 400
+    Glass: 600
+    Plasteel: 100
+    Gold: 300
+    Plasma: 200
+
+- type: latheRecipe
+  id: WeaponPulseCarbine
+  result: WeaponPulseCarbine
+  category: Weapons
+  completetime: 8
+  materials:
+    Steel: 1000
+    Glass: 700
+    Plasteel: 300
+    Gold: 500
+    Plasma: 500
+
+- type: latheRecipe
+  id: WeaponPulseRifle
+  result: WeaponPulseRifle
+  category: Weapons
+  completetime: 8
+  materials:
+    Steel: 1600
+    Glass: 800
+    Plasteel: 400
+    Gold: 500
+    Plasma: 800
