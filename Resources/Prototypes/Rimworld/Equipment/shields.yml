@@ -17,3 +17,7 @@
           Piercing: 0.3
         flatReductions:
           Piercing: 3
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: HeldSpeedModifier

@@ -4,8 +4,8 @@
   category: Shields
   completetime: 6
   materials:
-    Steel: 8
-    Plastic: 4
+    Steel: 400
+    Plastic: 400
 
 - type: latheRecipe
   id: RiotLaserShield
@@ -13,9 +13,9 @@
   category: Shields
   completetime: 6
   materials:
-    Steel: 8
-    Plastic: 2
-    Silver: 2
+    Steel: 400
+    Plastic: 200
+    Silver: 200
 
 - type: latheRecipe
   id: RiotBulletShield
@@ -23,9 +23,9 @@
   category: Shields
   completetime: 6
   materials:
-    Steel: 8
-    Plastic: 2
-    Plasteel: 2
+    Steel: 400
+    Plastic: 200
+    Plasteel: 200
 
 - type: latheRecipe
   id: RiotHeavyBulletShield
@@ -33,6 +33,6 @@
   category: Shields
   completetime: 6
   materials:
-    Steel: 6
-    Plastic: 2
-    Plasteel: 4
+    Steel: 600
+    Plastic: 200
+    Plasteel: 400

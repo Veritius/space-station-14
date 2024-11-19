@@ -140,14 +140,6 @@
     Plastic: 50
 
 - type: latheRecipe
-  id: RiotShield
-  result: RiotShield
-  completetime: 4
-  materials:
-    Steel: 400
-    Glass: 400
-
-- type: latheRecipe
   id: TelescopicShield
   result: TelescopicShield
   completetime: 4
