@@ -1,0 +1,19 @@
+- type: entity
+  name: heavy riot bullet shield
+  parent: [ BaseShield, BaseRestrictedContraband ]
+  id: RiotHeavyBulletShield
+  description: A ballistic riot shield built for withstanding bullets, but not much else.
+  components:
+    - type: Sprite
+      state: riot_bullet-icon
+    - type: Item
+      heldPrefix: riot_bullet
+    - type: Blocking
+      passiveBlockModifier:
+        coefficients:
+          Piercing: 0.5
+      activeBlockModifier:
+        coefficients:
+          Piercing: 0.3
+        flatReductions:
+          Piercing: 3

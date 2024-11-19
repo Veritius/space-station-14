@@ -1,0 +1,38 @@
+- type: latheRecipe
+  id: RiotShield
+  result: RiotShield
+  category: Shields
+  completetime: 6
+  materials:
+    Steel: 8
+    Plastic: 4
+
+- type: latheRecipe
+  id: RiotLaserShield
+  result: RiotLaserShield
+  category: Shields
+  completetime: 6
+  materials:
+    Steel: 8
+    Plastic: 2
+    Silver: 2
+
+- type: latheRecipe
+  id: RiotBulletShield
+  result: RiotBulletShield
+  category: Shields
+  completetime: 6
+  materials:
+    Steel: 8
+    Plastic: 2
+    Plasteel: 2
+
+- type: latheRecipe
+  id: RiotHeavyBulletShield
+  result: RiotHeavyBulletShield
+  category: Shields
+  completetime: 6
+  materials:
+    Steel: 6
+    Plastic: 2
+    Plasteel: 4
