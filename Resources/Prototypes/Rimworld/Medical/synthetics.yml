@@ -229,6 +229,9 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+      - !type:EmptyContainersBehaviour
+        containers:
+        - brain
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: RotationVisuals
