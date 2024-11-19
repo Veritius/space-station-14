@@ -5,7 +5,7 @@
   graph: WormholeGenerator
   startNode: start
   targetNode: finish
-  category: Event
+  category: Objective
   icon:
     sprite: Structures/Machines/gateway.rsi
     state: frame
