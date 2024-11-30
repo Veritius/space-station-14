@@ -1,0 +1,42 @@
+- type: entity
+  parent: BaseMobEventXeno
+  id: EventXenoQueen
+  name: queen
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/queen.rsi
+    offset: 0,0.2
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1200: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      1000: 0.7
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 8
+        Slash: 24
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 3
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: GhostRole
+    name: xeno queen
+    description: The matriarch of the xeno hive. Enormous and powerful, but very slow and vulnerable if alone. Work with your fellow xenos, don't play alone.
+    raffle:
+      settings: default
