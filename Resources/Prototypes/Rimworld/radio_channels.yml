@@ -9,7 +9,7 @@
 - type: radioChannel
   id: XenoHivemind
   name: Xeno Hivemind
-  keycode: 'm'
+  keycode: 'p'
   frequency: 9482
   color: "#373351"
   longRange: true

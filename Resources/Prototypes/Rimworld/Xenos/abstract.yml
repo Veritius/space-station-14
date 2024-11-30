@@ -123,4 +123,4 @@
     makeSentient: true
     name: xeno
     description: A xenonid.
-    rules: You are a team antagonist with all other xenonids. You're not outright hostile with argocytes, but they're not your friends either. You are hostile against corrupt silicons. Work towards exterminating the invading talls (the crew). Do not gib people. You do not remember your past life. Use [bold]:m[/bold] to talk with your fellow xenos in the hivemind channel.
+    rules: You are a team antagonist with all other xenonids. You're not outright hostile with argocytes, but they're not your friends either. You are hostile against corrupt silicons. Work towards exterminating the invading talls (the crew). Do not gib people. You do not remember your past life. Use [bold]:p[/bold] to talk with your fellow xenos in the hivemind channel.
