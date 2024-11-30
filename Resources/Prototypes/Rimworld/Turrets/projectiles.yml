@@ -1,0 +1,31 @@
+- type: entity
+  parent: BaseCartridge
+  id: CartridgeTurretIncendiary
+  name: cartridge (incendiary, turret)
+  components:
+  - type: CartridgeAmmo
+    proto: BulletTurretIncendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff6e52"
+
+- type: entity
+  parent: BaseBulletIncendiary
+  id: BulletTurretIncendiary
+  name: bullet (incendiary, turret)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: infernoshot
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+        Heat: 32

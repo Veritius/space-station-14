@@ -93,7 +93,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: CartridgeMagnumIncendiary
+    proto: CartridgeTurretIncendiary
     fireCost: 1
   - type: Battery
     maxCharge: 50
