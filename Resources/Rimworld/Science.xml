@@ -1,0 +1,21 @@
+<Document>
+# Science on the Rim
+Due to your crash landing, Nanotrasen has issued you a license for highly restricted technologies.
+
+## Experimental
+Tier 3 [color=#9a6ef0]Experimental[/color] tech focuses on [bold]the conditions you fight in.[/bold]
+Bend space and time to your will, play with reality-altering technology, and manipulate the world as you see fit.
+
+<Box>
+  <GuideEntityEmbed Entity="EventSkipVest" Caption="teleport vest"/>
+  <GuideEntityEmbed Entity="EventCloakVest" Caption="cloaking vest"/>
+</Box>
+
+## Arsenal
+Tier 3 [color=#dc373b]Arsenal[/color] tech focuses on [bold]the things you fight with.[/bold]
+Use cutting edge technology in the front lines and wage war with terrifyingly powerful weapons.
+
+<Box>
+  <GuideEntityEmbed Entity="WeaponRifleVulture" Caption="vulture rifle"/>
+</Box>
+</Document>

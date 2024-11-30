@@ -16,6 +16,8 @@ It's strongly recommended to organise expeditionary teams to find these artifact
 <Box>
   <GuideEntityEmbed Entity="WormholeGenPartProcessor" Caption="quantum processor"/>
   <GuideEntityEmbed Entity="WormholeGenPartTransport" Caption="calabi-yau wormhole core"/>
+<Box>
+</Box>
   <GuideEntityEmbed Entity="WormholeGenPartPowerCell" Caption="zero-point energy cell"/>
   <GuideEntityEmbed Entity="WormholeGenPartMapData" Caption="subspace map data"/>
 </Box>

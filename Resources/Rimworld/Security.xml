@@ -1,0 +1,30 @@
+<Document>
+# Security on the Rim
+In this unprecedented emergency, Nanotrasen has granted the crew access to a new line of prototype equipment.
+
+## Turrets
+Turrets are automated fortifications with self-recharging ammo.
+They are invaluable for base defense, but they are easily destroyed.
+They are also expensive to construct, and cannot be moved afterwards.
+
+Note that [color=red]turrets don't respect friendly fire![/color]
+If you are standing between a turret and its target, it will shoot regardless.
+Be mindful of this when setting up defensive turrets, or you'll have a lot of casualties.
+
+- [bold]Grenade turrets[/bold] fire high explosive grenades. They are highly effective against groups of targets, but are liable to cause massive friendly fire.
+
+- [bold]Sniper turrets[/bold] fire heavy anti-material cartridges. They are effective against armored targets, but fail to handle large swarms of small targets.
+
+- [bold]Shotgun turrets[/bold] fire conventional buckshot. They devastate unarmored targets at short range, but are ineffective at distant or armored targets.
+
+- [bold]Machine gun turrets[/bold] fire many small bullets very quickly. They are effective at suppressing enemies and dispersing groups, but don't do a lot of damage, and are useless against armored targets.
+
+- [bold]Incendiary turrets[/bold] fire projectiles that ignite targets. They are effective against unarmored targets even after they exit the turret's range.
+
+- [bold]Disabler turrets[/bold] fire high-energy disabling bolts that stun targets. They are an excellent supplement to other turrets, but don't do much on their own.
+
+- [bold]Laser turrets[/bold] shoot laser beams at a high rate. They are outstandingly accurate and work well as area denial, though are ineffective against armor.
+
+- [bold]Heavy laser turrets[/bold] shoot powerful laser beams at a slow rate. They are outstandingly accurate and are effective against highly mobile targets.
+
+</Document>

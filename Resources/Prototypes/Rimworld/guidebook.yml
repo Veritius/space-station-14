@@ -3,27 +3,43 @@
   name: Rimworld
   text: "/Rimworld/Intro.xml"
   children:
-  - RimworldSurvival
-  - RimworldProgression
   - RimworldEscape
-  - RimworldTips
+  - RimworldSupply
+  - RimworldSecurity
+  - RimworldMedical
+  - RimworldScience
+  - RimworldCrewSilicons
 
-- type: guideEntry
-  id: RimworldSurvival
-  name: Survival
-  text: "/Rimworld/Survival.xml"
-
-- type: guideEntry
-  id: RimworldProgression
-  name: Progression
-  text: "/Rimworld/Progression.xml"
+# Essential guidebook entries
 
 - type: guideEntry
   id: RimworldEscape
   name: Escape
   text: "/Rimworld/Escape.xml"
 
+# Role specific entries
+
 - type: guideEntry
-  id: RimworldTips
-  name: Tips
-  text: "/Rimworld/Tips.xml"
+  id: RimworldSecurity
+  name: Security
+  text: "/Rimworld/Security.xml"
+
+- type: guideEntry
+  id: RimworldMedical
+  name: Medical
+  text: "/Rimworld/Medical.xml"
+
+- type: guideEntry
+  id: RimworldScience
+  name: Science
+  text: "/Rimworld/Science.xml"
+
+- type: guideEntry
+  id: RimworldSupply
+  name: Supply
+  text: "/Rimworld/Supply.xml"
+
+- type: guideEntry
+  id: RimworldCrewSilicons
+  name: Silicons
+  text: "/Rimworld/CrewSilicons.xml"

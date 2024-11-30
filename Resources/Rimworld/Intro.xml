@@ -2,19 +2,13 @@
 # Rimworld Event
 This is a guidebook to the Rimworld event.
 You will not be told everything there is to know: some of that is up to you to discover.
-The point of this guide is to give you enough information to not die immediately.
+The point of this guide is to give you enough information to, hopefully, survive and escape.
 
-Good luck out there. You'll need it.
+## Raiding parties
+Regular raiding parties will be sent to attack the crew's outposts.
+These parties are not formed of conventional enemies - they're far more armored, and far deadlier.
+[bold]It is strongly recommended to fortify your outposts to survive these attacks![/bold]
 
-## Things to be aware of
-There is a lot of hacks and weird technical stuff being used to get this event to work.
-
-First of all: this is technically an enormous station. Station grids can be destroyed.
-I've tried to mitigate this where I can, but if there's a hole, [bold]Ahelp it![/bold]
-RCDs are also prevented from working due to the fact they can put holes in the ground.
-
-Also, the entire map is bounded by special invulnerable, impassable objects.
-If you find one, don't bother trying to break through, it's not possible.
-You can easily identify these by looking for the word 'dense X' where X is some object.
-
+Raiding parties get stronger over time. If you want to survive, stagnation is not an option.
+See [textlink="the security page" link="RimworldSecurity"] and [textlink="the science page" link="RimworldScience"] for more details.
 </Document>
