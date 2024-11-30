@@ -124,9 +124,9 @@
         layer:
         - MobLayer
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 0.75
+    rechargeCooldown: 0.6
   - type: BasicEntityAmmoProvider
-    proto: BulletAcid
+    proto: BulletAcidStrong
     capacity: 1
     count: 1
   - type: Gun
