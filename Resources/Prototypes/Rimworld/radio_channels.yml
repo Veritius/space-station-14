@@ -1,7 +1,23 @@
 - type: radioChannel
   id: CorruptSilicon
-  name: Corrupt Hivemind
+  name: Silicon Hivemind
   keycode: 'k'
   frequency: 9483
   color: "#b8ea23"
+  longRange: true
+
+- type: radioChannel
+  id: XenoHivemind
+  name: Xeno Hivemind
+  keycode: 'k'
+  frequency: 9482
+  color: "#373351"
+  longRange: true
+
+- type: radioChannel
+  id: ArgocyteHivemind
+  name: Argocyte Hivemind
+  keycode: 'k'
+  frequency: 9481
+  color: "#e5ed7d"
   longRange: true
