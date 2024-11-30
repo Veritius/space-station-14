@@ -4,6 +4,7 @@
   text: "/Rimworld/Intro.xml"
   children:
   - RimworldEscape
+  - RimworldSettling
   - RimworldSupply
   - RimworldSecurity
   - RimworldMedical
@@ -18,7 +19,7 @@
   text: "/Rimworld/Escape.xml"
 
 - type: guideEntry
-  id: RimworldSettlement
+  id: RimworldSettling
   name: Settling
   text: "/Rimworld/Settling.xml"
 
