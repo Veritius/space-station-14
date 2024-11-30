@@ -14,3 +14,13 @@
         - state: xeno_toxic
     - type: Ammo
       muzzleFlash: null
+
+- type: entity
+  parent: BulletAcidStrong
+  id: StrongAcidSpread
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileSpread
+    proto: BulletAcidStrong
+    count: 5
+    spread: 10
