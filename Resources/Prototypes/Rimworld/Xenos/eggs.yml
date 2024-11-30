@@ -1,0 +1,90 @@
+- type: entity
+  parent: MarkerBase
+  id: XenoEggSpawnerRandom
+  name: xeno egg spawner
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - XenoEggDrone
+    - XenoEggPraetorian
+    - XenoEggRunner
+    rareChance: 0.333
+    rarePrototypes:
+    - XenoEggRavager
+    - XenoEggSpitter
+
+- type: entity
+  parent: BaseItem
+  id: BaseXenoEgg
+  abstract: true
+  name: xeno egg
+  description: A xenonid egg. You feel like you should run away from it.
+  components:
+  - type: GhostRole
+    name: xenonid
+    description: A xenonid.
+    rules: You are a team antagonist with all other xenonids. You're not outright hostile with argocytes, but they're not your friends either. You are hostile against corrupt silicons. Work towards exterminating the invading talls (the crew). Do not gib people. You do not remember your past life. Use [bold]:p[/bold] to talk with your fellow xenos in the hivemind channel.
+    raffle:
+      settings: default
+  - type: Sprite
+    sprite: Objects/Consumable/Food/egg.rsi
+    scale: 3,3
+    color: "#494360"
+  - type: Item
+    sprite: Objects/Consumable/Food/egg.rsi
+    size: Ginormous
+
+- type: entity
+  parent: BaseXenoEgg
+  id: XenoEggDrone
+  suffix: Drone
+  components:
+  - type: GhostRole
+    name: xeno drone
+    description: A worker of the xeno hive.
+  - type: GhostRoleMobSpawner
+    prototype: MobEventXenoDrone
+
+- type: entity
+  parent: BaseXenoEgg
+  id: XenoEggPraetorian
+  suffix: Praetorian
+  components:
+  - type: GhostRole
+    name: xeno praetorian
+    description: A lesser fighter-caste member of the xeno hive.
+  - type: GhostRoleMobSpawner
+    prototype: MobEventXenoPraetorian
+
+- type: entity
+  parent: BaseXenoEgg
+  id: XenoEggRunner
+  suffix: Runner
+  components:
+  - type: GhostRole
+    name: xeno runner
+    description: A specialised scout of the xeno hive. Fragile but extremely fast.
+  - type: GhostRoleMobSpawner
+    prototype: MobEventXenoRunner
+
+- type: entity
+  parent: BaseXenoEgg
+  id: XenoEggRavager
+  suffix: Ravager
+  components:
+  - type: GhostRole
+    name: xeno ravager
+    description: A specialised hunter-killer of the xeno hive. Tough and hard-hitting.
+  - type: GhostRoleMobSpawner
+    prototype: MobEventXenoRavager
+
+- type: entity
+  parent: BaseXenoEgg
+  id: XenoEggSpitter
+  suffix: Spitter
+  components:
+  - type: GhostRole
+    name: xeno spitter
+    description: A specialised fighter-caste member of the xeno hive. Very fragile, but capable of ranged attacks.
+  - type: GhostRoleMobSpawner
+    prototype: MobEventXenoSpitter
