@@ -27,5 +27,5 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 32
+        Blunt: 10
+        Heat: 15
