@@ -123,4 +123,4 @@
     makeSentient: true
     name: argocyte
     description: An argocyte.
-    rules: You are a team antagonist with all other argocytes. You're not outright hostile with xenos, but they're not your friends either. You are hostile against corrupt silicons. Defend the argocyte hive from the crew. Do not gib people. You do not remember your past life. Use [bold]:k[/bold] to talk with your fellow argocytes in the hivemind channel.
+    rules: You are a team antagonist with all other argocytes. You're not outright hostile with xenos, but they're not your friends either. You are hostile against corrupt silicons. Defend the argocyte hive from the crew. Do not gib people. You do not remember your past life. Use [bold]:l[/bold] to talk with your fellow argocytes in the hivemind channel.
