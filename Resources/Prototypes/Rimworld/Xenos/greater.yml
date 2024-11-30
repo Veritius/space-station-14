@@ -137,7 +137,7 @@
     - FullAuto
     soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
   - type: GhostRole
-    name: xeno ravager
+    name: xeno spitter
     description: A specialised fighter-caste member of the xeno hive. Very fragile, but capable of ranged attacks.
     raffle:
       settings: default
