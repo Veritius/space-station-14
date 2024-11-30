@@ -17,6 +17,11 @@
   name: Escape
   text: "/Rimworld/Escape.xml"
 
+- type: guideEntry
+  id: RimworldSettlement
+  name: Settling
+  text: "/Rimworld/Settling.xml"
+
 # Role specific entries
 
 - type: guideEntry

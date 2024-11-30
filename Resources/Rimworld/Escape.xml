@@ -1,23 +1,19 @@
 <Document>
 # Escaping the planet
-
-## The Wormhole Generator
-To escape, you must build, activate, and defend a wormhole generator.
-This is the [color=gold][bold]primary win condition[/bold][/color].
+Escaping the planet is the [color=gold][bold]primary win condition[/bold][/color] of this event.
+To escape, you must construct the [color=cyan]Wormhole Generator[/color], a device that facilitates your escape from the planet.
 
 <Box>
   <GuideEntityEmbed Entity="EventGateway" Caption="Wormhole Generator"/>
 </Box>
 
-To build the Wormhole Generator, you must obtain four unique components.
-You will have to leave the safety of your base of operations to find them.
-It's strongly recommended to organise expeditionary teams to find these artifacts.
+## Construction
+To build the Wormhole Generator, you must obtain [color=cyan]four unique components[/color].
+It's strongly recommended to organise competent expeditionary teams to find these artifacts.
 
 <Box>
   <GuideEntityEmbed Entity="WormholeGenPartProcessor" Caption="quantum processor"/>
   <GuideEntityEmbed Entity="WormholeGenPartTransport" Caption="calabi-yau wormhole core"/>
-<Box>
-</Box>
   <GuideEntityEmbed Entity="WormholeGenPartPowerCell" Caption="zero-point energy cell"/>
   <GuideEntityEmbed Entity="WormholeGenPartMapData" Caption="subspace map data"/>
 </Box>
@@ -25,10 +21,18 @@ It's strongly recommended to organise expeditionary teams to find these artifact
 Once you have obtained these parts, you can begin building the Wormhole Generator
 using the construction menu. It's under the Objective tab, or just search for the name.
 You should build it somewhere defensible, ideally in the heart of your base of operations.
+It cannot be moved once built, and you cannot reverse the construction steps.
 
-## Homesteading
-Instead of building the wormhole generator, you can opt to stay on the planet and establish a settlement.
-This is an [color=gold][bold]alternative win condition[/bold][/color] and is not easy. To win, you have to eliminate
-[color=red]all threats in the area![/color] This involves entering the nest/base and destroying the core structure.
-These threats won't go down easily, so if you want to do this, you'd better be really, really prepared.
+## Activation
+Once constructed, the wormhole generator can be activated.
+This is an irreversible decision, and takes 20 minutes to complete.
+During this time, [color=red][bold]raids will escalate dramatically![/bold][/color]
+
+You should be [bold]very, very sure[/bold] when you activate the wormhole generator.
+There's no going back once you do, and it will be your final challenge on the planet.
+Prepare carefully and fortify your base, and remember, not everyone will make it home.
+Sacrifices are inevitable.
+
+To activate the wormhole generator, you must have Command access on your ID card.
+When you want it to happen, ahelp, since there is no mechanical way for it to happen.
 </Document>
