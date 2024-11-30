@@ -19,7 +19,7 @@
       120: 0.7
   - type: MeleeWeapon
     damage:
-      groups:
+      types:
         Brute: 6
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
@@ -59,6 +59,11 @@
   - type: SlowOnDamage
     speedModifierThresholds:
       300: 0.7
+  - type: MeleeWeapon
+    damage:
+      types:
+        Brute: 8
+        Slash: 4
   - type: Fixtures
     fixtures:
       fix1:

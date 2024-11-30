@@ -19,7 +19,7 @@
       1000: 0.7
   - type: MeleeWeapon
     damage:
-      groups:
+      types:
         Brute: 8
         Slash: 24
   - type: MovementSpeedModifier

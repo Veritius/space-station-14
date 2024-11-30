@@ -21,8 +21,8 @@
       200: 0.5
   - type: MeleeWeapon
     damage:
-      groups:
-        Slash: 8
+      types:
+        Slash: 9
   - type: MovementSpeedModifier
     baseSprintSpeed: 7.0
   - type: Fixtures
@@ -63,7 +63,7 @@
       500: 0.7
   - type: MeleeWeapon
     damage:
-      groups:
+      types:
         Slash: 16
         Piercing: 2
   - type: MovementSpeedModifier
@@ -108,8 +108,8 @@
       130: 0.5
   - type: MeleeWeapon
     damage:
-      groups:
-        Slash: 8
+      types:
+        Slash: 5
   - type: MovementSpeedModifier
     baseSprintSpeed: 4.5
   - type: Fixtures
